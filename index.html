@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Parfüm Muadil Öneri Sistemi</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>PerfuMatch</h1>
+            <p class="subtitle">Lüks Parfümlerin Uygun Fiyatlı Muadillerini Keşfedin</p>
+            
+            <!-- Cinsiyet Seçimi -->
+            <div class="gender-selection">
+                <button class="gender-btn active" data-gender="all">
+                    <i class="fas fa-users"></i> Tümü
+                </button>
+                <button class="gender-btn" data-gender="women">
+                    <i class="fas fa-venus"></i> Kadın
+                </button>
+                <button class="gender-btn" data-gender="men">
+                    <i class="fas fa-mars"></i> Erkek
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container main-content">
+        <!-- Yükleme Spinner -->
+        <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+            <div class="spinner"></div>
+            <p>Parfümler analiz ediliyor...</p>
+        </div>
+
+        <div class="search-options">
+            <div class="option-card" id="byName">
+                <div class="icon">🔍</div>
+                <h3>İsme Göre Arama</h3>
+                <p>Beğendiğiniz lüks parfümün adını yazın, size uygun fiyatlı muadilini gösterelim.</p>
+            </div>
+            
+            <div class="option-card" id="byNotes">
+                <div class="icon">🌿</div>
+                <h3>Notalara Göre Arama</h3>
+                <p>Sevdiğiniz üst, orta ve alt notaları seçin, bu notaları içeren parfümleri bulalım.</p>
+            </div>
+            
+            <div class="option-card" id="byFamily">
+                <div class="icon">🌸</div>
+                <h3>Parfüm Ailesine Göre Arama</h3>
+                <p>Çiçeksi, odunsu, pudramsı gibi koku ailelerine göre parfüm bulun.</p>
+            </div>
+        </div>
+        
+        <!-- İsme Göre Arama -->
+        <div class="search-container" id="nameSearch">
+            <h2>İsme Göre Arama</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Lüks parfüm adını yazın... (örn: Chanel No.5, Dior Sauvage)" id="perfumeNameInput">
+                <button id="nameSearchBtn">
+                    <i class="fas fa-search"></i> Ara
+                </button>
+            </div>
+            
+            <!-- Popüler Aramalar -->
+            <div class="popular-searches">
+                <h4>Popüler Aramalar:</h4>
+                <div class="popular-tags">
+                    <span class="popular-tag" data-search="Chanel No.5">Chanel No.5</span>
+                    <span class="popular-tag" data-search="Dior Sauvage">Dior Sauvage</span>
+                    <span class="popular-tag" data-search="Tom Ford Oud Wood">Tom Ford Oud Wood</span>
+                    <span class="popular-tag" data-search="Yves Saint Laurent Black Opium">YSL Black Opium</span>
+                    <span class="popular-tag" data-search="Coco Mademoiselle">Coco Mademoiselle</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Notalara Göre Arama -->
+        <div class="search-container notes-search" id="notesSearch">
+            <h2>Notalara Göre Arama</h2>
+            <div class="notes-container">
+                <div class="note-section">
+                    <h4>Üst Notalar</h4>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note1" name="topNotes" value="Bergamot">
+                            <label for="note1">Bergamot</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note2" name="topNotes" value="Limon">
+                            <label for="note2">Limon</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note3" name="topNotes" value="Portakal">
+                            <label for="note3">Portakal</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note4" name="topNotes" value="Greyfurt">
+                            <label for="note4">Greyfurt</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note5" name="topNotes" value="Elma">
+                            <label for="note5">Elma</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note6" name="topNotes" value="Siyah Frenk Üzümü">
+                            <label for="note6">Siyah Frenk Üzümü</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note7" name="topNotes" value="Pembe Biber">
+                            <label for="note7">Pembe Biber</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note8" name="topNotes" value="Zencefil">
+                            <label for="note8">Zencefil</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="note-section">
+                    <h4>Orta Notalar (Kalp)</h4>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note9" name="middleNotes" value="Yasemin">
+                            <label for="note9">Yasemin</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note10" name="middleNotes" value="Gül">
+                            <label for="note10">Gül</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note11" name="middleNotes" value="Lavanta">
+                            <label for="note11">Lavanta</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note12" name="middleNotes" value="Süsen">
+                            <label for="note12">Süsen</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note13" name="middleNotes" value="Sardunya">
+                            <label for="note13">Sardunya</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note14" name="middleNotes" value="Tarçın">
+                            <label for="note14">Tarçın</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note15" name="middleNotes" value="Karanfil">
+                            <label for="note15">Karanfil</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note16" name="middleNotes" value="Kakule">
+                            <label for="note16">Kakule</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="note-section">
+                    <h4>Alt Notalar (Dip)</h4>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note17" name="baseNotes" value="Sedir">
+                            <label for="note17">Sedir</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note18" name="baseNotes" value="Sandal Ağacı">
+                            <label for="note18">Sandal Ağacı</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note19" name="baseNotes" value="Vetiver">
+                            <label for="note19">Vetiver</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note20" name="baseNotes" value="Amber">
+                            <label for="note20">Amber</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note21" name="baseNotes" value="Misk">
+                            <label for="note21">Misk</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note22" name="baseNotes" value="Paçuli">
+                            <label for="note22">Paçuli</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note23" name="baseNotes" value="Vanilya">
+                            <label for="note23">Vanilya</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="note24" name="baseNotes" value="Kahve">
+                            <label for="note24">Kahve</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <button class="search-button" id="notesSearchBtn">
+                    <i class="fas fa-search"></i> Notalara Göre Ara
+                </button>
+            </div>
+        </div>
+        
+        <!-- Parfüm Ailesine Göre Arama -->
+        <div class="search-container family-search" id="familySearch">
+            <h2>Parfüm Ailesine Göre Arama</h2>
+            <div class="family-buttons">
+                <button class="family-button" data-family="floral">
+                    <i class="fas fa-flower"></i> Çiçeksi
+                </button>
+                <button class="family-button" data-family="woody">
+                    <i class="fas fa-tree"></i> Odunsu
+                </button>
+                <button class="family-button" data-family="oriental">
+                    <i class="fas fa-star"></i> Oriental
+                </button>
+                <button class="family-button" data-family="fresh">
+                    <i class="fas fa-wind"></i> Taze
+                </button>
+                <button class="family-button" data-family="fruity">
+                    <i class="fas fa-apple-alt"></i> Meyveli
+                </button>
+                <button class="family-button" data-family="chypre">
+                    <i class="fas fa-leaf"></i> Chipre
+                </button>
+                <button class="family-button" data-family="fougere">
+                    <i class="fas fa-seedling"></i> Fougere
+                </button>
+                <button class="family-button" data-family="gourmand">
+                    <i class="fas fa-cookie-bite"></i> Gurme
+                </button>
+            </div>
+        </div>
+
+        <!-- Karşılaştırma Alanı (İsme Göre Arama İçin) -->
+        <div class="comparison-area" id="nameComparisonArea">
+            <h2 class="comparison-title">Parfüm Karşılaştırması</h2>
+            <div class="comparison-container">
+                <!-- Lüks Parfüm -->
+                <div class="perfume-comparison-card luxury">
+                    <div class="card-badge luxury-badge">
+                        <i class="fas fa-crown"></i> Lüks Parfüm
+                    </div>
+                    <div class="perfume-image-placeholder">
+                        <i class="fas fa-image"></i> Parfüm Görseli
+                    </div>
+                    <div class="perfume-name">Chanel No.5</div>
+                    <div class="perfume-brand">Chanel</div>
+                    <div class="perfume-price">₺2,850</div>
+                    
+                    <div class="notes-section">
+                        <div class="notes-title">Üst Notalar:</div>
+                        <div class="notes-list">
+                            <span class="note-tag">Bergamot</span>
+                            <span class="note-tag">Limon</span>
+                            <span class="note-tag">Portakal</span>
+                        </div>
+                    </div>
+                    
+                    <div class="notes-section">
+                        <div class="notes-title">Orta Notalar:</div>
+                        <div class="notes-list">
+                            <span class="note-tag">Yasemin</span>
+                            <span class="note-tag">Gül</span>
+                            <span class="note-tag">Süsen</span>
+                        </div>
+                    </div>
+                    
+                    <div class="notes-section">
+                        <div class="notes-title">Alt Notalar:</div>
+                        <div class="notes-list">
+                            <span class="note-tag">Sandal Ağacı</span>
+                            <span class="note-tag">Vanilya</span>
+                            <span class="note-tag">Amber</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VS -->
+                <div class="vs-container">VS</div>
+
+                <!-- Muadil Parfüm -->
+                <div class="perfume-comparison-card alternative">
+                    <div class="card-badge alternative-badge">
+                        <i class="fas fa-star"></i> Uygun Fiyatlı Muadil
+                    </div>
+                    <div class="perfume-image-placeholder">
+                        <i class="fas fa-image"></i> Parfüm Görseli
+                    </div>
+                    <div class="perfume-name">Golden Scent Classic</div>
+                    <div class="perfume-brand">Golden Scent</div>
+                    <div class="perfume-price">₺385</div>
+                    
+                    <div class="similarity-info">
+                        <div class="similarity-percentage">92%</div>
+                        <div class="similarity-text">Benzerlik Oranı</div>
+                    </div>
+                    
+                    <div class="notes-section">
+                        <div class="notes-title">Üst Notalar:</div>
+                        <div class="notes-list">
+                            <span class="note-tag">Bergamot</span>
+                            <span class="note-tag">Limon</span>
+                            <span class="note-tag">Greyfurt</span>
+                        </div>
+                    </div>
+                    
+                    <div class="notes-section">
+                        <div class="notes-title">Orta Notalar:</div>
+                        <div class="notes-list">
+                            <span class="note-tag">Yasemin</span>
+                            <span class="note-tag">Gül</span>
+                            <span class="note-tag">Lavanta</span>
+                        </div>
+                    </div>
+                    
+                    <div class="notes-section">
+                        <div class="notes-title">Alt Notalar:</div>
+                        <div class="notes-list">
+                            <span class="note-tag">Sandal Ağacı</span>
+                            <span class="note-tag">Vanilya</span>
+                            <span class="note-tag">Misk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="back-button" onclick="goBackToSearch()">
+                <i class="fas fa-arrow-left"></i> Geri Dön
+            </button>
+        </div>
+
+        <!-- Sonuç Grid Alanı (Nota ve Aile Arama İçin) -->
+        <div class="results-grid" id="resultsGrid">
+            <h2 class="results-title">Bulunan Parfümler</h2>
+            <div class="grid-container" id="gridContainer">
+                <!-- Örnek parfüm kartları - API'den gelecek veriler burada gösterilecek -->
+                <div class="perfume-grid-card" onclick="showComparison('Tom Ford Black Orchid')">
+                    <div class="grid-card-image">
+                        <i class="fas fa-image"></i> Parfüm Görseli
+                    </div>
+                    <div class="grid-card-content">
+                        <div class="grid-perfume-name">Tom Ford Black Orchid</div>
+                        <div class="grid-perfume-brand">Tom Ford</div>
+                        <div class="grid-perfume-price">₺3,250</div>
+                        <div class="grid-perfume-notes">
+                            <span class="grid-note">Vanilya</span>
+                            <span class="grid-note">Paçuli</span>
+                            <span class="grid-note">Sandal Ağacı</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="perfume-grid-card" onclick="showComparison('Dior Sauvage')">
+                    <div class="grid-card-image">
+                        <i class="fas fa-image"></i> Parfüm Görseli
+                    </div>
+                    <div class="grid-card-content">
+                        <div class="grid-perfume-name">Dior Sauvage</div>
+                        <div class="grid-perfume-brand">Dior</div>
+                        <div class="grid-perfume-price">₺2,850</div>
+                        <div class="grid-perfume-notes">
+                            <span class="grid-note">Bergamot</span>
+                            <span class="grid-note">Pembe Biber</span>
+                            <span class="grid-note">Amber</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="perfume-grid-card" onclick="showComparison('YSL Black Opium')">
+                    <div class="grid-card-image">
+                        <i class="fas fa-image"></i> Parfüm Görseli
+                    </div>
+                    <div class="grid-card-content">
+                        <div class="grid-perfume-name">YSL Black Opium</div>
+                        <div class="grid-perfume-brand">Yves Saint Laurent</div>
+                        <div class="grid-perfume-price">₺2,650</div>
+                        <div class="grid-perfume-notes">
+                            <span class="grid-note">Kahve</span>
+                            <span class="grid-note">Vanilya</span>
+                            <span class="grid-note">Yasemin</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="back-button" onclick="goBackToSearch()">
+                <i class="fas fa-arrow-left"></i> Geri Dön
+            </button>
+        </div>
+        
+        <!-- En Çok Aranan Parfümler Slider -->
+        <div class="popular-section">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">En Çok Aranan Parfümler</h2>
+                    <p class="section-subtitle">Popüler lüks parfümler ve uygun fiyatlı muadilleri</p>
+                </div>
+                <div class="nav-buttons">
+                    <button class="nav-btn prev-btn" onclick="previousSlide()" aria-label="Önceki">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="nav-btn next-btn" onclick="nextSlide()" aria-label="Sonraki">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="perfume-slider">
+                <div class="slider-container" id="sliderContainer">
+                    <!-- Slider Kartları -->
+                    <div class="perfume-card" onclick="showSliderComparison('Chanel No.5')">
+                        <div class="card-image">
+                            <div class="popularity-badge">#1</div>
+                            <i class="fas fa-image"></i> Parfüm Görseli
+                        </div>
+                        <div class="card-content">
+                            <div class="card-perfume-name">Chanel No.5</div>
+                            <div class="card-perfume-brand">Chanel</div>
+                            <div class="card-perfume-price">₺2,850</div>
+                            <div class="card-perfume-notes">
+                                <span class="card-note">Yasemin</span>
+                                <span class="card-note">Gül</span>
+                                <span class="card-note">Sandal Ağacı</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="perfume-card" onclick="showSliderComparison('Dior Sauvage')">
+                        <div class="card-image">
+                            <div class="popularity-badge">#2</div>
+                            <i class="fas fa-image"></i> Parfüm Görseli
+                        </div>
+                        <div class="card-content">
+                            <div class="card-perfume-name">Dior Sauvage</div>
+                            <div class="card-perfume-brand">Dior</div>
+                            <div class="card-perfume-price">₺2,850</div>
+                            <div class="card-perfume-notes">
+                                <span class="card-note">Bergamot</span>
+                                <span class="card-note">Pembe Biber</span>
+                                <span class="card-note">Amber</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="perfume-card" onclick="showSliderComparison('Tom Ford Oud Wood')">
+                        <div class="card-image">
+                            <div class="popularity-badge">#3</div>
+                            <i class="fas fa-image"></i> Parfüm Görseli
+                        </div>
+                        <div class="card-content">
+                            <div class="card-perfume-name">Tom Ford Oud Wood</div>
+                            <div class="card-perfume-brand">Tom Ford</div>
+                            <div class="card-perfume-price">₺4,250</div>
+                            <div class="card-perfume-notes">
+                                <span class="card-note">Oud</span>
+                                <span class="card-note">Sandal Ağacı</span>
+                                <span class="card-note">Vanilya</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="perfume-card" onclick="showSliderComparison('YSL Black Opium')">
+                        <div class="card-image">
+                            <div class="popularity-badge">#4</div>
+                            <i class="fas fa-image"></i> Parfüm Görseli
+                        </div>
+                        <div class="card-content">
+                            <div class="card-perfume-name">YSL Black Opium</div>
+                            <div class="card-perfume-brand">Yves Saint Laurent</div>
+                            <div class="card-perfume-price">₺2,650</div>
+                            <div class="card-perfume-notes">
+                                <span class="card-note">Kahve</span>
+                                <span class="card-note">Vanilya</span>
+                                <span class="card-note">Yasemin</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="perfume-card" onclick="showSliderComparison('Coco Mademoiselle')">
+                        <div class="card-image">
+                            <div class="popularity-badge">#5</div>
+                            <i class="fas fa-image"></i> Parfüm Görseli
+                        </div>
+                        <div class="card-content">
+                            <div class="card-perfume-name">Coco Mademoiselle</div>
+                            <div class="card-perfume-brand">Chanel</div>
+                            <div class="card-perfume-price">₺3,150</div>
+                            <div class="card-perfume-notes">
+                                <span class="card-note">Portakal</span>
+                                <span class="card-note">Gül</span>
+                                <span class="card-note">Paçuli</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
