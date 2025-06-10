@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parfüm Detay Test - PerfuMatch</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="src/style/perfume-detail.css">
+    <style>
+        .test-links {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        .test-links h3 {
+            margin-top: 0;
+            color: #495057;
+        }
+        .test-link {
+            display: inline-block;
+            margin: 5px 10px 5px 0;
+            padding: 8px 16px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .test-link:hover {
+            background: #0056b3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Test Links -->
+    <div class="test-links">
+        <h3>🧪 Parfüm Detay Test Linkleri</h3>
+        <p>Aşağıdaki linklerden birini tıklayarak parfüm detay sayfasını test edebilirsiniz:</p>
+        
+        <a href="perfume-detail.html?brand=Chanel&name=Chanel No. 5" class="test-link">
+            <i class="fas fa-crown"></i> Chanel No. 5
+        </a>
+        
+        <a href="perfume-detail.html?brand=Chanel&name=Bleu de Chanel" class="test-link">
+            <i class="fas fa-crown"></i> Bleu de Chanel
+        </a>
+        
+        <a href="perfume-detail.html?brand=Dior&name=Sauvage" class="test-link">
+            <i class="fas fa-crown"></i> Dior Sauvage
+        </a>
+        
+        <a href="perfume-detail.html?brand=Tom Ford&name=Black Orchid" class="test-link">
+            <i class="fas fa-crown"></i> Tom Ford Black Orchid
+        </a>
+        
+        <a href="perfume-detail.html?brand=Creed&name=Aventus" class="test-link">
+            <i class="fas fa-crown"></i> Creed Aventus
+        </a>
+        
+        <a href="perfume-detail.html?brand=Yves Saint Laurent&name=Black Opium" class="test-link">
+            <i class="fas fa-crown"></i> YSL Black Opium
+        </a>
+        
+        <a href="perfume-detail.html?brand=Versace&name=Eros" class="test-link">
+            <i class="fas fa-crown"></i> Versace Eros
+        </a>
+        
+        <a href="perfume-detail.html?brand=Giorgio Armani&name=Acqua di Gio" class="test-link">
+            <i class="fas fa-crown"></i> Armani Acqua di Gio
+        </a>
+        
+        <br><br>
+        
+        <h4>🔍 Test Edilecek Özellikler:</h4>
+        <ul>
+            <li>✅ Parfüm bilgilerinin doğru yüklenmesi</li>
+            <li>✅ Alternatifler listesinin görüntülenmesi</li>
+            <li>✅ Benzerlik skorlarının gösterilmesi</li>
+            <li>✅ Toast notification sisteminin çalışması</li>
+            <li>✅ Console debugging mesajlarının görüntülenmesi</li>
+            <li>✅ Loading spinner'ın çalışması</li>
+            <li>✅ Hata durumlarının yönetimi</li>
+        </ul>
+        
+        <p><strong>Not:</strong> Backend sunucusunun çalıştığından emin olun: <code>python server.py</code></p>
+    </div>
+
+    <!-- Ana Sayfa Linki -->
+    <div style="text-align: center; margin: 20px;">
+        <a href="index.html" style="color: #007bff; text-decoration: none;">
+            <i class="fas fa-home"></i> Ana Sayfaya Dön
+        </a>
+    </div>
+
+    <script>
+        console.log('🧪 Test sayfası yüklendi!');
+        console.log('🔗 Backend URL: http://localhost:5000');
+        
+        // Backend durumunu kontrol et
+        fetch('http://localhost:5000/api/health')
+            .then(response => response.json())
+            .then(data => {
+                console.log('✅ Backend çalışıyor:', data);
+                document.querySelector('.test-links').style.borderColor = '#28a745';
+            })
+            .catch(error => {
+                console.error('❌ Backend bağlantı hatası:', error);
+                document.querySelector('.test-links').style.borderColor = '#dc3545';
+                document.querySelector('.test-links').innerHTML += 
+                    '<div style="color: #dc3545; margin-top: 10px;"><strong>⚠️ Backend sunucusu çalışmıyor!</strong> Lütfen <code>python server.py</code> komutunu çalıştırın.</div>';
+            });
+    </script>
+</body>
+</html> 

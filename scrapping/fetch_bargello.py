@@ -62,6 +62,10 @@ for parfum_url in tqdm(parfum_links, desc="Parfümler Scrape Ediliyor"):
         puan_elementi = parfum_soup.select(".rate .rating-symbol-foreground span")
         puan = len(puan_elementi) if puan_elementi else "Bilinmiyor"
         
+        # Fiyat
+        fiyat_elementi = parfum_soup.select_one(".item-price-list .price")
+        fiyat = fiyat_elementi.text.strip() if fiyat_elementi else "Bilinmiyor"
+        
         # Notalar
         notalar = parfum_soup.select(".tab-content .tab-pane.active p")
         
@@ -81,6 +85,7 @@ for parfum_url in tqdm(parfum_links, desc="Parfümler Scrape Ediliyor"):
             "urun_kodu": urun_kodu,
             "stok_durumu": stok_durumu,
             "puan": puan,
+            "fiyat": fiyat,
             "notalar": {
                 "üst_notlar": ust_notlar,
                 "orta_notlar": orta_notlar,

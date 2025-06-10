@@ -9,7 +9,7 @@ JSON dosyalarından PostgreSQL veritabanına veri aktarır
 import os
 import sys
 from flask import Flask
-from src.models.database import init_db
+from src.models.database import init_db, db, Perfume, PerfumeNote, Note, Brand, PerfumeSimilarity
 from src.utils.data_importer import DataImporter
 
 def create_app():
@@ -26,15 +26,57 @@ def create_app():
     
     return app
 
+def clean_database():
+    """Veritabanını temizle (sadece import edilen veriler)"""
+    print("🧹 Veritabanı temizleniyor...")
+    
+    try:
+        # Benzerlik kayıtlarını sil
+        PerfumeSimilarity.query.delete()
+        print("✅ Benzerlik kayıtları silindi")
+        
+        # Parfüm-nota ilişkilerini sil
+        PerfumeNote.query.delete()
+        print("✅ Parfüm-nota ilişkileri silindi")
+        
+        # Parfümleri sil
+        Perfume.query.delete()
+        print("✅ Parfümler silindi")
+        
+        # Notaları sil
+        Note.query.delete()
+        print("✅ Notalar silindi")
+        
+        # Markaları sil (sadece alternative ve luxury olanları)
+        Brand.query.filter(Brand.type.in_(['alternative', 'luxury'])).delete()
+        print("✅ Markalar silindi")
+        
+        db.session.commit()
+        print("✅ Veritabanı temizleme tamamlandı")
+        return True
+        
+    except Exception as e:
+        print(f"❌ Veritabanı temizleme hatası: {e}")
+        db.session.rollback()
+        return False
+
 def main():
     """Ana fonksiyon"""
     print("🎯 PerfuMatch Veri İçe Aktarma Başlatılıyor...")
+    
+    # Komut satırı argümanlarını kontrol et
+    clean_first = '--clean' in sys.argv or '-c' in sys.argv
     
     # Flask uygulamasını oluştur
     app = create_app()
     
     with app.app_context():
         try:
+            # Temizleme seçeneği
+            if clean_first:
+                if not clean_database():
+                    return False
+            
             # Veri içe aktarıcıyı başlat
             importer = DataImporter()
             
@@ -71,5 +113,12 @@ def main():
             return False
 
 if __name__ == '__main__':
+    if len(sys.argv) > 1 and sys.argv[1] in ['--help', '-h']:
+        print("Kullanım:")
+        print("  python import_data.py           # Normal import")
+        print("  python import_data.py --clean   # Önce veritabanını temizle, sonra import et")
+        print("  python import_data.py -c        # Kısa versiyon")
+        sys.exit(0)
+    
     success = main()
     sys.exit(0 if success else 1) 

@@ -6,121 +6,468 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="src/style/style.css">
     <link rel="stylesheet" href="src/style/perfume-detail.css">
-    <title>Parfüm Detayları - PerfuMatch</title>
+    <title>Parfüm Detayı - PerfuMatch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8b4513 0%, #daa520 100%);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .back-nav {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 8px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: white;
+            color: #8b4513;
+        }
+
+        .detail-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 3rem auto;
+            padding: 3rem;
+            max-width: 800px;
+        }
+
+        .perfume-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid #f8f9fa;
+        }
+
+        .perfume-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .perfume-brand {
+            color: #8b4513;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .perfume-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .perfume-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+
+        .similarity-score {
+            background: #28a745;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .detail-section {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .detail-section h3 {
+            color: #8b4513;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .detail-section p {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .notes-section {
+            grid-column: 1 / -1;
+        }
+
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .note-category {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #8b4513;
+        }
+
+        .note-category h4 {
+            color: #8b4513;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .note-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+        }
+
+        .note-tag {
+            background: #e9ecef;
+            color: #495057;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #8b4513;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #6d3410;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #545b62;
+            transform: translateY(-2px);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #8b4513;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            text-align: center;
+            padding: 2rem;
+            color: #e74c3c;
+            background: #fff5f5;
+            border: 2px solid #fed7d7;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .detail-container {
+                margin: 1rem auto;
+                padding: 2rem 1.5rem;
+            }
+            
+            .detail-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .perfume-name {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="detail-header">
+    <header>
         <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <h1><a href="index.html">PerfuMatch</a></h1>
-                    <p class="subtitle">Parfüm Detayları</p>
-                </div>
-                <div class="navigation">
-                    <a href="index.html" class="nav-link">
-                        <i class="fas fa-home"></i> Ana Sayfa
-                    </a>
-                </div>
+            <h1>🌸 PerfuMatch</h1>
+            <div class="back-nav">
+                <a href="javascript:history.back()" class="back-link">← Geri Dön</a>
             </div>
         </div>
     </header>
 
-    <!-- Loading Spinner -->
-    <div class="loading-spinner" id="loadingSpinner">
-        <div class="spinner"></div>
-        <p>Parfüm bilgileri yükleniyor...</p>
-    </div>
+    <main class="container">
+        <div class="detail-container" id="detailContainer">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Parfüm detayları yükleniyor...</p>
+            </div>
+        </div>
+    </main>
 
-    <!-- Main Content -->
-    <div class="container main-content" id="mainContent" style="display: none;">
-        
-        <!-- Parfüm Bilgileri -->
-        <section class="perfume-info-section">
-            <div class="perfume-header">
-                <div class="perfume-image-container">
-                    <div class="perfume-image-placeholder" id="perfumeImage">
-                        <i class="fas fa-image"></i>
-                        <span>Parfüm Görseli</span>
-                    </div>
-                </div>
+    <script>
+        // URL'den parfüm ID'sini al
+        const urlParams = new URLSearchParams(window.location.search);
+        const perfumeId = urlParams.get('id');
+        const source = urlParams.get('source'); // 'luxury' veya 'alternative'
+
+        // Sayfa yüklendiğinde parfüm detaylarını getir
+        document.addEventListener('DOMContentLoaded', function() {
+            if (perfumeId) {
+                loadPerfumeDetails(perfumeId, source);
+            } else {
+                showError('Parfüm ID\'si bulunamadı');
+            }
+        });
+
+        // Parfüm detaylarını yükle
+        async function loadPerfumeDetails(id, source) {
+            try {
+                let endpoint, response;
                 
-                <div class="perfume-details">
-                    <h1 class="perfume-title" id="perfumeTitle">Parfüm Adı</h1>
-                    <h2 class="perfume-brand" id="perfumeBrand">Marka</h2>
-                    <div class="perfume-meta">
-                        <span class="perfume-gender" id="perfumeGender">Unisex</span>
-                        <span class="perfume-perfumer" id="perfumePerfumer">Parfümör: Bilinmiyor</span>
-                    </div>
+                if (source === 'luxury') {
+                    // Luxury perfume için önce luxury endpoint'i dene
+                    endpoint = '/api/luxury-perfume';
+                    response = await fetch(`${endpoint}/${id}`);
                     
-                    <!-- Parfüm Notaları -->
-                    <div class="notes-container">
-                        <div class="notes-section">
-                            <h3>Parfüm Notaları</h3>
-                            <div class="notes-list" id="perfumeNotes">
-                                <!-- Notalar buraya eklenecek -->
+                    // Eğer luxury'de bulunamazsa, genel perfume endpoint'ini dene
+                    if (!response.ok) {
+                        endpoint = '/api/perfume';
+                        response = await fetch(`${endpoint}/${id}`);
+                    }
+                } else {
+                    // Alternative perfume için önce alternative endpoint'i dene
+                    endpoint = '/api/alternative-perfume';
+                    response = await fetch(`${endpoint}/${id}`);
+                    
+                    // Eğer alternative'de bulunamazsa, genel perfume endpoint'ini dene
+                    if (!response.ok) {
+                        endpoint = '/api/perfume';
+                        response = await fetch(`${endpoint}/${id}`);
+                    }
+                }
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                // API response format'ına göre parfüm verisini al
+                const perfume = data.perfume || data;
+                displayPerfumeDetails(perfume);
+                
+            } catch (error) {
+                console.error('❌ Parfüm detayları yüklenirken hata:', error);
+                showError('Parfüm detayları yüklenirken bir hata oluştu');
+            }
+        }
+
+        // Parfüm detaylarını göster
+        function displayPerfumeDetails(perfume) {
+            const container = document.getElementById('detailContainer');
+            
+            // Notaları düzenle
+            let topNotes = [], middleNotes = [], baseNotes = [];
+            if (perfume.notes) {
+                topNotes = perfume.notes.top || [];
+                middleNotes = perfume.notes.middle || [];
+                baseNotes = perfume.notes.base || [];
+            }
+
+            container.innerHTML = `
+                <div class="perfume-header">
+                    <div class="perfume-icon">🌸</div>
+                    <div class="perfume-brand">${perfume.brand?.name || perfume.brand || 'Bilinmeyen Marka'}</div>
+                    <div class="perfume-name">${perfume.name || 'İsimsiz Parfüm'}</div>
+                    <div class="perfume-price">${formatPrice(perfume.price)}</div>
+                    ${perfume.similarity_score ? `<div class="similarity-score">%${Math.round(perfume.similarity_score)} Benzerlik</div>` : ''}
+                </div>
+
+                <div class="detail-grid">
+                    <div class="detail-section">
+                        <h3>📋 Genel Bilgiler</h3>
+                        <p><strong>Cinsiyet:</strong> ${getGenderText(perfume.gender)}</p>
+                        <p><strong>Marka:</strong> ${perfume.brand?.name || perfume.brand || 'Bilinmeyen'}</p>
+                        ${perfume.concentration ? `<p><strong>Konsantrasyon:</strong> ${perfume.concentration}</p>` : ''}
+                        ${perfume.size ? `<p><strong>Boyut:</strong> ${perfume.size}</p>` : ''}
+                    </div>
+
+                    <div class="detail-section">
+                        <h3>💰 Fiyat Bilgileri</h3>
+                        <p><strong>Fiyat:</strong> ${formatPrice(perfume.price)}</p>
+                        ${perfume.original_price && perfume.original_price !== perfume.price ? 
+                            `<p><strong>Orijinal Fiyat:</strong> <s>${formatPrice(perfume.original_price)}</s></p>` : ''}
+                        ${perfume.currency ? `<p><strong>Para Birimi:</strong> ${perfume.currency}</p>` : ''}
+                    </div>
+
+                    ${(topNotes.length > 0 || middleNotes.length > 0 || baseNotes.length > 0) ? `
+                        <div class="detail-section notes-section">
+                            <h3>🌿 Parfüm Notaları</h3>
+                            <div class="notes-grid">
+                                ${topNotes.length > 0 ? `
+                                    <div class="note-category">
+                                        <h4>Üst Notalar</h4>
+                                        <div class="note-tags">
+                                            ${topNotes.map(note => `<span class="note-tag">${note.name || note}</span>`).join('')}
+                                        </div>
+                                    </div>
+                                ` : ''}
+                                
+                                ${middleNotes.length > 0 ? `
+                                    <div class="note-category">
+                                        <h4>Kalp Notalar</h4>
+                                        <div class="note-tags">
+                                            ${middleNotes.map(note => `<span class="note-tag">${note.name || note}</span>`).join('')}
+                                        </div>
+                                    </div>
+                                ` : ''}
+                                
+                                ${baseNotes.length > 0 ? `
+                                    <div class="note-category">
+                                        <h4>Dip Notalar</h4>
+                                        <div class="note-tags">
+                                            ${baseNotes.map(note => `<span class="note-tag">${note.name || note}</span>`).join('')}
+                                        </div>
+                                    </div>
+                                ` : ''}
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Değerlendirmeler -->
-                    <div class="ratings-container" id="ratingsContainer">
-                        <h3>Değerlendirmeler</h3>
-                        <div class="ratings-grid">
-                            <!-- Değerlendirmeler buraya eklenecek -->
-                        </div>
-                    </div>
-
-                    <!-- Parfumo Linki -->
-                    <div class="external-link">
-                        <a href="#" id="parfumoLink" target="_blank" class="parfumo-btn">
-                            <i class="fas fa-external-link-alt"></i>
-                            Parfumo'da Görüntüle
-                        </a>
-                    </div>
+                    ` : ''}
                 </div>
-            </div>
-        </section>
 
-        <!-- Muadil Parfümler -->
-        <section class="alternatives-section">
-            <div class="section-header">
-                <h2 class="section-title">Uygun Fiyatlı Muadiller</h2>
-                <p class="section-subtitle">Bu parfüme benzer notlara sahip uygun fiyatlı alternatifler</p>
-            </div>
-            
-            <div class="alternatives-grid" id="alternativesGrid">
-                <!-- Muadil parfümler buraya eklenecek -->
-            </div>
-        </section>
+                <div class="action-buttons">
+                    ${perfume.product_url ? `
+                        <a href="${perfume.product_url}" target="_blank" class="btn btn-primary">
+                            🛒 Satın Al
+                        </a>
+                    ` : ''}
+                    <a href="javascript:history.back()" class="btn btn-secondary">
+                        ← Geri Dön
+                    </a>
+                </div>
+            `;
+        }
 
-        <!-- Benzer Parfümler (İsteğe bağlı) -->
-        <section class="similar-section">
-            <div class="section-header">
-                <h2 class="section-title">Benzer Parfümler</h2>
-                <p class="section-subtitle">Aynı aileden diğer parfümler</p>
-            </div>
-            
-            <div class="similar-grid" id="similarGrid">
-                <!-- Benzer parfümler buraya eklenecek -->
-            </div>
-        </section>
-    </div>
+        // Yardımcı fonksiyonlar
+        function formatPrice(price) {
+            if (!price) return 'Fiyat Belirtilmemiş';
+            return typeof price === 'number' ? `${price.toLocaleString('tr-TR')}₺` : price;
+        }
 
-    <!-- Error Message -->
-    <div class="error-container" id="errorContainer" style="display: none;">
-        <div class="error-content">
-            <i class="fas fa-exclamation-triangle"></i>
-            <h2>Parfüm Bulunamadı</h2>
-            <p>Aradığınız parfümün bilgilerine ulaşılamadı. Lütfen daha sonra tekrar deneyin.</p>
-            <a href="index.html" class="back-home-btn">
-                <i class="fas fa-home"></i> Ana Sayfaya Dön
-            </a>
-        </div>
-    </div>
+        function getGenderText(gender) {
+            const genderMap = {
+                'men': '👨 Erkek',
+                'women': '👩 Kadın',
+                'unisex': '🌈 Unisex'
+            };
+            return genderMap[gender?.toLowerCase()] || '🌈 Unisex';
+        }
 
-    <!-- Scripts -->
-    <script src="src/api/perfume-api.js"></script>
-    <script src="src/script/perfume-detail.js"></script>
+        function showError(message) {
+            const container = document.getElementById('detailContainer');
+            container.innerHTML = `
+                <div class="error">
+                    <h3>❌ Hata</h3>
+                    <p>${message}</p>
+                    <br>
+                    <a href="index.html" class="btn btn-secondary">Ana Sayfaya Dön</a>
+                </div>
+            `;
+        }
+    </script>
 </body>
 </html> 

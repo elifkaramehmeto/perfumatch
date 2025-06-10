@@ -486,6 +486,96 @@ class PerfumeAPI {
             console.error('Nota yükleme hatası:', error);
         }
     }
+
+    // URL'den parfüm bilgilerini parse et
+    parsePerfumeFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const brand = urlParams.get('brand');
+        const name = urlParams.get('name');
+        
+        console.log('🔍 URL\'den parse edilen bilgiler:', { brand, name });
+        
+        if (!brand || !name) {
+            console.error('❌ URL\'de brand veya name parametresi bulunamadı');
+            return null;
+        }
+        
+        return { brand, name };
+    }
+
+    // Marka ve isim ile parfüm getir
+    async fetchPerfumeByBrandAndName(brand, name) {
+        try {
+            console.log('🔍 Parfüm aranıyor:', { brand, name });
+            
+            // Önce veritabanında ara
+            const searchResults = await this.searchPerfumes(`${brand} ${name}`, 'name');
+            console.log('📊 Veritabanı arama sonucu:', searchResults);
+            
+            if (searchResults.results && searchResults.results.length > 0) {
+                const perfume = searchResults.results[0];
+                console.log('✅ Veritabanında parfüm bulundu:', perfume);
+                
+                // Alternatifler için API çağrısı yap
+                try {
+                    const alternatives = await this.getPerfumeAlternatives(perfume.id);
+                    console.log('🔄 Alternatifler getiriliyor:', alternatives);
+                    
+                    // Alternatifler formatını düzenle
+                    const formattedAlternatives = alternatives.alternatives.map(alt => {
+                        const altPerfume = alt.alternative_perfume;
+                        return {
+                            id: altPerfume.id,
+                            name: altPerfume.name,
+                            brand: altPerfume.brand ? altPerfume.brand.name : 'Bilinmiyor',
+                            similarity_score: `${alt.similarity_score}%`,
+                            price: altPerfume.price ? `${altPerfume.price} ${altPerfume.currency}` : 'Fiyat Belirtilmemiş',
+                            notes: altPerfume.notes || [],
+                            gender: altPerfume.gender,
+                            image_url: altPerfume.image_url
+                        };
+                    });
+                    
+                    perfume.bargello_recommendations = formattedAlternatives;
+                    console.log('✅ Formatlanmış alternatifler:', formattedAlternatives);
+                } catch (altError) {
+                    console.warn('⚠️ Alternatifler getirilemedi:', altError);
+                    perfume.bargello_recommendations = [];
+                }
+                
+                return perfume;
+            }
+            
+            // Veritabanında bulunamadı, Parfumo'dan ara
+            console.log('🌐 Parfumo\'dan aranıyor...');
+            const parfumoResult = await this.searchParfumo(brand, name);
+            console.log('📊 Parfumo arama sonucu:', parfumoResult);
+            
+            if (parfumoResult) {
+                // Parfumo verisini uygun formata çevir
+                const formattedPerfume = {
+                    name: name,
+                    brand: { name: brand },
+                    gender: parfumoResult.gender || 'Unisex',
+                    perfumer: parfumoResult.perfumer || 'Bilinmiyor',
+                    url: parfumoResult.url,
+                    notes: parfumoResult.notes || [],
+                    ratings: parfumoResult.ratings || {},
+                    bargello_recommendations: parfumoResult.bargello_recommendations || []
+                };
+                
+                console.log('✅ Parfumo\'dan parfüm formatlandı:', formattedPerfume);
+                return formattedPerfume;
+            }
+            
+            console.error('❌ Parfüm hiçbir yerde bulunamadı');
+            return null;
+            
+        } catch (error) {
+            console.error('❌ fetchPerfumeByBrandAndName hatası:', error);
+            throw error;
+        }
+    }
 }
 
 // Global API instance

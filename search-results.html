@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arama Sonuçları - PerfuMatch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #8b4513 0%, #daa520 100%);
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .back-nav {
+            background: rgba(255,255,255,0.1);
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .back-link {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 8px 20px;
+            border: 2px solid white;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: white;
+            color: #8b4513;
+        }
+
+        .search-info {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .search-info h2 {
+            color: #8b4513;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-details {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .results-count {
+            background: #28a745;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .perfumes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .perfume-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .perfume-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: #8b4513;
+        }
+
+        .perfume-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: #adb5bd;
+            font-size: 3rem;
+        }
+
+        .perfume-brand {
+            color: #8b4513;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .perfume-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .perfume-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        .perfume-gender {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .perfume-gender.men {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .perfume-gender.women {
+            background: #fce4ec;
+            color: #c2185b;
+        }
+
+        .perfume-gender.unisex {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .perfume-notes {
+            margin-top: 1rem;
+        }
+
+        .notes-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .notes-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+        }
+
+        .note-tag {
+            background: #f8f9fa;
+            color: #495057;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .card-actions {
+            margin-top: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .action-btn.primary {
+            background: #8b4513;
+            color: white;
+        }
+
+        .action-btn.primary:hover {
+            background: #6d3410;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .action-btn.secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .action-btn.secondary:hover {
+            background: #545b62;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #8b4513;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            text-align: center;
+            padding: 2rem;
+            color: #e74c3c;
+            background: #fff5f5;
+            border: 2px solid #fed7d7;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 3rem;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .search-info {
+                margin: 1rem 0;
+                padding: 1.5rem;
+            }
+            
+            .search-info h2 {
+                font-size: 1.5rem;
+            }
+            
+            .perfumes-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .card-actions {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌸 PerfuMatch</h1>
+            <div class="back-nav">
+                <a href="/" class="back-link">← Ana Sayfaya Dön</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="search-info" id="searchInfo">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Arama sonuçları yükleniyor...</p>
+            </div>
+        </div>
+
+        <section class="perfumes-grid" id="resultsGrid">
+            <!-- Arama sonuçları burada gösterilecek -->
+        </section>
+    </main>
+
+    <script>
+        // URL'den arama parametrelerini al
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchTerm = urlParams.get('q');
+        const searchType = urlParams.get('type') || 'name';
+
+        // Sayfa yüklendiğinde arama yap
+        document.addEventListener('DOMContentLoaded', function() {
+            if (searchTerm) {
+                performSearch(searchTerm, searchType);
+            } else {
+                showError('Arama terimi bulunamadı');
+            }
+        });
+
+        // Arama işlemini gerçekleştir
+        async function performSearch(term, type) {
+            try {
+                const response = await fetch('/api/perfume/search', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        searchTerm: term,
+                        searchType: type,
+                        limit: 50
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                displaySearchResults(data, term, type);
+
+            } catch (error) {
+                console.error('❌ Arama hatası:', error);
+                showError('Arama sırasında bir hata oluştu');
+            }
+        }
+
+        // Arama sonuçlarını göster
+        function displaySearchResults(data, searchTerm, searchType) {
+            const searchInfo = document.getElementById('searchInfo');
+            const resultsGrid = document.getElementById('resultsGrid');
+
+            // Arama bilgilerini göster
+            const typeText = {
+                'name': 'İsim',
+                'notes': 'Nota',
+                'brand': 'Marka'
+            };
+
+            searchInfo.innerHTML = `
+                <h2>🔍 Arama Sonuçları</h2>
+                <div class="search-details">
+                    <strong>"${searchTerm}"</strong> için <strong>${typeText[searchType]}</strong> araması
+                </div>
+                <div class="results-count">${data.total} sonuç bulundu</div>
+            `;
+
+            // Sonuçları göster
+            if (data.results && data.results.length > 0) {
+                resultsGrid.innerHTML = data.results.map(perfume => createPerfumeCard(perfume)).join('');
+            } else {
+                resultsGrid.innerHTML = `
+                    <div class="no-results">
+                        <h3>😔 Sonuç Bulunamadı</h3>
+                        <p>"${searchTerm}" için hiçbir parfüm bulunamadı.</p>
+                        <br>
+                        <a href="index.html" class="action-btn primary">Ana Sayfaya Dön</a>
+                    </div>
+                `;
+            }
+        }
+
+        // Parfüm kartı oluştur
+        function createPerfumeCard(perfume) {
+            const genderClass = perfume.gender ? perfume.gender.toLowerCase() : 'unisex';
+            const brandName = perfume.brand?.name || perfume.brand || 'Bilinmeyen Marka';
+            
+            // Notaları düzenle
+            let allNotes = [];
+            if (perfume.notes) {
+                if (perfume.notes.top) allNotes = allNotes.concat(perfume.notes.top.map(note => note.name || note));
+                if (perfume.notes.middle) allNotes = allNotes.concat(perfume.notes.middle.map(note => note.name || note));
+                if (perfume.notes.base) allNotes = allNotes.concat(perfume.notes.base.map(note => note.name || note));
+            }
+            
+            return `
+                <div class="perfume-card">
+                    <div class="perfume-image">🌸</div>
+                    <div class="perfume-brand">${brandName}</div>
+                    <div class="perfume-name">${perfume.name || 'İsimsiz Parfüm'}</div>
+                    <div class="perfume-price">${formatPrice(perfume.price)}</div>
+                    <div class="perfume-gender ${genderClass}">${getGenderText(perfume.gender)}</div>
+                    ${allNotes.length > 0 ? `
+                        <div class="perfume-notes">
+                            <div class="notes-title">Notalar:</div>
+                            <div class="notes-list">
+                                ${allNotes.slice(0, 5).map(note => `<span class="note-tag">${note}</span>`).join('')}
+                                ${allNotes.length > 5 ? '<span class="note-tag">+' + (allNotes.length - 5) + ' daha</span>' : ''}
+                            </div>
+                        </div>
+                    ` : ''}
+                    <div class="card-actions">
+                        <a href="perfume-detail.html?id=${perfume.id}&source=alternative" class="action-btn primary">
+                            📋 Detaylar
+                        </a>
+                        ${perfume.product_url ? `
+                            <a href="${perfume.product_url}" target="_blank" class="action-btn secondary">
+                                🛒 Satın Al
+                            </a>
+                        ` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Yardımcı fonksiyonlar
+        function formatPrice(price) {
+            if (!price) return 'Fiyat belirtilmemiş';
+            if (typeof price === 'string' && price.includes('₺')) return price;
+            return typeof price === 'number' ? `₺${price.toLocaleString('tr-TR')}` : price;
+        }
+
+        function getGenderText(gender) {
+            const genderMap = {
+                'men': '👨 Erkek',
+                'women': '👩 Kadın',
+                'unisex': '🌈 Unisex',
+                'erkek': '👨 Erkek',
+                'kadın': '👩 Kadın'
+            };
+            return genderMap[gender?.toLowerCase()] || '🌈 Unisex';
+        }
+
+        function showError(message) {
+            const searchInfo = document.getElementById('searchInfo');
+            const resultsGrid = document.getElementById('resultsGrid');
+            
+            searchInfo.innerHTML = `
+                <div class="error">
+                    <h3>❌ Hata</h3>
+                    <p>${message}</p>
+                </div>
+            `;
+            
+            resultsGrid.innerHTML = '';
+        }
+    </script>
+</body>
+</html> 

@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import json
 import os
@@ -11,7 +11,7 @@ import urllib.parse
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='.')
 CORS(app)  # Enable CORS for all routes
 
 # Load data files
@@ -65,20 +65,41 @@ all_perfumes = []
 
 # Process Bargello perfumes
 for perfume in bargello_perfumes:
+    # Fiyat formatını düzenle
+    price = perfume.get('fiyat', '')
+    if isinstance(price, str) and '₺' in price:
+        # "350,00₺" formatından sayısal değer çıkar
+        try:
+            price_num = float(price.replace('₺', '').replace(',', '.').strip())
+        except:
+            price_num = price
+    else:
+        price_num = price
+    
+    # Notaları düzenle
+    notalar = perfume.get('notalar', {})
+    if isinstance(notalar, dict):
+        ust_notlar = notalar.get('üst_notlar', '') or notalar.get('Üst Notalar', '')
+        orta_notlar = notalar.get('orta_notlar', '') or notalar.get('Orta Notalar', '')
+        alt_notlar = notalar.get('alt_notlar', '') or notalar.get('Alt Notalar', '')
+    else:
+        ust_notlar = orta_notlar = alt_notlar = ''
+    
     processed = {
         'id': f"bargello_{len(all_perfumes)}",
         'name': perfume.get('isim', ''),
         'brand': {'name': 'Bargello'},
-        'price': perfume.get('fiyat', ''),
+        'price': price_num,
         'currency': 'TRY',
         'notes': {
-            'top': [{'name': note} for note in perfume.get('notalar', {}).get('Üst Notalar', '').split(',') if note.strip()],
-            'middle': [{'name': note} for note in perfume.get('notalar', {}).get('Orta Notalar', '').split(',') if note.strip()],
-            'base': [{'name': note} for note in perfume.get('notalar', {}).get('Alt Notalar', '').split(',') if note.strip()]
+            'top': [{'name': note.strip()} for note in ust_notlar.split(',') if note.strip()],
+            'middle': [{'name': note.strip()} for note in orta_notlar.split(',') if note.strip()],
+            'base': [{'name': note.strip()} for note in alt_notlar.split(',') if note.strip()]
         },
         'gender': perfume.get('cinsiyet', 'Unisex'),
         'family': perfume.get('aile', ''),
-        'source': 'bargello'
+        'source': 'bargello',
+        'product_url': perfume.get('link', '')
     }
     all_perfumes.append(processed)
 
@@ -97,12 +118,27 @@ for perfume in muscent_perfumes:
         },
         'gender': perfume.get('gender', 'Unisex'),
         'family': perfume.get('family', ''),
-        'source': 'muscent'
+        'source': 'muscent',
+        'product_url': perfume.get('url', '')
     }
     all_perfumes.append(processed)
 
 # Process Zara perfumes
 for perfume in zara_perfumes:
+    # Zara notalarını düzenle - bazen liste, bazen dict olabiliyor
+    notes_data = perfume.get('notes', {})
+    if isinstance(notes_data, list):
+        # Eğer notes bir liste ise, boş dict kullan
+        top_notes = []
+        middle_notes = []
+        base_notes = []
+    elif isinstance(notes_data, dict):
+        top_notes = notes_data.get('top', [])
+        middle_notes = notes_data.get('middle', [])
+        base_notes = notes_data.get('base', [])
+    else:
+        top_notes = middle_notes = base_notes = []
+    
     processed = {
         'id': f"zara_{len(all_perfumes)}",
         'name': perfume.get('name', ''),
@@ -110,17 +146,40 @@ for perfume in zara_perfumes:
         'price': perfume.get('price', ''),
         'currency': 'TRY',
         'notes': {
-            'top': [{'name': note} for note in perfume.get('notes', {}).get('top', [])],
-            'middle': [{'name': note} for note in perfume.get('notes', {}).get('middle', [])],
-            'base': [{'name': note} for note in perfume.get('notes', {}).get('base', [])]
+            'top': [{'name': note} for note in top_notes if note],
+            'middle': [{'name': note} for note in middle_notes if note],
+            'base': [{'name': note} for note in base_notes if note]
         },
         'gender': perfume.get('gender', 'Unisex'),
         'family': perfume.get('family', ''),
-        'source': 'zara'
+        'source': 'zara',
+        'product_url': perfume.get('url', '')
     }
     all_perfumes.append(processed)
 
 logging.info(f"Loaded {len(all_perfumes)} perfumes from all sources")
+
+# Static file routes
+@app.route('/')
+def index():
+    """Serve the main page"""
+    return send_from_directory('.', 'index.html')
+
+@app.route('/search-results.html')
+def search_results():
+    """Serve search results page"""
+    return send_from_directory('.', 'search-results.html')
+
+@app.route('/perfume-detail.html')
+def perfume_detail():
+    """Serve perfume detail page"""
+    return send_from_directory('.', 'perfume-detail.html')
+
+# CSS ve JS dosyaları için özel route'lar
+@app.route('/src/<path:filename>')
+def src_files(filename):
+    """Serve src directory files"""
+    return send_from_directory('src', filename)
 
 # API Routes
 @app.route('/api/health', methods=['GET'])
@@ -134,11 +193,13 @@ def health_check():
 
 @app.route('/api/perfume/search', methods=['POST'])
 def search_perfumes():
-    """Search perfumes by name, notes, or family"""
+    """Search perfumes by name, notes, family, or advanced filters"""
     data = request.get_json()
     search_term = data.get('searchTerm', '').lower()
     search_type = data.get('searchType', 'name')
     gender = data.get('gender', 'all')
+    family = data.get('family', 'all')
+    selected_notes = data.get('selectedNotes', [])
     limit = data.get('limit', 10)
     
     results = []
@@ -154,26 +215,54 @@ def search_perfumes():
             elif gender == 'men' and perfume_gender not in ['erkek', 'men', 'male']:
                 continue
         
-        # Search by type
-        if search_type == 'name':
-            if search_term in perfume['name'].lower():
-                match = True
-        elif search_type == 'notes':
-            # Search in all notes
-            search_terms = [term.strip() for term in search_term.split(',')]
-            for term in search_terms:
-                for note_type in ['top', 'middle', 'base']:
-                    for note in perfume['notes'].get(note_type, []):
-                        if term in note['name'].lower():
-                            match = True
+        # Family filter
+        if family != 'all':
+            perfume_family = perfume.get('family', '').lower()
+            if family.lower() not in perfume_family:
+                continue
+        
+        # Notes filter (if selected notes are provided)
+        if selected_notes:
+            perfume_notes = []
+            for note_type in ['top', 'middle', 'base']:
+                for note in perfume['notes'].get(note_type, []):
+                    note_name = note.get('name', '') if isinstance(note, dict) else str(note)
+                    perfume_notes.append(note_name.lower())
+            
+            # Check if any of the selected notes match
+            notes_match = any(selected_note.lower() in perfume_notes for selected_note in selected_notes)
+            if not notes_match:
+                continue
+        
+        # Search by type (only if search term is provided)
+        if search_term:
+            if search_type == 'name':
+                if search_term in perfume['name'].lower():
+                    match = True
+            elif search_type == 'notes':
+                # Search in all notes
+                search_terms = [term.strip() for term in search_term.split(',')]
+                for term in search_terms:
+                    for note_type in ['top', 'middle', 'base']:
+                        for note in perfume['notes'].get(note_type, []):
+                            note_name = note.get('name', '') if isinstance(note, dict) else str(note)
+                            if term in note_name.lower():
+                                match = True
+                                break
+                        if match:
                             break
                     if match:
                         break
-                if match:
-                    break
-        elif search_type == 'family':
-            if search_term in perfume.get('family', '').lower():
-                match = True
+            elif search_type == 'brand':
+                brand_name = perfume['brand'].get('name', '') if isinstance(perfume['brand'], dict) else str(perfume['brand'])
+                if search_term in brand_name.lower():
+                    match = True
+            elif search_type == 'family':
+                if search_term in perfume.get('family', '').lower():
+                    match = True
+        else:
+            # If no search term, include all perfumes that pass filters
+            match = True
         
         if match:
             results.append(perfume)
@@ -184,7 +273,9 @@ def search_perfumes():
         'results': results,
         'total': len(results),
         'search_term': search_term,
-        'search_type': search_type
+        'search_type': search_type,
+        'family': family,
+        'selected_notes': selected_notes
     })
 
 @app.route('/api/perfume/parfumo-search', methods=['POST'])
@@ -227,11 +318,15 @@ def get_notes():
     for perfume in all_perfumes:
         if note_type and note_type in perfume['notes']:
             for note in perfume['notes'][note_type]:
-                all_notes.add(note['name'])
+                note_name = note.get('name', '') if isinstance(note, dict) else str(note)
+                if note_name:
+                    all_notes.add(note_name)
         elif not note_type:
             for note_category in perfume['notes'].values():
                 for note in note_category:
-                    all_notes.add(note['name'])
+                    note_name = note.get('name', '') if isinstance(note, dict) else str(note)
+                    if note_name:
+                        all_notes.add(note_name)
     
     return jsonify({
         'notes': sorted(list(all_notes)),
@@ -244,7 +339,9 @@ def get_brands():
     """Get all brands"""
     brands = set()
     for perfume in all_perfumes:
-        brands.add(perfume['brand']['name'])
+        brand_name = perfume['brand'].get('name', '') if isinstance(perfume['brand'], dict) else str(perfume['brand'])
+        if brand_name:
+            brands.add(brand_name)
     
     return jsonify({
         'brands': sorted(list(brands)),
@@ -336,6 +433,215 @@ def rate_perfume(perfume_id):
         'message': 'Değerlendirme kaydedildi',
         'perfume_id': perfume_id,
         'rating': rating
+    })
+
+@app.route('/api/luxury-perfumes', methods=['GET'])
+def get_luxury_perfumes():
+    """Get list of luxury perfumes for the main page"""
+    # For demo purposes, we'll create some mock luxury perfumes
+    # In a real app, you'd have a separate luxury perfumes database
+    luxury_perfumes = [
+        {
+            'id': 1,
+            'name': 'Sauvage',
+            'brand': {'name': 'Dior'},
+            'price': 2500,
+            'currency': 'TRY',
+            'gender': 'men',
+            'notes': {
+                'top': [{'name': 'Bergamot'}, {'name': 'Pink Pepper'}],
+                'middle': [{'name': 'Lavender'}, {'name': 'Geranium'}],
+                'base': [{'name': 'Ambroxan'}, {'name': 'Cedar'}]
+            }
+        },
+        {
+            'id': 2,
+            'name': 'Black Opium',
+            'brand': {'name': 'Yves Saint Laurent'},
+            'price': 2800,
+            'currency': 'TRY',
+            'gender': 'women',
+            'notes': {
+                'top': [{'name': 'Pink Pepper'}, {'name': 'Orange Blossom'}],
+                'middle': [{'name': 'Jasmine'}, {'name': 'Coffee'}],
+                'base': [{'name': 'Vanilla'}, {'name': 'Patchouli'}]
+            }
+        },
+        {
+            'id': 3,
+            'name': 'Aventus',
+            'brand': {'name': 'Creed'},
+            'price': 4500,
+            'currency': 'TRY',
+            'gender': 'men',
+            'notes': {
+                'top': [{'name': 'Pineapple'}, {'name': 'Bergamot'}, {'name': 'Apple'}],
+                'middle': [{'name': 'Rose'}, {'name': 'Dry Birch'}, {'name': 'Moroccan Jasmine'}],
+                'base': [{'name': 'Oak Moss'}, {'name': 'Musk'}, {'name': 'Ambergris'}]
+            }
+        },
+        {
+            'id': 4,
+            'name': 'La Vie Est Belle',
+            'brand': {'name': 'Lancôme'},
+            'price': 2200,
+            'currency': 'TRY',
+            'gender': 'women',
+            'notes': {
+                'top': [{'name': 'Pear'}, {'name': 'Black Currant'}],
+                'middle': [{'name': 'Iris'}, {'name': 'Jasmine'}, {'name': 'Orange Blossom'}],
+                'base': [{'name': 'Vanilla'}, {'name': 'Praline'}, {'name': 'Tonka Bean'}]
+            }
+        },
+        {
+            'id': 5,
+            'name': 'Tom Ford Black Orchid',
+            'brand': {'name': 'Tom Ford'},
+            'price': 3200,
+            'currency': 'TRY',
+            'gender': 'unisex',
+            'notes': {
+                'top': [{'name': 'Truffle'}, {'name': 'Gardenia'}, {'name': 'Black Currant'}],
+                'middle': [{'name': 'Orchid'}, {'name': 'Spices'}, {'name': 'Lotus Wood'}],
+                'base': [{'name': 'Vanilla'}, {'name': 'Sandalwood'}, {'name': 'Patchouli'}]
+            }
+        },
+        {
+            'id': 6,
+            'name': 'Bleu de Chanel',
+            'brand': {'name': 'Chanel'},
+            'price': 2600,
+            'currency': 'TRY',
+            'gender': 'men',
+            'notes': {
+                'top': [{'name': 'Grapefruit'}, {'name': 'Lemon'}, {'name': 'Mint'}],
+                'middle': [{'name': 'Ginger'}, {'name': 'Nutmeg'}, {'name': 'Jasmine'}],
+                'base': [{'name': 'Incense'}, {'name': 'Cedar'}, {'name': 'Sandalwood'}]
+            }
+        }
+    ]
+    
+    return jsonify({'perfumes': luxury_perfumes})
+
+@app.route('/api/luxury-perfume/<int:perfume_id>', methods=['GET'])
+def get_luxury_perfume_detail(perfume_id):
+    """Get detailed information about a luxury perfume"""
+    luxury_perfumes = get_luxury_perfumes().get_json()['perfumes']
+    
+    for perfume in luxury_perfumes:
+        if perfume['id'] == perfume_id:
+            return jsonify({'perfume': perfume})
+    
+    return jsonify({'error': 'Luxury perfume not found'}), 404
+
+@app.route('/api/alternative-perfume/<perfume_id>', methods=['GET'])
+def get_alternative_perfume_detail(perfume_id):
+    """Get detailed information about an alternative perfume"""
+    for perfume in all_perfumes:
+        if perfume['id'] == perfume_id:
+            # Add product URL if available
+            if perfume.get('source') == 'bargello':
+                # Find original data for product URL
+                for orig_perfume in bargello_perfumes:
+                    if orig_perfume.get('isim') == perfume['name']:
+                        perfume['product_url'] = orig_perfume.get('link', '')
+                        break
+            elif perfume.get('source') == 'zara':
+                # Find original data for product URL
+                for orig_perfume in zara_perfumes:
+                    if orig_perfume.get('name') == perfume['name']:
+                        perfume['product_url'] = orig_perfume.get('url', '')
+                        break
+            elif perfume.get('source') == 'muscent':
+                # Find original data for product URL
+                for orig_perfume in muscent_perfumes:
+                    if orig_perfume.get('name') == perfume['name']:
+                        perfume['product_url'] = orig_perfume.get('url', '')
+                        break
+            
+            return jsonify({'perfume': perfume})
+    
+    return jsonify({'error': 'Alternative perfume not found'}), 404
+
+@app.route('/api/find-alternatives', methods=['POST'])
+def find_alternatives():
+    """Find alternative perfumes for a luxury perfume"""
+    data = request.get_json()
+    luxury_perfume_id = data.get('luxury_perfume_id')
+    min_similarity = data.get('min_similarity', 0.3)
+    max_results = data.get('max_results', 10)
+    
+    # Get luxury perfume details
+    luxury_perfume = None
+    luxury_perfumes = get_luxury_perfumes().get_json()['perfumes']
+    
+    for perfume in luxury_perfumes:
+        if perfume['id'] == luxury_perfume_id:
+            luxury_perfume = perfume
+            break
+    
+    if not luxury_perfume:
+        return jsonify({'error': 'Luxury perfume not found'}), 404
+    
+    # Find alternatives based on notes similarity
+    alternatives = []
+    luxury_notes = []
+    
+    # Collect all luxury perfume notes
+    for note_type in ['top', 'middle', 'base']:
+        for note in luxury_perfume['notes'].get(note_type, []):
+            luxury_notes.append(note['name'].lower())
+    
+    for perfume in all_perfumes:
+        # Skip if same gender preference doesn't match
+        if luxury_perfume['gender'] != 'unisex' and perfume.get('gender', '').lower() != luxury_perfume['gender']:
+            continue
+        
+        # Calculate similarity based on notes
+        perfume_notes = []
+        for note_type in ['top', 'middle', 'base']:
+            for note in perfume['notes'].get(note_type, []):
+                perfume_notes.append(note['name'].lower())
+        
+        if not perfume_notes:
+            continue
+        
+        # Calculate Jaccard similarity
+        intersection = len(set(luxury_notes) & set(perfume_notes))
+        union = len(set(luxury_notes) | set(perfume_notes))
+        similarity = intersection / union if union > 0 else 0
+        
+        if similarity >= min_similarity:
+            perfume_copy = perfume.copy()
+            perfume_copy['similarity_score'] = similarity * 100
+            
+            # Add product URL if available
+            if perfume.get('source') == 'bargello':
+                for orig_perfume in bargello_perfumes:
+                    if orig_perfume.get('isim') == perfume['name']:
+                        perfume_copy['product_url'] = orig_perfume.get('link', '')
+                        break
+            elif perfume.get('source') == 'zara':
+                for orig_perfume in zara_perfumes:
+                    if orig_perfume.get('name') == perfume['name']:
+                        perfume_copy['product_url'] = orig_perfume.get('url', '')
+                        break
+            elif perfume.get('source') == 'muscent':
+                for orig_perfume in muscent_perfumes:
+                    if orig_perfume.get('name') == perfume['name']:
+                        perfume_copy['product_url'] = orig_perfume.get('url', '')
+                        break
+            
+            alternatives.append(perfume_copy)
+    
+    # Sort by similarity and limit results
+    alternatives.sort(key=lambda x: x['similarity_score'], reverse=True)
+    alternatives = alternatives[:max_results]
+    
+    return jsonify({
+        'luxury_perfume': luxury_perfume,
+        'alternatives': alternatives,
+        'total_found': len(alternatives)
     })
 
 # Error handlers

@@ -2,6 +2,51 @@
 
 PerfuMatch, lüks parfümlerin uygun fiyatlı muadillerini bulmak için geliştirilmiş bir web uygulamasıdır. PostgreSQL veritabanı ile desteklenen bu sistem, parfüm notalarına, ailelerine ve markalarına göre akıllı eşleştirmeler yapar.
 
+## ⚡ Hızlı Başlangıç
+
+### 🖱️ Tek Tıkla Kurulum
+
+**Windows kullanıcıları:**
+```cmd
+# 1. Projeyi klonlayın
+git clone https://github.com/elifkaramehmeto/perfumatch.git
+cd perfumatch
+
+# 2. Kurulum script'ini çift tıklayın veya çalıştırın
+setup.bat
+```
+
+**macOS/Linux kullanıcıları:**
+```bash
+# 1. Projeyi klonlayın
+git clone https://github.com/elifkaramehmeto/perfumatch.git
+cd perfumatch
+
+# 2. Kurulum script'ini çalıştırın
+./setup.sh
+```
+
+### 🔧 Manuel Kurulum
+
+```bash
+# 1. Projeyi klonlayın
+git clone https://github.com/elifkaramehmeto/perfumatch.git
+cd perfumatch
+
+# 2. Python kurulum script'ini çalıştırın
+python setup.py
+
+# 3. Uygulamayı başlatın
+run.bat        # Windows
+# veya
+./run.sh       # macOS/Linux
+
+# 4. Tarayıcınızda açın
+# http://localhost:5000
+```
+
+> **💡 İpucu:** İlk kurulum 5-10 dakika sürebilir. Script tüm gereksinimleri otomatik olarak kontrol eder ve kurar.
+
 ## 🎯 Özellikler
 
 ### ✨ Ana Özellikler
@@ -25,63 +70,143 @@ PerfuMatch, lüks parfümlerin uygun fiyatlı muadillerini bulmak için gelişti
 ## 🚀 Kurulum
 
 ### Gereksinimler
-- Python 3.11+
-- PostgreSQL 15+
-- Docker & Docker Compose (önerilen)
+- Python 3.8+
+- Node.js 16+
+- PostgreSQL 12+
 
-### Docker ile Kurulum (Önerilen)
+### 🎯 Hızlı Kurulum (Önerilen)
 
-1. **Projeyi klonlayın:**
+**İlk kez kuracaklar için otomatik kurulum script'i:**
+
 ```bash
-git clone https://github.com/your-username/perfumatch.git
+# Projeyi klonlayın
+git clone https://github.com/elifkaramehmeto/perfumatch.git
 cd perfumatch
+
+# Otomatik kurulum script'ini çalıştırın
+python setup.py
 ```
 
-2. **Docker Compose ile başlatın:**
+Bu script otomatik olarak:
+- ✅ Sistem gereksinimlerini kontrol eder
+- ✅ Python sanal ortamı oluşturur
+- ✅ Tüm bağımlılıkları yükler
+- ✅ PostgreSQL veritabanını kurar
+- ✅ Environment dosyalarını oluşturur
+- ✅ İlk verileri içe aktarır
+- ✅ Çalıştırma script'lerini hazırlar
+
+### 🖥️ Uygulamayı Başlatma
+
+Kurulum tamamlandıktan sonra:
+
+**Windows:**
+```cmd
+run.bat
+```
+
+**macOS/Linux:**
 ```bash
+./run.sh
+```
+
+**Manuel başlatma:**
+```bash
+# Sanal ortamı aktifleştir
+source venv/bin/activate  # Linux/macOS
+# veya
+venv\Scripts\activate     # Windows
+
+# Uygulamayı başlat
+python server.py
+```
+
+### 🌐 Erişim Adresleri
+- **Ana sayfa:** http://localhost:5000
+- **API Sağlık Kontrolü:** http://localhost:5000/api/health
+- **API Dokümantasyonu:** http://localhost:5000/api/
+
+### 📁 Kurulum Sonrası Oluşturulan Dosyalar
+
+Kurulum script'i aşağıdaki dosya ve klasörleri otomatik olarak oluşturur:
+
+```
+perfumatch/
+├── venv/                   # Python sanal ortamı
+├── logs/                   # Uygulama log dosyaları
+├── uploads/                # Yüklenen dosyalar
+├── static/                 # Statik dosyalar (CSS, JS, resimler)
+├── data/backups/           # Veritabanı yedekleri
+├── .env                    # Environment değişkenleri
+├── run.bat                 # Windows çalıştırma script'i
+├── run.sh                  # Unix/Linux çalıştırma script'i
+└── requirements.txt        # Güncellenmiş Python bağımlılıkları
+```
+
+### 🔑 Önemli Dosyalar
+
+- **`.env`** - Veritabanı bağlantısı ve uygulama ayarları
+- **`run.bat/run.sh`** - Uygulamayı başlatmak için
+- **`logs/perfumatch.log`** - Uygulama logları
+- **`setup.py`** - Ana kurulum script'i
+
+### 🐳 Docker ile Kurulum (Alternatif)
+
+```bash
+# Docker Compose ile başlatın
 docker-compose up -d
-```
 
-3. **Verileri içe aktarın:**
-```bash
+# Verileri içe aktarın
 docker-compose exec web python import_data.py
 ```
 
-4. **Uygulamaya erişin:**
+**Docker erişim adresleri:**
 - Ana uygulama: http://localhost:5000
 - pgAdmin: http://localhost:8080 (admin@perfumatch.com / admin123)
 
-### Manuel Kurulum
+### 🔧 Manuel Kurulum (Gelişmiş Kullanıcılar)
 
-1. **Bağımlılıkları yükleyin:**
+1. **Sanal ortam oluşturun:**
 ```bash
-pip install -r requirements.txt
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+# veya
+venv\Scripts\activate     # Windows
 ```
 
-2. **PostgreSQL veritabanını kurun:**
+2. **Bağımlılıkları yükleyin:**
 ```bash
-# PostgreSQL'i başlatın
-sudo systemctl start postgresql
+pip install -r requirements.txt
+npm install
+```
+
+3. **PostgreSQL veritabanını kurun:**
+```bash
+# PostgreSQL'e bağlanın
+psql -U postgres
 
 # Veritabanı ve kullanıcı oluşturun
-sudo -u postgres psql
 CREATE DATABASE perfumatch_db;
 CREATE USER perfumatch_user WITH PASSWORD 'perfumatch_pass';
 GRANT ALL PRIVILEGES ON DATABASE perfumatch_db TO perfumatch_user;
+ALTER USER perfumatch_user CREATEDB;
 \q
 ```
 
-3. **Environment variables ayarlayın:**
-```bash
-export DATABASE_URL="postgresql://perfumatch_user:perfumatch_pass@localhost:5432/perfumatch_db"
+4. **Environment dosyası oluşturun (.env):**
+```env
+DATABASE_URL=postgresql://perfumatch_user:perfumatch_pass@localhost:5432/perfumatch_db
+FLASK_ENV=development
+FLASK_DEBUG=True
+SECRET_KEY=your-secret-key-here
 ```
 
-4. **Veritabanını başlatın:**
+5. **Verileri içe aktarın:**
 ```bash
 python import_data.py
 ```
 
-5. **Sunucuyu başlatın:**
+6. **Sunucuyu başlatın:**
 ```bash
 python server.py
 ```
@@ -183,6 +308,110 @@ Parfüm benzerlik skoru şu faktörlere göre hesaplanır:
    - Ortak notalar / Toplam notalar × 45
 
 **Toplam**: 0-100 arası skor (≥30 puan olanlar gösterilir)
+
+## 🔧 Sorun Giderme
+
+### Yaygın Sorunlar ve Çözümleri
+
+#### 1. PostgreSQL Bağlantı Hatası
+```bash
+# PostgreSQL servisini başlatın
+# Windows:
+net start postgresql-x64-15
+
+# macOS:
+brew services start postgresql
+
+# Ubuntu/Debian:
+sudo systemctl start postgresql
+```
+
+#### 2. Python Modül Bulunamadı Hatası
+```bash
+# Sanal ortamın aktif olduğundan emin olun
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+
+# Bağımlılıkları yeniden yükleyin
+pip install -r requirements.txt
+```
+
+#### 3. Node.js Bağımlılık Hatası
+```bash
+# Node modüllerini temizleyin ve yeniden yükleyin
+rm -rf node_modules package-lock.json
+npm install
+```
+
+#### 4. Veritabanı İçe Aktarma Hatası
+```bash
+# Veritabanını sıfırlayın
+python check_db.py --reset
+
+# Verileri yeniden içe aktarın
+python import_data.py
+```
+
+#### 5. Port 5000 Kullanımda Hatası
+```bash
+# Farklı port kullanın
+export FLASK_RUN_PORT=5001
+python server.py
+```
+
+### Log Dosyaları
+- **Uygulama logları:** `logs/perfumatch.log`
+- **Hata logları:** `logs/error.log`
+- **Scraping logları:** `*.log` dosyaları
+
+### Yardım Alma
+Sorun yaşıyorsanız:
+1. Log dosyalarını kontrol edin
+2. `python check_db.py` komutunu çalıştırın
+3. GitHub Issues'da sorun bildirin
+4. README.md dosyasını tekrar okuyun
+
+## 🚀 Kurulum Sonrası
+
+### İlk Çalıştırma
+1. **Uygulamayı başlatın:** `run.bat` (Windows) veya `./run.sh` (Unix/Linux)
+2. **Tarayıcınızda açın:** http://localhost:5000
+3. **API'yi test edin:** http://localhost:5000/api/health
+
+### Veri Yönetimi
+```bash
+# Veritabanı durumunu kontrol et
+python check_db.py
+
+# Yeni veri ekle
+python import_data.py
+
+# Benzerlik skorlarını yeniden hesapla
+python calculate_similarities.py
+```
+
+### Geliştirme Modu
+```bash
+# Sanal ortamı aktifleştir
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+
+# Debug modunda çalıştır
+export FLASK_DEBUG=True  # Linux/macOS
+set FLASK_DEBUG=True     # Windows
+python server.py
+```
+
+### Üretim Ortamı
+```bash
+# Environment'ı production'a çevir
+# .env dosyasında:
+FLASK_ENV=production
+FLASK_DEBUG=False
+
+# Güvenlik anahtarını değiştir
+SECRET_KEY=your-production-secret-key
+```
 
 ## 📊 Veri Kaynakları
 

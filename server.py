@@ -159,6 +159,120 @@ def get_perfume_alternatives(perfume_id):
         logging.error(f"Alternatif getirme hatası: {e}")
         return jsonify({'error': 'Alternatifler bulunamadı'}), 404
 
+@app.route('/api/luxury-perfumes')
+def get_luxury_perfumes():
+    """Lüks parfümleri getir"""
+    try:
+        gender = request.args.get('gender', 'all')
+        limit = int(request.args.get('limit', 50))
+        
+        # Lüks markaları al
+        luxury_brands = Brand.query.filter_by(type='luxury').all()
+        luxury_brand_ids = [b.id for b in luxury_brands]
+        
+        # Lüks parfümleri sorgula
+        query = Perfume.query.filter(Perfume.brand_id.in_(luxury_brand_ids))
+        
+        # Cinsiyet filtreleme
+        if gender != 'all':
+            query = query.filter_by(gender=gender)
+        
+        perfumes = query.limit(limit).all()
+        results = [p.to_dict(include_notes=True) for p in perfumes]
+        
+        return jsonify({
+            'perfumes': results,
+            'count': len(results)
+        })
+        
+    except Exception as e:
+        logging.error(f"Lüks parfüm listesi hatası: {e}")
+        return jsonify({'error': 'Lüks parfümler getirilemedi'}), 500
+
+@app.route('/api/find-alternatives', methods=['POST'])
+def find_alternatives():
+    """Lüks parfüm için alternatifler bul"""
+    try:
+        data = request.get_json()
+        luxury_perfume_id = data.get('luxury_perfume_id')
+        max_price = data.get('max_price')
+        min_similarity = data.get('min_similarity', 30)
+        gender_match = data.get('gender_match', True)
+        limit = data.get('limit', 20)
+        
+        if not luxury_perfume_id:
+            return jsonify({'error': 'Lüks parfüm ID gerekli'}), 400
+        
+        # Benzerlik kayıtlarını sorgula
+        query = PerfumeSimilarity.query.filter_by(luxury_perfume_id=luxury_perfume_id)
+        
+        # Minimum benzerlik filtresi
+        query = query.filter(PerfumeSimilarity.similarity_score >= min_similarity)
+        
+        # Cinsiyet eşleşmesi filtresi
+        if gender_match:
+            query = query.filter_by(gender_match=True)
+        
+        # Benzerlik skoruna göre sırala
+        similarities = query.order_by(PerfumeSimilarity.similarity_score.desc()).all()
+        
+        results = []
+        for sim in similarities:
+            alternative_perfume = Perfume.query.get(sim.alternative_perfume_id)
+            
+            # Fiyat filtresi
+            if max_price and alternative_perfume.price and alternative_perfume.price > max_price:
+                continue
+            
+            alternative_data = alternative_perfume.to_dict(include_notes=True)
+            alternative_data['similarity_score'] = float(sim.similarity_score)
+            alternative_data['price_difference'] = float(sim.price_difference) if sim.price_difference else None
+            alternative_data['gender_match'] = sim.gender_match
+            
+            results.append(alternative_data)
+            
+            if len(results) >= limit:
+                break
+        
+        # Lüks parfüm bilgisini de ekle
+        luxury_perfume = Perfume.query.get(luxury_perfume_id)
+        luxury_data = luxury_perfume.to_dict(include_notes=True) if luxury_perfume else None
+        
+        return jsonify({
+            'luxury_perfume': luxury_data,
+            'alternatives': results,
+            'count': len(results),
+            'filters': {
+                'max_price': max_price,
+                'min_similarity': min_similarity,
+                'gender_match': gender_match
+            }
+        })
+        
+    except Exception as e:
+        logging.error(f"Alternatif bulma hatası: {e}")
+        return jsonify({'error': 'Alternatifler bulunamadı'}), 500
+
+@app.route('/api/brands/luxury')
+def get_luxury_brands():
+    """Lüks markaları getir"""
+    try:
+        brands = Brand.query.filter_by(type='luxury').all()
+        results = []
+        
+        for brand in brands:
+            brand_data = brand.to_dict()
+            # Marka altındaki parfüm sayısını ekle
+            perfume_count = Perfume.query.filter_by(brand_id=brand.id).count()
+            brand_data['perfume_count'] = perfume_count
+            results.append(brand_data)
+        
+        return jsonify(results)
+        
+    except Exception as e:
+        logging.error(f"Lüks marka listesi hatası: {e}")
+        return jsonify({'error': 'Lüks markalar getirilemedi'}), 500
+
 @app.route('/api/brands')
 def get_brands():
     """Tüm markaları getir"""

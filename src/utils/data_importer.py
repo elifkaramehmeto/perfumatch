@@ -19,6 +19,7 @@ class DataImporter:
         self.note_cache = {}
         self.brand_cache = {}
         self.family_cache = {}
+        self.perfume_note_cache = set()  # Parfüm-nota kombinasyonlarını takip et
         
     def load_json_file(self, file_path: str) -> List[Dict]:
         """JSON dosyasını yükle"""
@@ -75,20 +76,29 @@ class DataImporter:
         return family
     
     def get_or_create_note(self, note_name: str, note_type: str = 'middle') -> Note:
-        """Nota al veya oluştur"""
-        note_key = f"{note_name}_{note_type}"
-        if note_key in self.note_cache:
-            return self.note_cache[note_key]
+        """Nota al veya oluştur - cache ve unique constraint hatalarını önle"""
+        # Cache key'i sadece nota ismi olsun (type'a göre değil)
+        if note_name in self.note_cache:
+            return self.note_cache[note_name]
         
-        note = Note.query.filter_by(name=note_name, type=note_type).first()
+        # Önce veritabanında var mı kontrol et (isim bazında)
+        note = Note.query.filter_by(name=note_name).first()
         if not note:
             # Nota kategorisini belirle
             category = self.determine_note_category(note_name)
             note = Note(name=note_name, type=note_type, category=category)
-            db.session.add(note)
-            db.session.flush()
+            try:
+                db.session.add(note)
+                db.session.flush()
+            except Exception as e:
+                # Unique constraint hatası durumunda tekrar sorgula
+                db.session.rollback()
+                note = Note.query.filter_by(name=note_name).first()
+                if not note:
+                    logger.error(f"Nota oluşturulamadı: {note_name}, Hata: {e}")
+                    raise
         
-        self.note_cache[note_key] = note
+        self.note_cache[note_name] = note
         return note
     
     def determine_note_category(self, note_name: str) -> str:
@@ -121,12 +131,23 @@ class DataImporter:
         if not price_str:
             return None, 'TRY'
         
-        # Fiyat formatlarını temizle
-        price_str = price_str.replace(',', '').replace(' ', '')
+        # Boşlukları temizle
+        price_str = price_str.replace(' ', '')
         
         # TL, ₺ veya TRY içeren fiyatları bul
         if '₺' in price_str or 'TL' in price_str or 'TRY' in price_str:
             currency = 'TRY'
+            # Türkçe format: virgül decimal separator olarak kullanılır
+            # Örnek: 320,00₺ -> 320.00
+            price_str = price_str.replace('₺', '').replace('TL', '').replace('TRY', '')
+            
+            # Fiyat aralığı varsa ilk fiyatı al (örn: "320,00₺ – 690,00₺")
+            if '–' in price_str or '-' in price_str:
+                price_str = price_str.split('–')[0].split('-')[0].strip()
+            
+            # Virgülü noktaya çevir (Türkçe decimal format)
+            price_str = price_str.replace(',', '.')
+            
             # Sayısal değeri çıkar
             numbers = re.findall(r'\d+\.?\d*', price_str)
             if numbers:
@@ -135,11 +156,18 @@ class DataImporter:
         # Diğer para birimleri için
         if '$' in price_str:
             currency = 'USD'
+            price_str = price_str.replace('$', '')
         elif '€' in price_str:
             currency = 'EUR'
+            price_str = price_str.replace('€', '')
         else:
             currency = 'TRY'
         
+        # Fiyat aralığı varsa ilk fiyatı al
+        if '–' in price_str or '-' in price_str:
+            price_str = price_str.split('–')[0].split('-')[0].strip()
+        
+        # Nokta decimal separator olarak kullanılır (USD, EUR için)
         numbers = re.findall(r'\d+\.?\d*', price_str)
         if numbers:
             return Decimal(numbers[0]), currency
@@ -206,21 +234,26 @@ class DataImporter:
         """Muscent notalarını parse et"""
         notes = []
         
-        # En yoğun notalar
-        if 'en_yogun_notalar' in perfume_data.get('notalar', {}):
-            note_str = perfume_data['notalar']['en_yogun_notalar']
-            if note_str:
+        # Notalar alanını kontrol et
+        if 'notalar' in perfume_data:
+            notalar = perfume_data['notalar']
+            
+            # En yoğun notalar
+            if 'en_yogun_notalar' in notalar and notalar['en_yogun_notalar']:
+                note_str = notalar['en_yogun_notalar']
                 note_names = [n.strip() for n in note_str.split(',')]
                 for note_name in note_names:
                     if note_name:
-                        notes.append((note_name, 'middle'))  # Varsayılan olarak middle
+                        notes.append((note_name, 'middle'))
         
-        # Etiketlerden de nota çıkar
-        tags = perfume_data.get('etiketler', [])
-        if isinstance(tags, list):
-            for tag in tags:
-                if tag.lower() not in ['erkek', 'kadın', 'unisex', 'men', 'women']:
-                    notes.append((tag.title(), 'middle'))
+        # Etiketlerden de nota çıkar (cinsiyet etiketlerini hariç tut)
+        if 'etiketler' in perfume_data:
+            etiketler = perfume_data['etiketler']
+            if isinstance(etiketler, list):
+                gender_tags = ['erkek', 'kadın', 'unisex', 'men', 'women']
+                for etiket in etiketler:
+                    if etiket.lower() not in gender_tags:
+                        notes.append((etiket.title(), 'middle'))
         
         return notes
     
@@ -228,14 +261,40 @@ class DataImporter:
         """Zara notalarını parse et"""
         notes = []
         
-        if 'notes' in perfume_data:
-            note_list = perfume_data['notes']
-            if isinstance(note_list, list):
-                for note_name in note_list:
-                    if note_name:
-                        notes.append((note_name.title(), 'middle'))
+        # Zara için genellikle description'dan nota çıkarımı yapılır
+        # Şimdilik boş döndür, gerekirse daha sonra implement edilir
         
         return notes
+    
+    def add_perfume_note_safely(self, perfume_id: int, note_id: int) -> bool:
+        """Parfüm-nota ilişkisini güvenli şekilde ekle"""
+        # Cache'de var mı kontrol et
+        cache_key = (perfume_id, note_id)
+        if cache_key in self.perfume_note_cache:
+            return False
+        
+        # Veritabanında var mı kontrol et
+        existing = PerfumeNote.query.filter_by(
+            perfume_id=perfume_id,
+            note_id=note_id
+        ).first()
+        
+        if existing:
+            self.perfume_note_cache.add(cache_key)
+            return False
+        
+        try:
+            perfume_note = PerfumeNote(
+                perfume_id=perfume_id,
+                note_id=note_id
+            )
+            db.session.add(perfume_note)
+            self.perfume_note_cache.add(cache_key)
+            return True
+        except Exception as e:
+            logger.error(f"Parfüm-nota ilişkisi eklenemedi: {perfume_id}-{note_id}, Hata: {e}")
+            db.session.rollback()
+            return False
     
     def import_bargello_data(self, file_path: str = 'bargello_parfumler.json'):
         """Bargello verilerini içe aktar"""
@@ -286,11 +345,7 @@ class DataImporter:
                     notes = self.parse_notes_from_bargello(item['notalar'])
                     for note_name, note_type in notes:
                         note = self.get_or_create_note(note_name, note_type)
-                        perfume_note = PerfumeNote(
-                            perfume_id=perfume.id,
-                            note_id=note.id
-                        )
-                        db.session.add(perfume_note)
+                        self.add_perfume_note_safely(perfume.id, note.id)
                 
                 imported_count += 1
                 
@@ -363,11 +418,7 @@ class DataImporter:
                 notes = self.parse_notes_from_muscent(item)
                 for note_name, note_type in notes:
                     note = self.get_or_create_note(note_name, note_type)
-                    perfume_note = PerfumeNote(
-                        perfume_id=perfume.id,
-                        note_id=note.id
-                    )
-                    db.session.add(perfume_note)
+                    self.add_perfume_note_safely(perfume.id, note.id)
                 
                 imported_count += 1
                 
@@ -437,11 +488,7 @@ class DataImporter:
                 notes = self.parse_notes_from_zara(item)
                 for note_name, note_type in notes:
                     note = self.get_or_create_note(note_name, note_type)
-                    perfume_note = PerfumeNote(
-                        perfume_id=perfume.id,
-                        note_id=note.id
-                    )
-                    db.session.add(perfume_note)
+                    self.add_perfume_note_safely(perfume.id, note.id)
                 
                 imported_count += 1
                 

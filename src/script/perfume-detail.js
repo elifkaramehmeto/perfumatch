@@ -8,50 +8,64 @@ class PerfumeDetailPage {
 
     async init() {
         try {
+            console.log('🎯 Parfüm detay sayfası başlatılıyor...');
+            
             // URL'den parfüm bilgilerini al
             const perfumeInfo = window.perfumeAPI.parsePerfumeFromURL();
+            console.log('📋 URL\'den alınan bilgiler:', perfumeInfo);
             
             if (!perfumeInfo) {
+                console.error('❌ Parfüm bilgileri URL\'de bulunamadı');
                 this.showError('Parfüm bilgileri bulunamadı.');
                 return;
             }
 
             // Loading göster
             this.showLoading();
+            console.log('⏳ Loading gösteriliyor...');
 
             // Parfüm verilerini çek
+            console.log('🔍 Parfüm verileri getiriliyor:', perfumeInfo.brand, perfumeInfo.name);
             this.perfumeData = await window.perfumeAPI.fetchPerfumeByBrandAndName(
                 perfumeInfo.brand, 
                 perfumeInfo.name
             );
 
+            console.log('📊 Getirilen parfüm verisi:', this.perfumeData);
+
             if (!this.perfumeData) {
+                console.error('❌ Parfüm verileri getirilemedi');
                 this.showError('Parfüm bilgileri yüklenemedi.');
                 return;
             }
 
             // Sayfayı güncelle
+            console.log('🔄 Sayfa güncelleniyor...');
             this.updatePage();
             this.hideLoading();
+            console.log('✅ Parfüm detay sayfası başarıyla yüklendi');
 
         } catch (error) {
-            console.error('Parfüm detay sayfası yüklenirken hata:', error);
+            console.error('❌ Parfüm detay sayfası yüklenirken hata:', error);
             this.showError('Bir hata oluştu. Lütfen daha sonra tekrar deneyin.');
         }
     }
 
     showLoading() {
+        console.log('⏳ Loading spinner gösteriliyor');
         document.getElementById('loadingSpinner').style.display = 'flex';
         document.getElementById('mainContent').style.display = 'none';
         document.getElementById('errorContainer').style.display = 'none';
     }
 
     hideLoading() {
+        console.log('✅ Loading spinner gizleniyor');
         document.getElementById('loadingSpinner').style.display = 'none';
         document.getElementById('mainContent').style.display = 'block';
     }
 
     showError(message) {
+        console.error('❌ Hata gösteriliyor:', message);
         document.getElementById('loadingSpinner').style.display = 'none';
         document.getElementById('mainContent').style.display = 'none';
         document.getElementById('errorContainer').style.display = 'flex';
@@ -63,14 +77,17 @@ class PerfumeDetailPage {
     }
 
     updatePage() {
+        console.log('🔄 Sayfa bileşenleri güncelleniyor...');
         this.updatePerfumeInfo();
         this.updateNotes();
         this.updateRatings();
         this.updateAlternatives();
         this.updatePageTitle();
+        console.log('✅ Tüm bileşenler güncellendi');
     }
 
     updatePerfumeInfo() {
+        console.log('📝 Parfüm bilgileri güncelleniyor...');
         const perfumeInfo = window.perfumeAPI.parsePerfumeFromURL();
         
         // Başlık ve marka
@@ -85,13 +102,17 @@ class PerfumeDetailPage {
         if (this.perfumeData.url) {
             document.getElementById('parfumoLink').href = this.perfumeData.url;
         }
+        
+        console.log('✅ Parfüm bilgileri güncellendi');
     }
 
     updateNotes() {
+        console.log('🌸 Notalar güncelleniyor...');
         const notesContainer = document.getElementById('perfumeNotes');
         notesContainer.innerHTML = '';
 
         if (this.perfumeData.notes && this.perfumeData.notes.length > 0) {
+            console.log('📋 Notalar bulundu:', this.perfumeData.notes);
             this.perfumeData.notes.forEach(note => {
                 const noteElement = document.createElement('span');
                 noteElement.className = 'note-item';
@@ -99,22 +120,30 @@ class PerfumeDetailPage {
                 notesContainer.appendChild(noteElement);
             });
         } else {
+            console.log('⚠️ Nota bilgisi bulunamadı');
             notesContainer.innerHTML = '<span class="note-item">Nota bilgisi bulunamadı</span>';
         }
+        
+        console.log('✅ Notalar güncellendi');
     }
 
     updateRatings() {
+        console.log('⭐ Değerlendirmeler güncelleniyor...');
         const ratingsContainer = document.querySelector('.ratings-grid');
         ratingsContainer.innerHTML = '';
 
         if (this.perfumeData.ratings && Object.keys(this.perfumeData.ratings).length > 0) {
+            console.log('📊 Değerlendirmeler bulundu:', this.perfumeData.ratings);
             Object.entries(this.perfumeData.ratings).forEach(([category, score]) => {
                 const ratingElement = this.createRatingElement(category, score);
                 ratingsContainer.appendChild(ratingElement);
             });
         } else {
+            console.log('⚠️ Değerlendirme bilgisi bulunamadı');
             ratingsContainer.innerHTML = '<div class="rating-item"><div class="rating-label">Değerlendirme</div><div class="rating-value">N/A</div></div>';
         }
+        
+        console.log('✅ Değerlendirmeler güncellendi');
     }
 
     createRatingElement(category, score) {
@@ -143,69 +172,150 @@ class PerfumeDetailPage {
     }
 
     updateAlternatives() {
+        console.log('🔄 Alternatifler güncelleniyor...');
         const alternativesGrid = document.getElementById('alternativesGrid');
         alternativesGrid.innerHTML = '';
 
+        console.log('📊 Mevcut alternatifler:', this.perfumeData.bargello_recommendations);
+
         if (this.perfumeData.bargello_recommendations && this.perfumeData.bargello_recommendations.length > 0) {
-            this.perfumeData.bargello_recommendations.forEach(alternative => {
+            console.log('✅ Alternatifler bulundu, kartlar oluşturuluyor...');
+            this.perfumeData.bargello_recommendations.forEach((alternative, index) => {
+                console.log(`📋 Alternatif ${index + 1}:`, alternative);
                 const alternativeCard = this.createAlternativeCard(alternative);
                 alternativesGrid.appendChild(alternativeCard);
             });
+            console.log('✅ Tüm alternatif kartları oluşturuldu');
         } else {
+            console.log('⚠️ Hiç alternatif bulunamadı');
             alternativesGrid.innerHTML = `
                 <div class="no-alternatives">
+                    <i class="fas fa-search"></i>
                     <p>Bu parfüm için henüz muadil bulunamadı.</p>
+                    <p class="no-alternatives-subtitle">Benzerlik hesaplaması devam ediyor...</p>
                 </div>
             `;
         }
+        
+        console.log('✅ Alternatifler bölümü güncellendi');
     }
 
     createAlternativeCard(alternative) {
+        console.log('🎨 Alternatif kartı oluşturuluyor:', alternative);
+        
         const cardDiv = document.createElement('div');
         cardDiv.className = 'alternative-card';
         
+        // Benzerlik skorunu düzenle
+        const similarityScore = alternative.similarity_score || '85%';
+        const perfumeName = alternative.name || 'Bilinmeyen Parfüm';
+        const brand = alternative.brand || 'Bargello';
+        const price = alternative.price || 'Uygun Fiyatlı';
+        
         // Notaları düzenle
-        const notesHTML = this.formatAlternativeNotes(alternative.notalar);
+        const notesHTML = this.formatAlternativeNotes(alternative.notes);
         
         cardDiv.innerHTML = `
-            <div class="similarity-badge">${alternative.benzerlik}</div>
-            <div class="alternative-name">${alternative.isim}</div>
-            <div class="alternative-brand">Bargello</div>
-            <div class="alternative-price">Uygun Fiyatlı</div>
+            <div class="similarity-badge">${similarityScore}</div>
+            <div class="alternative-name">${perfumeName}</div>
+            <div class="alternative-brand">${brand}</div>
+            <div class="alternative-price">${price}</div>
             ${notesHTML}
         `;
         
+        console.log('✅ Alternatif kartı oluşturuldu:', perfumeName);
         return cardDiv;
     }
 
-    formatAlternativeNotes(notalar) {
-        if (!notalar || typeof notalar !== 'object') {
+    formatAlternativeNotes(notes) {
+        console.log('🌸 Alternatif notaları formatlanıyor:', notes);
+        
+        if (!notes) {
+            console.log('⚠️ Nota bilgisi yok');
             return '<div class="alternative-notes"><h4>Notalar</h4><p>Nota bilgisi bulunamadı</p></div>';
         }
 
         let notesHTML = '<div class="alternative-notes">';
         
-        Object.entries(notalar).forEach(([category, notes]) => {
-            if (notes && notes !== 'Yok' && notes.trim() !== '') {
+        // Eğer notalar object ise (top, middle, base)
+        if (typeof notes === 'object' && !Array.isArray(notes)) {
+            console.log('📋 Object formatında notalar bulundu');
+            
+            // Üst notalar
+            if (notes.top && notes.top.length > 0) {
                 notesHTML += `
                     <div class="notes-category">
-                        <h4>${category}:</h4>
+                        <h4>Üst Notalar:</h4>
                         <div class="alternative-notes-list">
                 `;
-                
-                // Notaları virgülle ayır ve her birini span olarak ekle
-                const notesList = typeof notes === 'string' ? notes.split(',') : [notes];
-                notesList.forEach(note => {
-                    if (note.trim()) {
-                        notesHTML += `<span class="alternative-note">${note.trim()}</span>`;
+                notes.top.forEach(note => {
+                    const noteName = typeof note === 'object' ? note.name : note;
+                    if (noteName) {
+                        notesHTML += `<span class="alternative-note">${noteName}</span>`;
                     }
                 });
-                
                 notesHTML += '</div></div>';
             }
-        });
+            
+            // Orta notalar
+            if (notes.middle && notes.middle.length > 0) {
+                notesHTML += `
+                    <div class="notes-category">
+                        <h4>Orta Notalar:</h4>
+                        <div class="alternative-notes-list">
+                `;
+                notes.middle.forEach(note => {
+                    const noteName = typeof note === 'object' ? note.name : note;
+                    if (noteName) {
+                        notesHTML += `<span class="alternative-note">${noteName}</span>`;
+                    }
+                });
+                notesHTML += '</div></div>';
+            }
+            
+            // Alt notalar
+            if (notes.base && notes.base.length > 0) {
+                notesHTML += `
+                    <div class="notes-category">
+                        <h4>Alt Notalar:</h4>
+                        <div class="alternative-notes-list">
+                `;
+                notes.base.forEach(note => {
+                    const noteName = typeof note === 'object' ? note.name : note;
+                    if (noteName) {
+                        notesHTML += `<span class="alternative-note">${noteName}</span>`;
+                    }
+                });
+                notesHTML += '</div></div>';
+            }
+        }
+        // Eğer notalar array ise
+        else if (Array.isArray(notes)) {
+            console.log('📋 Array formatında notalar bulundu');
+            notesHTML += '<h4>Notalar:</h4><div class="alternative-notes-list">';
+            notes.forEach(note => {
+                const noteName = typeof note === 'object' ? note.name : note;
+                if (noteName && noteName.trim()) {
+                    notesHTML += `<span class="alternative-note">${noteName.trim()}</span>`;
+                }
+            });
+            notesHTML += '</div>';
+        }
+        // Eğer notalar string ise
+        else if (typeof notes === 'string') {
+            console.log('📋 String formatında notalar bulundu');
+            notesHTML += '<h4>Notalar:</h4><div class="alternative-notes-list">';
+            const notesList = notes.split(',');
+            notesList.forEach(note => {
+                if (note.trim()) {
+                    notesHTML += `<span class="alternative-note">${note.trim()}</span>`;
+                }
+            });
+            notesHTML += '</div>';
+        }
         
         notesHTML += '</div>';
+        console.log('✅ Notalar formatlandı');
         return notesHTML;
     }
 
@@ -228,14 +338,75 @@ class PerfumeDetailPage {
     }
 }
 
+// Toast notification sistemi
+class ToastNotification {
+    static show(message, type = 'info', duration = 3000) {
+        console.log(`📢 Toast gösteriliyor: ${type} - ${message}`);
+        
+        // Toast container oluştur
+        let toastContainer = document.getElementById('toastContainer');
+        if (!toastContainer) {
+            toastContainer = document.createElement('div');
+            toastContainer.id = 'toastContainer';
+            toastContainer.className = 'toast-container';
+            document.body.appendChild(toastContainer);
+        }
+        
+        // Toast element oluştur
+        const toast = document.createElement('div');
+        toast.className = `toast toast-${type}`;
+        
+        const icon = this.getIcon(type);
+        toast.innerHTML = `
+            <div class="toast-content">
+                <i class="${icon}"></i>
+                <span>${message}</span>
+            </div>
+            <button class="toast-close" onclick="this.parentElement.remove()">
+                <i class="fas fa-times"></i>
+            </button>
+        `;
+        
+        // Toast'ı ekle
+        toastContainer.appendChild(toast);
+        
+        // Animasyon için timeout
+        setTimeout(() => {
+            toast.classList.add('show');
+        }, 100);
+        
+        // Otomatik kaldırma
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+                if (toast.parentElement) {
+                    toast.remove();
+                }
+            }, 300);
+        }, duration);
+    }
+    
+    static getIcon(type) {
+        const icons = {
+            'success': 'fas fa-check-circle',
+            'error': 'fas fa-exclamation-circle',
+            'warning': 'fas fa-exclamation-triangle',
+            'info': 'fas fa-info-circle'
+        };
+        return icons[type] || icons.info;
+    }
+}
+
 // Sayfa yüklendiğinde başlat
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('🎯 DOM yüklendi, PerfumeDetailPage başlatılıyor...');
     new PerfumeDetailPage();
 });
 
 // Hata yakalayıcı
 window.addEventListener('error', function(e) {
-    console.error('Sayfa hatası:', e.error);
+    console.error('❌ Sayfa hatası:', e.error);
+    ToastNotification.show('Bir hata oluştu. Sayfa yeniden yüklenecek.', 'error');
     
     const errorContainer = document.getElementById('errorContainer');
     if (errorContainer) {
@@ -247,6 +418,7 @@ window.addEventListener('error', function(e) {
 
 // Geri buton için
 window.addEventListener('popstate', function(e) {
+    console.log('🔙 Geri butonuna basıldı');
     // Tarayıcı geri butonuna basıldığında ana sayfaya yönlendir
     if (window.location.pathname === '/perfume-detail.html' && !window.location.search) {
         window.location.href = 'index.html';
