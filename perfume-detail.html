@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="src/style/perfume-detail.css">
+    <title>Parfüm Detayları - PerfuMatch</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="detail-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1><a href="index.html">PerfuMatch</a></h1>
+                    <p class="subtitle">Parfüm Detayları</p>
+                </div>
+                <div class="navigation">
+                    <a href="index.html" class="nav-link">
+                        <i class="fas fa-home"></i> Ana Sayfa
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+        <p>Parfüm bilgileri yükleniyor...</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container main-content" id="mainContent" style="display: none;">
+        
+        <!-- Parfüm Bilgileri -->
+        <section class="perfume-info-section">
+            <div class="perfume-header">
+                <div class="perfume-image-container">
+                    <div class="perfume-image-placeholder" id="perfumeImage">
+                        <i class="fas fa-image"></i>
+                        <span>Parfüm Görseli</span>
+                    </div>
+                </div>
+                
+                <div class="perfume-details">
+                    <h1 class="perfume-title" id="perfumeTitle">Parfüm Adı</h1>
+                    <h2 class="perfume-brand" id="perfumeBrand">Marka</h2>
+                    <div class="perfume-meta">
+                        <span class="perfume-gender" id="perfumeGender">Unisex</span>
+                        <span class="perfume-perfumer" id="perfumePerfumer">Parfümör: Bilinmiyor</span>
+                    </div>
+                    
+                    <!-- Parfüm Notaları -->
+                    <div class="notes-container">
+                        <div class="notes-section">
+                            <h3>Parfüm Notaları</h3>
+                            <div class="notes-list" id="perfumeNotes">
+                                <!-- Notalar buraya eklenecek -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Değerlendirmeler -->
+                    <div class="ratings-container" id="ratingsContainer">
+                        <h3>Değerlendirmeler</h3>
+                        <div class="ratings-grid">
+                            <!-- Değerlendirmeler buraya eklenecek -->
+                        </div>
+                    </div>
+
+                    <!-- Parfumo Linki -->
+                    <div class="external-link">
+                        <a href="#" id="parfumoLink" target="_blank" class="parfumo-btn">
+                            <i class="fas fa-external-link-alt"></i>
+                            Parfumo'da Görüntüle
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Muadil Parfümler -->
+        <section class="alternatives-section">
+            <div class="section-header">
+                <h2 class="section-title">Uygun Fiyatlı Muadiller</h2>
+                <p class="section-subtitle">Bu parfüme benzer notlara sahip uygun fiyatlı alternatifler</p>
+            </div>
+            
+            <div class="alternatives-grid" id="alternativesGrid">
+                <!-- Muadil parfümler buraya eklenecek -->
+            </div>
+        </section>
+
+        <!-- Benzer Parfümler (İsteğe bağlı) -->
+        <section class="similar-section">
+            <div class="section-header">
+                <h2 class="section-title">Benzer Parfümler</h2>
+                <p class="section-subtitle">Aynı aileden diğer parfümler</p>
+            </div>
+            
+            <div class="similar-grid" id="similarGrid">
+                <!-- Benzer parfümler buraya eklenecek -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Error Message -->
+    <div class="error-container" id="errorContainer" style="display: none;">
+        <div class="error-content">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h2>Parfüm Bulunamadı</h2>
+            <p>Aradığınız parfümün bilgilerine ulaşılamadı. Lütfen daha sonra tekrar deneyin.</p>
+            <a href="index.html" class="back-home-btn">
+                <i class="fas fa-home"></i> Ana Sayfaya Dön
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="src/api/perfume-api.js"></script>
+    <script src="src/script/perfume-detail.js"></script>
+</body>
+</html> 

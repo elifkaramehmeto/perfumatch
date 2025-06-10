@@ -92,7 +92,7 @@ function showSearch(type) {
 }
 
 // İsme göre arama yap
-function performNameSearch() {
+async function performNameSearch() {
     const searchTerm = document.getElementById('perfumeNameInput').value.trim();
     
     if (!searchTerm) {
@@ -102,15 +102,42 @@ function performNameSearch() {
 
     showLoading();
     
-    // Simüle edilmiş arama - gerçek API entegrasyonu sonrası kaldırılacak
-    setTimeout(() => {
+    try {
+        // Önce veritabanında ara
+        const results = await window.perfumeAPI.searchPerfumes(searchTerm, 'name', getActiveGender());
+        
+        if (results.results && results.results.length > 0) {
+            hideLoading();
+            showSearchResults(results.results, 'name');
+        } else {
+            // Veritabanında bulunamazsa Parfumo'dan ara
+            const words = searchTerm.split(' ');
+            if (words.length >= 2) {
+                const brand = words[0];
+                const perfumeName = words.slice(1).join(' ');
+                
+                const parfumoResult = await window.perfumeAPI.searchParfumo(brand, perfumeName);
+                hideLoading();
+                
+                if (parfumoResult) {
+                    showParfumoComparison(parfumoResult);
+                } else {
+                    showError('Parfüm bulunamadı. Lütfen farklı bir arama terimi deneyin.');
+                }
+            } else {
+                hideLoading();
+                showError('Parfüm bulunamadı. Marka ve parfüm adını birlikte yazın (örn: Chanel No.5)');
+            }
+        }
+    } catch (error) {
         hideLoading();
-        showNameComparison(searchTerm);
-    }, 1000);
+        console.error('Arama hatası:', error);
+        showError('Arama sırasında bir hata oluştu.');
+    }
 }
 
 // Notalara göre arama yap
-function performNotesSearch() {
+async function performNotesSearch() {
     const selectedNotes = getSelectedNotes();
     
     if (selectedNotes.length === 0) {
@@ -120,22 +147,46 @@ function performNotesSearch() {
 
     showLoading();
     
-    // Simüle edilmiş arama - gerçek API entegrasyonu sonrası kaldırılacak
-    setTimeout(() => {
+    try {
+        // Seçilen nota isimlerini al
+        const noteNames = selectedNotes.map(note => note.value);
+        const searchTerm = noteNames.join(',');
+        
+        const results = await window.perfumeAPI.searchPerfumes(searchTerm, 'notes', getActiveGender());
+        
         hideLoading();
-        showNotesResults(selectedNotes);
-    }, 1000);
+        
+        if (results.results && results.results.length > 0) {
+            showSearchResults(results.results, 'notes');
+        } else {
+            showError('Seçilen notalara sahip parfüm bulunamadı.');
+        }
+    } catch (error) {
+        hideLoading();
+        console.error('Nota arama hatası:', error);
+        showError('Arama sırasında bir hata oluştu.');
+    }
 }
 
 // Aileye göre arama yap
-function performFamilySearch(family) {
+async function performFamilySearch(family) {
     showLoading();
     
-    // Simüle edilmiş arama - gerçek API entegrasyonu sonrası kaldırılacak
-    setTimeout(() => {
+    try {
+        const results = await window.perfumeAPI.searchPerfumes(family, 'family', getActiveGender());
+        
         hideLoading();
-        showFamilyResults(family);
-    }, 1000);
+        
+        if (results.results && results.results.length > 0) {
+            showSearchResults(results.results, 'family');
+        } else {
+            showError(`${family} ailesine ait parfüm bulunamadı.`);
+        }
+    } catch (error) {
+        hideLoading();
+        console.error('Aile arama hatası:', error);
+        showError('Arama sırasında bir hata oluştu.');
+    }
 }
 
 // Seçilen notaları al
@@ -189,27 +240,49 @@ function showFamilyResults(family) {
     updateGridResults([{type: 'family', value: family}]);
 }
 
-// Slider'dan karşılaştırma göster
+// Slider'dan karşılaştırma göster (eski fonksiyon - artık kullanılmıyor)
 function showSliderComparison(perfumeName) {
-    // Mevcut arama alanlarını gizle
-    document.querySelectorAll('.search-container').forEach(container => {
-        container.classList.remove('active');
-    });
+    // Bu fonksiyon artık window.perfumeAPI.showPerfumeComparison ile değiştirildi
+    console.warn('showSliderComparison kullanımdan kaldırıldı, window.perfumeAPI.showPerfumeComparison kullanın');
     
-    // Grid sonuçlarını gizle
-    document.getElementById('resultsGrid').classList.remove('active');
+    // Parfüm kartından marka ve isim bilgilerini çıkar
+    const perfumeInfo = extractPerfumeInfoFromName(perfumeName);
     
-    // İsim karşılaştırma alanını göster
-    document.getElementById('nameComparisonArea').classList.add('active');
-    scrollToElement('nameComparisonArea');
+    if (perfumeInfo) {
+        window.perfumeAPI.showPerfumeComparison(perfumeInfo.brand, perfumeInfo.name);
+    } else {
+        // Fallback: eski karşılaştırma sistemini kullan
+        // Mevcut arama alanlarını gizle
+        document.querySelectorAll('.search-container').forEach(container => {
+            container.classList.remove('active');
+        });
+        
+        // Grid sonuçlarını gizle
+        document.getElementById('resultsGrid').classList.remove('active');
+        
+        // İsim karşılaştırma alanını göster
+        document.getElementById('nameComparisonArea').classList.add('active');
+        scrollToElement('nameComparisonArea');
 
-    // Karşılaştırma kartlarını güncelle
-    updateComparisonCards(perfumeName);
+        // Karşılaştırma kartlarını güncelle
+        updateComparisonCards(perfumeName);
+    }
 }
 
-// Grid'den karşılaştırma göster
+// Grid'den karşılaştırma göster (eski fonksiyon - artık kullanılmıyor)
 function showComparison(perfumeName) {
-    showSliderComparison(perfumeName);
+    // Bu fonksiyon artık window.perfumeAPI.showPerfumeComparison ile değiştirildi
+    console.warn('showComparison kullanımdan kaldırıldı, window.perfumeAPI.showPerfumeComparison kullanın');
+    
+    // Parfüm kartından marka ve isim bilgilerini çıkar
+    const perfumeInfo = extractPerfumeInfoFromName(perfumeName);
+    
+    if (perfumeInfo) {
+        window.perfumeAPI.showPerfumeComparison(perfumeInfo.brand, perfumeInfo.name);
+    } else {
+        // Fallback: eski karşılaştırma sistemini kullan
+        showSliderComparison(perfumeName);
+    }
 }
 
 // Arama'ya geri dön
@@ -507,6 +580,40 @@ function loadFromURL() {
     }
 }
 
+// Parfüm adından marka ve isim bilgilerini çıkar
+function extractPerfumeInfoFromName(perfumeName) {
+    // Yaygın marka isimlerini kontrol et
+    const brands = [
+        'Chanel', 'Dior', 'Tom Ford', 'Yves Saint Laurent', 'YSL', 
+        'Giorgio Armani', 'Versace', 'Gucci', 'Prada', 'Hermès',
+        'Creed', 'Maison Margiela', 'Byredo', 'Le Labo', 'Diptyque',
+        'Amouage', 'Montale', 'Mancera', 'Nasomatto', 'Kilian',
+        'Dolce & Gabbana', 'Calvin Klein', 'Hugo Boss', 'Burberry',
+        'Thierry Mugler', 'Jean Paul Gaultier', 'Issey Miyake',
+        'Lancôme', 'Estée Lauder', 'Clinique', 'Marc Jacobs'
+    ];
+    
+    for (const brand of brands) {
+        if (perfumeName.toLowerCase().includes(brand.toLowerCase())) {
+            return {
+                name: perfumeName,
+                brand: brand
+            };
+        }
+    }
+    
+    // Eğer bilinen marka bulunamazsa, ilk kelimeyi marka olarak al
+    const words = perfumeName.split(' ');
+    if (words.length > 1) {
+        return {
+            name: perfumeName,
+            brand: words[0]
+        };
+    }
+    
+    return null;
+}
+
 // Yardımcı fonksiyonlar
 function scrollToElement(elementId) {
     const element = document.getElementById(elementId);
@@ -576,7 +683,7 @@ window.addEventListener('error', function(e) {
 });
 
 // Service Worker kaydı (PWA için - isteğe bağlı)
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js')
             .then(function(registration) {
@@ -588,10 +695,113 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+// Yeni fonksiyonlar - API entegrasyonu için
+
+// Aktif cinsiyeti al
+function getActiveGender() {
+    const activeGenderBtn = document.querySelector('.gender-btn.active');
+    return activeGenderBtn ? activeGenderBtn.getAttribute('data-gender') : 'all';
+}
+
+// Arama sonuçlarını göster
+function showSearchResults(results, searchType) {
+    // Arama alanlarını gizle
+    document.querySelectorAll('.search-container').forEach(container => {
+        container.classList.remove('active');
+    });
+    
+    // Karşılaştırma alanını gizle
+    document.getElementById('nameComparisonArea').classList.remove('active');
+    
+    // Grid alanını göster
+    const resultsGrid = document.getElementById('resultsGrid');
+    const gridContainer = document.getElementById('gridContainer');
+    
+    if (gridContainer) {
+        gridContainer.innerHTML = results.map(perfume => 
+            window.perfumeAPI.createPerfumeCard(perfume, 'grid')
+        ).join('');
+    }
+    
+    resultsGrid.classList.add('active');
+    scrollToElement('resultsGrid');
+}
+
+// Parfumo karşılaştırmasını göster
+function showParfumoComparison(parfumoData) {
+    // Arama alanlarını gizle
+    document.querySelectorAll('.search-container').forEach(container => {
+        container.classList.remove('active');
+    });
+    
+    // Grid alanını gizle
+    document.getElementById('resultsGrid').classList.remove('active');
+    
+    // Karşılaştırma alanını göster
+    const comparisonArea = document.getElementById('nameComparisonArea');
+    
+    // Parfumo verisini karşılaştırma formatına çevir
+    const luxuryPerfume = {
+        name: parfumoData.perfumer || 'Bilinmiyor',
+        brand: { name: 'Lüks Marka' },
+        price: 'Yüksek Fiyat',
+        currency: 'TRY',
+        notes: convertParfumoNotes(parfumoData.notes)
+    };
+    
+    const alternatives = parfumoData.database_alternatives || parfumoData.bargello_recommendations || [];
+    
+    comparisonArea.innerHTML = `
+        <h2 class="comparison-title">Parfüm Karşılaştırması</h2>
+        ${window.perfumeAPI.createComparisonCard(luxuryPerfume, alternatives)}
+        <button class="back-button" onclick="goBackToSearch()">
+            <i class="fas fa-arrow-left"></i> Geri Dön
+        </button>
+    `;
+    
+    comparisonArea.classList.add('active');
+    scrollToElement('nameComparisonArea');
+}
+
+// Parfumo notalarını çevir
+function convertParfumoNotes(notes) {
+    if (!notes || !Array.isArray(notes)) return { top: [], middle: [], base: [] };
+    
+    return {
+        top: notes.slice(0, 3).map(note => ({ name: note })),
+        middle: notes.slice(3, 6).map(note => ({ name: note })),
+        base: notes.slice(6).map(note => ({ name: note }))
+    };
+}
+
+// Hata gösterme fonksiyonu
+function showError(message) {
+    // Mevcut hata bildirimlerini kaldır
+    document.querySelectorAll('.error-notification').forEach(el => el.remove());
+    
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'error-notification';
+    errorDiv.innerHTML = `
+        <div class="error-content">
+            <i class="fas fa-exclamation-triangle"></i>
+            <span>${message}</span>
+            <button class="close-error" onclick="this.parentElement.parentElement.remove()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    `;
+    
+    document.body.appendChild(errorDiv);
+    
+    // 5 saniye sonra otomatik kaldır
+    setTimeout(() => {
+        if (errorDiv.parentElement) {
+            errorDiv.remove();
+        }
+    }, 5000);
+}
+
 // Konsol mesajı
 console.log('🎯 PerfuMatch JavaScript yüklendi!');
-console.log('📝 API entegrasyonu için hazır alanlar:');
-console.log('   - fetchPerfumeData() fonksiyonu');
-console.log('   - updateComparisonCards() fonksiyonu'); 
-console.log('   - updateGridResults() fonksiyonu');
-console.log('   - createPerfumeCard() fonksiyonu');
+console.log('📝 PostgreSQL veritabanı entegrasyonu aktif');
+console.log('🔗 API endpoint\'leri hazır');

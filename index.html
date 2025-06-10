@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style/style.css">
     <title>Parfüm Muadil Öneri Sistemi</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
             <h1>PerfuMatch</h1>
             <p class="subtitle">Lüks Parfümlerin Uygun Fiyatlı Muadillerini Keşfedin</p>
             
-            <!-- Cinsiyet Seçimi -->
+            <!-- Cinsiyet Seçimi -->    
             <div class="gender-selection">
                 <button class="gender-btn active" data-gender="all">
                     <i class="fas fa-users"></i> Tümü
@@ -82,7 +82,7 @@
         <div class="search-container notes-search" id="notesSearch">
             <h2>Notalara Göre Arama</h2>
             <div class="notes-container">
-                <div class="note-section">
+                <div class="note-section" data-note-type="top">
                     <h4>Üst Notalar</h4>
                     <div class="checkbox-group">
                         <div class="checkbox-item">
@@ -120,7 +120,7 @@
                     </div>
                 </div>
                 
-                <div class="note-section">
+                <div class="note-section" data-note-type="middle">
                     <h4>Orta Notalar (Kalp)</h4>
                     <div class="checkbox-group">
                         <div class="checkbox-item">
@@ -158,7 +158,7 @@
                     </div>
                 </div>
                 
-                <div class="note-section">
+                <div class="note-section" data-note-type="base">
                     <h4>Alt Notalar (Dip)</h4>
                     <div class="checkbox-group">
                         <div class="checkbox-item">
@@ -338,7 +338,7 @@
             <h2 class="results-title">Bulunan Parfümler</h2>
             <div class="grid-container" id="gridContainer">
                 <!-- Örnek parfüm kartları - API'den gelecek veriler burada gösterilecek -->
-                <div class="perfume-grid-card" onclick="showComparison('Tom Ford Black Orchid')">
+                <div class="perfume-grid-card" onclick="window.perfumeAPI.showPerfumeComparison('Tom Ford', 'Black Orchid')">
                     <div class="grid-card-image">
                         <i class="fas fa-image"></i> Parfüm Görseli
                     </div>
@@ -354,7 +354,7 @@
                     </div>
                 </div>
 
-                <div class="perfume-grid-card" onclick="showComparison('Dior Sauvage')">
+                <div class="perfume-grid-card" onclick="window.perfumeAPI.showPerfumeComparison('Dior', 'Sauvage')">
                     <div class="grid-card-image">
                         <i class="fas fa-image"></i> Parfüm Görseli
                     </div>
@@ -370,7 +370,7 @@
                     </div>
                 </div>
 
-                <div class="perfume-grid-card" onclick="showComparison('YSL Black Opium')">
+                <div class="perfume-grid-card" onclick="window.perfumeAPI.showPerfumeComparison('Yves Saint Laurent', 'Black Opium')">
                     <div class="grid-card-image">
                         <i class="fas fa-image"></i> Parfüm Görseli
                     </div>
@@ -412,7 +412,7 @@
             <div class="perfume-slider">
                 <div class="slider-container" id="sliderContainer">
                     <!-- Slider Kartları -->
-                    <div class="perfume-card" onclick="showSliderComparison('Chanel No.5')">
+                    <div class="perfume-card" onclick="window.perfumeAPI.showPerfumeComparison('Chanel', 'No.5')">
                         <div class="card-image">
                             <div class="popularity-badge">#1</div>
                             <i class="fas fa-image"></i> Parfüm Görseli
@@ -429,7 +429,7 @@
                         </div>
                     </div>
 
-                    <div class="perfume-card" onclick="showSliderComparison('Dior Sauvage')">
+                    <div class="perfume-card" onclick="window.perfumeAPI.showPerfumeComparison('Dior', 'Sauvage')">
                         <div class="card-image">
                             <div class="popularity-badge">#2</div>
                             <i class="fas fa-image"></i> Parfüm Görseli
@@ -446,7 +446,7 @@
                         </div>
                     </div>
 
-                    <div class="perfume-card" onclick="showSliderComparison('Tom Ford Oud Wood')">
+                    <div class="perfume-card" onclick="window.perfumeAPI.showPerfumeComparison('Tom Ford', 'Oud Wood')">
                         <div class="card-image">
                             <div class="popularity-badge">#3</div>
                             <i class="fas fa-image"></i> Parfüm Görseli
@@ -463,7 +463,7 @@
                         </div>
                     </div>
 
-                    <div class="perfume-card" onclick="showSliderComparison('YSL Black Opium')">
+                    <div class="perfume-card" onclick="window.perfumeAPI.showPerfumeComparison('Yves Saint Laurent', 'Black Opium')">
                         <div class="card-image">
                             <div class="popularity-badge">#4</div>
                             <i class="fas fa-image"></i> Parfüm Görseli
@@ -480,7 +480,7 @@
                         </div>
                     </div>
 
-                    <div class="perfume-card" onclick="showSliderComparison('Coco Mademoiselle')">
+                    <div class="perfume-card" onclick="window.perfumeAPI.showPerfumeComparison('Chanel', 'Coco Mademoiselle')">
                         <div class="card-image">
                             <div class="popularity-badge">#5</div>
                             <i class="fas fa-image"></i> Parfüm Görseli
@@ -501,6 +501,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="src/api/perfume-api.js"></script>
+    <script src="src/script/script.js"></script>
 </body>
 </html>

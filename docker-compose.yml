@@ -1,0 +1,54 @@
+# PostgreSQL Veritabanı ve Flask Uygulaması için Docker Compose yapılandırması
+
+services:
+  # PostgreSQL Veritabanı
+  db:
+    image: postgres:15
+    container_name: perfumatch_postgres
+    environment:
+      POSTGRES_USER: perfumatch_user
+      POSTGRES_PASSWORD: perfumatch_pass
+      POSTGRES_DB: perfumatch_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U perfumatch_user -d perfumatch_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Flask Uygulaması
+  web:
+    build: .
+    container_name: perfumatch_web
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - DATABASE_URL=postgresql://perfumatch_user:perfumatch_pass@db:5432/perfumatch_db
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - .:/app
+    restart: unless-stopped
+
+  # pgAdmin (Opsiyonel - Veritabanı yönetimi için)
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: perfumatch_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@perfumatch.com
+      PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

@@ -745,6 +745,79 @@ header h1 {
     transform: translateY(-2px);
 }
 
+/* Hata Bildirimleri */
+.error-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ff4757;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(255, 71, 87, 0.3);
+    z-index: 1000;
+    max-width: 400px;
+    animation: slideInRight 0.3s ease;
+}
+
+.error-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.close-error {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.2rem;
+    margin-left: auto;
+    border-radius: 3px;
+    transition: background 0.3s ease;
+}
+
+.close-error:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Başarı Bildirimleri */
+.success-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #2ed573;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(46, 213, 115, 0.3);
+    z-index: 1000;
+    max-width: 400px;
+    animation: slideInRight 0.3s ease;
+}
+
+/* Alternatif bulunamadı mesajı */
+.no-alternatives {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    font-size: 1.1rem;
+    background: #f8f9ff;
+    border-radius: 15px;
+    border: 2px dashed #ddd;
+}
+
 /* Responsive Tasarım */
 @media (max-width: 768px) {
     .container {

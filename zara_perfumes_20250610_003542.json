@@ -1,0 +1,28 @@
+[
+  {
+    "name": "EBONY WOOD EDP 100ML (3.4 FL.OZ).",
+    "price": "1,450.00 TL",
+    "description": "Created by Jo Malone CBE, founder of Jo Loves.\n\nEau de Parfum. A woody fragrance with notes of grapefruit, cypress and pink peppercorn, which melts into a heart of coffee. Its base of patchouli and vetiver provides a warm and elegant touch.",
+    "notes": [
+      "Composition: ALCOHOL DENAT., FRAGRANCE (PARFUM), WATER (AQUA), LIMONENE, HYDROXYCITRONELLAL, EUGENOL..."
+    ],
+    "image_url": "https://static.zara.net/assets/public/282c/99c4/72d64c7fb1ad/5dac6403b3b6/20110671999-e1/20110671999-e1.jpg?ts=1730996811877&w=475",
+    "product_url": "https://www.zara.com/tr/en/ebony-wood-edp-100ml--3-4-fl-oz-p20110671.html",
+    "brand": "Zara",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "WONDER ROSE CRUSH EDP 90 ML / 3.04 OZ",
+    "price": "833.33 TL/100ML",
+    "description": "Eau de Parfum. A bolder, more luminous version of Wonder Rose. Juicy and vibrant, it blends pear and blood orange with the radiant energy of the modern rose. Creamy vanilla signs the composition, leaving a warm, addictive trail that captures the effervescent thrill of a fleeting crush.",
+    "notes": [
+      "Rose",
+      "Citrus",
+      "Pine"
+    ],
+    "image_url": "https://static.zara.net/assets/public/a21c/55e7/c8004b20a26d/86221139d52a/20120948999-e1/20120948999-e1.jpg?ts=1743522799777&w=475",
+    "product_url": "https://www.zara.com/tr/en/wonder-rose-crush-edp-90-ml---3-04-oz-p20120948.html",
+    "brand": "Zara",
+    "scrape_date": "2025-06-10"
+  }
+]

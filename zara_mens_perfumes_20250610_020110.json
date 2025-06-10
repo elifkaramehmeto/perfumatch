@@ -1,0 +1,1632 @@
+[
+  {
+    "name": "WO/02 WOOD STREET EDP 100ML (3.4 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Siyah biberin baharatlı sıcaklığı ve tütsünün esrarengiz aurasıyla açılan bir koku. Kalbinde sedir ağacının ve guaiac ağacının gücünü ortaya çıkarır, ince bir rom akoruyla zenginleştirilmiştir. Dipte, vetiver ve deri derinlik katarken vanilya yumuşak ve bağımlılık yaratan bir iz bırakır.",
+    "notes": [
+      "Vetiver"
+    ],
+    "image_url": "https://static.zara.net/assets/public/2183/de9f/ee264d978d4a/3283838c08d8/20220262999-e1/20220262999-e1.jpg?ts=1748861038713&w=475",
+    "product_url": "https://www.zara.com/tr/tr/wo-02-wood-street-edp-100ml--3-4-fl--oz--p20220262.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "WO/03 CAFÉ ET CÈDRE EDP 100ML (3.4 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Bir bergamot ve karabiber kıvılcımı, taze çekilmiş kahvenin yoğun aromasına yol açar. Kalp daha eterik hale gelir, zambak, tütsü ve hafif bir duman gibi yüzen bitkisel bir dokunuşla. Sonunda, sarıp sarmalayan bir ahşap, tonka ve kaşmir sıcaklığı, samimi ve dingin bir iz bırakır.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/7626/b091/e78743068dd5/47c961f5c557/20220263999-e1/20220263999-e1.jpg?ts=1748861040908&w=475",
+    "product_url": "https://www.zara.com/tr/tr/wo-03-cafe-et-cedre-edp-100ml--3-4-fl--oz--p20220263.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "WO/01 SOMEWOODY EDP 100ML (3.4 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Lavanta ve tarçının yumuşak bir karışımı, kokuyu sıcaklık ve sakinlikle açar. Kalp, misk ve sedirin kremsiliğini hassas bir çiçek fısıltısıyla birleştirir. Dipte, odunsu notalar vanilya ve amber ile birleşerek sıcak, samimi ve rahatlatıcı bir iz bırakır.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/4433/6b05/ec814e15bb4d/bf0e38dca7fd/20220264999-e1/20220264999-e1.jpg?ts=1748861042873&w=475",
+    "product_url": "https://www.zara.com/tr/tr/wo-01-somewoody-edp-100ml--3-4-fl--oz--p20220264.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "TOB/01 TABAC & JAZZ EDP 100ML (3.4 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Armut ve bergamotun aydınlık ferahlığı, gün batımında hafif bir melodi gibi portakal çiçeğinin çiçeksi havasıyla karışıyor. Kalp, rom ve sandal ağacının sıcak ve saran akorlarıyla yankılanırken, osmantus meyveli ve kadifemsi bir nüans katıyor. Son kısım, duman ve cazla dolu bir salonda son bir akor gibi derin ve baştan çıkarıcı.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/7ba0/0ae0/8dfc492298ef/b109df6c0d3c/20220266999-e1/20220266999-e1.jpg?ts=1748861039931&w=475",
+    "product_url": "https://www.zara.com/tr/tr/tob-01-tabac---jazz-edp-100ml--3-4-fl--oz--p20220266.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "LTH/03 KNOW THE LEATHER EDP 100ML (3.4 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. İlk andan itibaren deri, karakterli, yoğun ve doğrudan bir şekilde kendini gösterir. Ardından, kalbi zariflik ve ışıltı katan bir iris ve çiçek örtüsüyle yumuşar. Son olarak, vanilya ve odunsu notalar paçuli ile iç içe geçerek zengin, sarıcı ve derinden bağımlılık yaratan bir iz bırakır.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/202e/0ecb/49e145ab9c9d/8ab63f3ad875/20220268999-e1/20220268999-e1.jpg?ts=1748861037709&w=475",
+    "product_url": "https://www.zara.com/tr/tr/lth-03-know-the-leather-edp-100ml--3-4-fl--oz--p20220268.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "LTH/01 STILL L.E.A.T.H.E.R EDP 100ML (3.4 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Sulu ve canlı bir ahududu, beklenmedik bir parıltıyla kokuyu açar. Safran, sıcak ve baharatlı bir şekilde görevi devralır ve zarafetle ritmi belirler. Dipte, deri güçlü bir şekilde ortaya çıkar ve kuru odunlarla birleşerek cesur, yoğun ve manyetik bir iz bırakır.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/18e9/18c0/5dda418d94c1/214f27bee46c/20220270999-e1/20220270999-e1.jpg?ts=1748861041634&w=475",
+    "product_url": "https://www.zara.com/tr/tr/lth-01-still-l-e-a-t-h-e-r-edp-100ml--3-4-fl--oz--p20220270.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "(SHAMANILLA) EDP 100ML (3.4 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Hindistan cevizi suyu ve bergamotun taze esintisi, yumuşak ve baharatlı kakule ile karışıyor. Kalp notası kremsi ve sarıcı olup sandal ağacı, şeftali çiçeği ve özgünlük katan bitkisel bir dokunuş içeriyor. Son olarak, vanilya, pamuk şeker ve beyaz cuaba'dan oluşan tatlı ve zarif bir izlenim, sıcak ve eterik bir kucaklama hissi bırakıyor.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/e41b/3753/25144a32a148/1f59e09f7a7f/20230008999-e1/20230008999-e1.jpg?ts=1748861044268&w=475",
+    "product_url": "https://www.zara.com/tr/tr/-shamanilla--edp-100ml--3-4-fl--oz--p20230008.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SURFING CLOUDBREAK EDP 100ML ( 3,38 FL.OZ )",
+    "price": "990,00 TL",
+    "description": "Eau de Parfum. Okyanus manzaralarını ve dizginlenemeyen dalgaları çağrıştıran odunsu ve sucul bir kompozisyon. Calypsone'nin açılışı, tuzlu suyu ve denizin dalgalarını hatırlatırken, champaca'nın çiçeksi kalbi egzotik ve güneşli bir dokunuş katıyor. Dipteki sedir, deniz ferahlığı ve odunsu yoğunluk arasında bir denge kurarak yapı ve karakter kazandırır.\n\nGüçlü dalgaların sörfçüler için bir cennet yarattığı Fiji'nin saf güzelliğine dalın. Zengin ve topraksı notalar, bu ikonik destinasyonun özünü yakalar ve sizi okyanusun canlandırıcı esintisini ve yemyeşil tropikal manzaraları deneyimlemeye davet eder.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/71fc/eeb1/716b49feabe6/42b2d4f9ba0f/20220336999-e1/20220336999-e1.jpg?ts=1747840757305&w=475",
+    "product_url": "https://www.zara.com/tr/tr/surfing-cloudbreak-edp-100ml---3-38-fl-oz---p20220336.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SURFING ULUWATU EDP 100ML (3,38 FL.OZ)",
+    "price": "990,00 TL",
+    "description": "Eau de Parfum. Dalgaların üzerindeki özgürlük hissini yakalayan odunsu ve sucul bir koku. Zencefil, duyuları tazeleyen bir esintiyle yükseltilmiş, baharatlı ve canlandırıcı bir başlangıç sunar. Dipteki sandal ağacı, başlangıcın ferah enerjisini rahatlatıcı ve doğal bir zeminle dengeleyerek sıcaklık ve yumuşaklık katar.\n\nUçurumların okyanusla buluştuğu nefes kesen bir gösteri sunan Bali'nin muhteşem güzelliğine kendinizi bırakın. Dalgalarda sörf yapın, tropikal esintiyi hissedin ve canlı Bali güneşinin tadını çıkarın. Baharatlı ve canlı notalar, bu ünlü sörf destinasyonunun ruhunu uyandırmak için mükemmel bir şekilde harmanlanmıştır.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/17bc/e8eb/52004bb4bbd1/13a6c5be6934/20220334999-e1/20220334999-e1.jpg?ts=1747840755227&w=475",
+    "product_url": "https://www.zara.com/tr/tr/surfing-uluwatu-edp-100ml--3-38-fl-oz--p20220334.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SURFING HOSSEGOR EDP 100ML ( 3.38 FL.OZ )",
+    "price": "990,00 TL",
+    "description": "Eau de Parfum. İlk uygulamadan itibaren aydınlık bir ferahlık yayan, turunçgilli ve baharatlı bir koku. Bergamot ve frenk üzümü üst notaları, baharatların canlı kalbinde eriyerek denizin enerjisini ve güneşin ten üzerindeki etkisini çağrıştırıyor. Sedir ağacı dip notası, tuzlu ve amberli nüanslarla taze ama sarıp sarmalayan bir iz bırakarak sıcaklık ve derinlik katıyor.\n\nDalgaların kırıldığı ve sörf ruhunun her köşede hissedildiği Atlantik kıyısına yapılan bir koku yolculuğu. Bu parfüm, okyanusun ferahlığını çiçeksi ve odunsu notalarla birleştirerek sörfçüler için bir cennet olan Hossegor'un özünü yakalıyor.\n\nDaha fazla gör",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/0885/3a30/8a4d449cbc9b/59a793774eb5/20220335999-e1/20220335999-e1.jpg?ts=1747840755620&w=475",
+    "product_url": "https://www.zara.com/tr/tr/surfing-hossegor-edp-100ml---3-38-fl-oz---p20220335.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SURFING MAVERICKS EDP 100ML (3,38 FL.OZ)",
+    "price": "990,00 TL",
+    "description": "Eau de Parfum. Maceraperest bir ruha sahip, aromatik ve odunsu bir koku. Elma, kakulenin baharatlı kalbine doğru ilerleyen sulu ve canlı bir açılış sunar. Kuru odunların dip notası, maskülen ve şık karakterini güçlendirerek, gücü ve tanımı olan çağdaş bir aroma sağlar.\n\nKaliforniya'nın ikonik sörf noktasının özünü yakalayan bu koku, dalgaların heyecanını kucaklamaya, okyanusun serinliğini hissetmeye ve altın Kaliforniya güneşinin tadını çıkarmaya davet ediyor. Canlandırıcı, ferahlatıcı ve sıcak notaları, bu efsanevi destinasyonun ruhunu uyandırmak için mükemmel bir şekilde bir araya geliyor.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/c20f/f9d2/aa394a688495/9619967d3017/20220337999-e1/20220337999-e1.jpg?ts=1747840759009&w=475",
+    "product_url": "https://www.zara.com/tr/tr/surfing-mavericks-edp-100ml--3-38-fl-oz--p20220337.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VIBRANT LEATHER SUMMER BREEZE EDP 100ML (3,38 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Vibrant Leather'ın daha ferah ve yazlık bir versiyonu. Bergamot ve limonun turunçgil ferahlığı, zencefilin ışıltısıyla karışırken, neroli ve yaseminin çiçeksi kalbi, siyah çayın derinliğiyle zenginleşiyor. Tonka fasulyesinin tatlılığı ve odunsu dip notalar, şık ve sofistike bir koku yaratıyor.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/00e7/80b5/031a46a1a935/05b4d9907b3b/20210249999-e1/20210249999-e1.jpg?ts=1745582489770&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vibrant-leather-summer-breeze-edp-100ml--3-38-fl-oz--p20210249.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM NEO GREEN EDITION EDP 100ML (3,38 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Beklenmedik bir ferahlık, hindistan cevizinin baharatlı sıcaklığıyla sarılmış, yeşil fıstık kremamsılığıyla açılıyor. Kuru odunların alt notası, kararlılık ve derinlik katarken modern, merak uyandıran ve doğal olarak sofistike bir koku yaratıyor.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/8276/7d71/96df4895a783/8b6389a09432/20210258999-e1/20210258999-e1.jpg?ts=1745393407441&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-neo-green-edition-edp-100ml--3-38-fl-oz--p20210258.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM SOLAR EDITION EDP 100ML (3.38 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Beklenmedik bir ferahlık, hindistan cevizinin baharatlı sıcaklığıyla sarılan yeşil fıstık kremasıyla açılıyor. Kuru odunların dip notaları karakter ve derinlik katarken modern, merak uyandıran ve doğal olarak sofistike bir koku yaratıyor.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/0007/52f1/04954f7e925d/8c012ddbac4c/20210260999-e1/20210260999-e1.jpg?ts=1745393407804&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-solar-edition-edp-100ml--3-38-fl-oz--p20210260.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VIBRANT LEATHER EDP 100ML (3,38 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Odunsu notaların sıcaklığı ve derinin yoğunluğu arasında bir denge. Bergamot ve limonun turunçgil notaları, bambu, deri akorları ve paçuli ve papirüsün temel notalarıyla birleşiyor.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/43b7/2d45/8bf04f759fdf/abf2f635e472/20210721999-e1/20210721999-e1.jpg?ts=1724755184244&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vibrant-leather-edp-100ml--3-38-fl-oz--p20210721.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "OUD VIBRANT LEATHER EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "\"Vibrant Leather Oud, oryantal bir akorun hassasiyeti ile büyüleyici ud ağacı notalarının baş döndürücü duygusallığı arasında saf bir uyumdur.\" Jérôme Epinette, Vibrant Leather parfümör.\n\nOdunsu eau de parfum. Koku piramidi bergamot, kumkuat ve elmanın narenciye notalarını, tütsü, sardunya, menekşe, paçuli, meşe ve ud ağacını içerir.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot",
+      "Oud"
+    ],
+    "image_url": "https://static.zara.net/assets/public/8fdc/59cf/361649b68c7d/81676898dd6d/20210722999-e1/20210722999-e1.jpg?ts=1724755171612&w=475",
+    "product_url": "https://www.zara.com/tr/tr/oud-vibrant-leather-edp-100-ml--3-4-fl-oz--p20210722.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SUNRISE ON THE RED SAND DUNES EDP 100ML ( 3.4 FL.OZ )",
+    "price": "1.100,00 TL",
+    "description": "Eau de parfum. Mylene Alran, sonsuz ufukların dünyasında bir parıltı gibi narenciye kokusunu sunuyor. Koku piramidi, mandalina halesi üzerinde bergamot ve zencefil notalarını ortaya çıkarıyor. Dip notalarda ise portakal çiçeği ve frenk üzümüyle sarmalanmış amber notaları bulunuyor.",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/8920/c622/18754788b68e/548e36c28574/20220240999-e1/20220240999-e1.jpg?ts=1724755223449&w=475",
+    "product_url": "https://www.zara.com/tr/tr/sunrise-on-the-red-sand-dunes-edp-100ml---3-4-fl-oz---p20220240.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VIBRANT LEATHER + OUD VIBRANT LEATHER EDP 2 X 60ML (2.03 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "\"Vibrant Leather, odunsu notaların huzurlu ve romantik yanı ile derinin canlılığı ve yoğunluğu arasında bir denge.\" Jérôme Epinette, Vibrant Leather parfümcüsü.\n\nEau de parfum. Koku piramidi, bergamot ve limonun narenciye notalarını, bambuyu, deri akorlarını, paçuliyi ve papirüsü ortaya çıkarıyor.\n\n\"Vibrant Leather Oud, oryantal bir akorun hassasiyeti ile büyüleyici bir şekilde şehvetli oud ağacı notaları arasında saf bir uyum.\" Jérôme Epinette, Vibrant Leather parfümcüsü.\n\nEau de parfum. Koku piramidi, bergamot, kumkuat ve elmanın narenciye notalarını, tütsüyü, sardunyayı, menekşeyi, paçuliyi, meşeyi ve oud ağacını içeriyor.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot",
+      "Oud"
+    ],
+    "image_url": "https://static.zara.net/assets/public/309d/2970/095c4f58b1c1/1c0d5c6680db/20210726999-e1/20210726999-e1.jpg?ts=1724755292929&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vibrant-leather-oud-vibrant-leather-edp-2-x-60ml--2-03-fl-oz--p20210726.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SEOUL + LISBOA EDT 2 X 90 ML (3.4 FL. OZ)",
+    "price": "990,00 TL",
+    "description": "İkili eau de toilette seti. Koku piramidinde fındık, biber ve kehribar (I) + limon, yeşil notalar ve misk (II) notaları yer alıyor.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/3522/fdc2/7fbd4929ba89/b800fb281af0/20210754999-e1/20210754999-e1.jpg?ts=1724755229742&w=475",
+    "product_url": "https://www.zara.com/tr/tr/seoul-lisboa-edt-2-x-90-ml--3-4-fl--oz--p20210754.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "GREEN SAVAGE + BLUE SPIRIT EDT 2 X 90 ML (3,4 FL. OZ)",
+    "price": "990,00 TL",
+    "description": "İkili eau de toilette seti. Koku piramidi limon, yasemin ve paçuli notaları içeriyor. Ferah, modern ve parlak bir koku. (I) + mandalina, ylang ylang ve amber notaları. Modern, geceye uygun ve sıcak bir koku. (II)",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/3877/6efe/ef334174b044/b0eb30c93c89/20210755999-e1/20210755999-e1.jpg?ts=1724755242544&w=475",
+    "product_url": "https://www.zara.com/tr/tr/green-savage-blue-spirit-edt-2-x-90-ml--3-4-fl--oz--p20210755.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "MAN NAVY BLACK + ZARA MAN 800 BLACK EDT 2X 90 ML (3,0 FL. OZ)",
+    "price": "990,00 TL",
+    "description": "NAVY BLACK: Nektarin, bergamot ve greyfurt üst notalarına sahip aromatik odunsu eau de toilette. Adaçayı ve kahve notalarının kalbinde, vetiver, amber ve paçuli notalarıyla zenginleşen bir temel üzerine kurulu. Sportif, ferah ve ışıltılı bir koku.\n\n800 BLACK: Turunçgil odunsu eau de toilette. Yuzu, safran ve tonka fasulyesi notalarını içeren koku piramidi. Geceye uygun, güçlü ve yoğun bir koku.\n\nDaha fazla gör",
+    "notes": [
+      "Amber",
+      "Bergamot",
+      "Vetiver"
+    ],
+    "image_url": "https://static.zara.net/assets/public/6304/6914/0eaa465d8c2b/52e868ef4f43/20210838999-e1/20210838999-e1.jpg?ts=1724755268727&w=475",
+    "product_url": "https://www.zara.com/tr/tr/man-navy-black-zara-man-800-black-edt-2x-90-ml--3-0-fl--oz--p20210838.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "NIGHT POUR HOMME III EDP 100 ML (3.38 FL OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Biberin baharatlı dokunuşuyla başlayan, iris ve osmanthus çiçeğinin kalbinde devam eden ve vetiver ve deri notalarının güçlü bir temeli üzerinde oturan cesur ve baştan çıkarıcı bir parfüm. Yoğun ve özel bir koku arayanlar için idealdir.",
+    "notes": [
+      "Vetiver"
+    ],
+    "image_url": "https://static.zara.net/assets/public/7691/75f5/80564a63a918/5146da5a797e/20210041999-e1/20210041999-e1.jpg?ts=1724835032124&w=475",
+    "product_url": "https://www.zara.com/tr/tr/night-pour-homme-iii-edp-100-ml--3-38-fl-oz--p20210041.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "NIGHT POUR HOMME II EDP 100 ML (3.4 FL.OZ)",
+    "price": "920,00 TL",
+    "description": "Oryantal eau de parfum. Bergamot, lavanta ve kehribar notaları içeren koku piramidi. Ferah, kalıcı ve geceye uygun bir koku.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/0bbf/86bb/708347dc9b6c/3ece2e610ac3/1689067776388/1689067776388.jpg?ts=1701388818540&w=475",
+    "product_url": "https://www.zara.com/tr/tr/night-pour-homme-ii-edp-100-ml--3-4-fl-oz--p20210547.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "NIGHT POUR HOMME II + III EDP 2 X 100 ML (3.4 FL.OZ)",
+    "price": "1.290,00 TL",
+    "description": "Şık, sofistike veya cesur olsun, kıyafetinize son dokunuşu katacak bir koku koleksiyonu. Geceye karanlık ve büyüleyici bir dokunuş katarak, gündüzleri ise ışıltılı ve çekici notalar ortaya çıkarır.\n\nNIGHT POUR HOMME II, baştan çıkarıcı ve sıcak baharatların büyüleyici bir koku için kuru odunsu notalarla harmanlandığı modern bir oryantal fujer kokusudur. Koku piramidi, kakule, lavanta ve hindistan cevizi ile sarmalanmış bergamot, greyfurt ve limonun meyvemsi üst notalarını ortaya çıkarır. Alt notalarda ise sedir ağacı, amber ve tonka fasulyesi eşliğinde misk ve vanilya notaları bulunur. Özgür ve rahat kişiliğini savunan erkekler için etkileyici bir koku.\n\nNIGHT POUR HOMME III, ışıltılı çiçeksi bir patlama ile şık ve ferah bir karakteri ortaya çıkaran odunsu bir kokudur. Koku piramidi, süsen, osmanthus, kişniş ve biberle sarmalanmış bergamot ve armudun meyvemsi üst notalarını ortaya çıkarır. Alt notalarda ise deri ve vetiver notaları eşliğinde sandal ağacı ve kaşmir ağacının odunsu notaları bulunur. Eşsiz, baştan çıkarıcı ve karşı konulmaz bir koku.\n\nDaha fazla gör",
+    "notes": [
+      "Amber",
+      "Bergamot",
+      "Vetiver"
+    ],
+    "image_url": "https://static.zara.net/assets/public/2a2a/c88e/631d49a29a12/41db57932ed1/20210624999-e1/20210624999-e1.jpg?ts=1724686748200&w=475",
+    "product_url": "https://www.zara.com/tr/tr/night-pour-homme-ii-iii-edp-2-x-100-ml--3-4-fl-oz--p20210624.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SEOUL SUMMER EDT 90 ML (3,04 FL. OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de Toilette. Seoul'ün yaz versiyonu. Mandalina ve yeşil notaları, elma ve portakal çiçeği kalbiyle birleştiren taze ve meyvemsi bir koku. Odunsu ve kehribar baz notaları, yaza ideal canlı bir aroma yaratarak sıcaklık katıyor.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/82cd/587c/90af44a999f1/fbbb23d9dbf8/20210634999-e1/20210634999-e1.jpg?ts=1741263510332&w=475",
+    "product_url": "https://www.zara.com/tr/tr/seoul-summer-edt-90-ml--3-04-fl--oz--p20210634.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SILVER SUMMER EDT 90 ML (3,04 FL. OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de Toilette. Man Silver'ın yaz versiyonu. Narenciye, nane ve aromatik lavanta ve kakule dokunuşlarıyla ferah ve canlı bir koku. Sandal ağacı, amber ve paçuli, sıcak ve sofistike bir temel oluşturuyor.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/6f05/5781/18d74753b291/f65e6bba38df/20210609999-e1/20210609999-e1.jpg?ts=1741263510304&w=475",
+    "product_url": "https://www.zara.com/tr/tr/silver-summer-edt-90-ml--3-04-fl--oz--p20210609.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "GREEN SAVAGE SUMMER EDT 90 ML (3,04 FL. OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de Toilette. Green Savage'ın yaz versiyonu. Bergamotla açılan ferah ve canlı bir koku. Işıltılı kalbi, aydınlık bir yaz sabahını anımsatırken, tonka fasulyesi ve sandal ağacı baz notaları sıcak bir dokunuş katıyor.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/6fbc/67dc/5f2f473abd11/32d0e3bca256/20210246999-e1/20210246999-e1.jpg?ts=1741263510348&w=475",
+    "product_url": "https://www.zara.com/tr/tr/green-savage-summer-edt-90-ml--3-04-fl--oz--p20210246.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BLUE SPIRIT SUMMER EDT 90 ML (3,04 FL. OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de Toilette. Blue Spirit'in yaz versiyonu. Lavanta ve adaçayının enerjisini, tütün notalarının saran sıcaklığıyla birleştiren ferah ve canlı bir koku. Yaz gecelerinin elektrikli yoğunluğunu yakalayan genç ve geceye uygun bir esans.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/d9c8/c9aa/1abd49aeb7c9/d4952914c5b3/20210247999-e1/20210247999-e1.jpg?ts=1741945424345&w=475",
+    "product_url": "https://www.zara.com/tr/tr/blue-spirit-summer-edt-90-ml--3-04-fl--oz--p20210247.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "RED RODEO EDT 90 ML (3.04 FL. OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de Parfum. Bergamot ve çileğin taze ve tuzlu başlangıcıyla amber ve odunsu bir koku. Kalbinde, deri ve köknar balsamı derinlik ve karakter katıyor. Amber, kaşmir ağacı ve vanilyanın sıcak notaları, özü yumuşak ve sofistike bir dokunuşla sarıyor.",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/908f/c120/e02740b18a2d/90fb9407285e/20210149999-000-e1/20210149999-000-e1.jpg?ts=1741174784389&w=475",
+    "product_url": "https://www.zara.com/tr/tr/red-rodeo-edt-90-ml--3-04-fl--oz--p20210149.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "YELLOW ODYSSEY EDT 90 ML (3,04 FL. OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de Parfum. Enerji ve karakter yayan dinamik bir koku. Biber, greyfurt ve bergamotun ferah notalarıyla açılıyor. Elma ve kaşmir ağacının kalbi sıcaklık katarken, misk, amber ve sandal ağacı bu canlı esansı tamamlıyor.",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/34ae/fb66/f8e24090b832/b591aebbefa3/20210251999-e1/20210251999-e1.jpg?ts=1740738973472&w=475",
+    "product_url": "https://www.zara.com/tr/tr/yellow-odyssey-edt-90-ml--3-04-fl--oz--p20210251.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "ORANGE NOMAD EDT 90 ML (3,04 FL. OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de Parfum. Maceracı ruhu yansıtan canlı bir koku. Orange Nomad, kan portakalının enerjisini portakal çiçeğinin çiçeksi yoğunluğuyla birleştirir. Canlı odunsu notalar, her anda özgürlük ve keşfe ilham vererek gücü ve karakteri vurgular.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/2b5e/8302/b4514f2c8282/4d77a08345ba/20210252999-e1/20210252999-e1.jpg?ts=1740738516275&w=475",
+    "product_url": "https://www.zara.com/tr/tr/orange-nomad-edt-90-ml--3-04-fl--oz--p20210252.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BLUE SPIRIT EDT 90 ML (3,04 FL.OZ)",
+    "price": "750,00 TL",
+    "description": "Aromatik eau de toilette. Mandalina, ylang ylang ve amber notaları içeren koku piramidi. Modern, geceye uygun ve sıcak bir koku.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/6ac4/8e02/e6ba47c0aeb8/adc1dcc1aaac/20210739999-e1/20210739999-e1.jpg?ts=1724689267811&w=475",
+    "product_url": "https://www.zara.com/tr/tr/blue-spirit-edt-90-ml--3-04-fl-oz--p20210739.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "GOLD ABSOLUTE EDP 90 ML (3,04 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Canlı limon ve mandalina, keskin bir pembe biber dokunuşu ve tarçının sıcaklığıyla harmanlanmış odunsu ve kehribar kokusu. Dip notalarında sedir ağacı, palo santo, kavrulmuş kestane, guayak ağacı ve vanilya ortaya çıkarak baştan çıkarıcı ve gizemli bir zenginlik yaratır.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/4ac8/0e79/f74343b9a6b5/5dfbb452a5bf/20210256999-e1/20210256999-e1.jpg?ts=1739352552919&w=475",
+    "product_url": "https://www.zara.com/tr/tr/gold-absolute-edp-90-ml--3-04-fl--oz--p20210256.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SILVER ABSOLUT EDP 90ML ( 3.04 FL. OZ )",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Odunsu-kehribar kokusu, canlandırıcı limon ve mandalina çıkış notalarıyla yeşil notalarla iç içe geçiyor. Zarif sardunya ve adaçayı kalbi derinlik katarken kakule sıcaklık katıyor. Son olarak mineral deri, paçuli ve laden büyüleyici bir temel oluşturuyor.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/c6e6/f08f/ca6a4fcbbf27/d48ec2dd1c43/20210255999-e1/20210255999-e1.jpg?ts=1739352550253&w=475",
+    "product_url": "https://www.zara.com/tr/tr/silver-absolut-edp-90ml---3-04-fl--oz---p20210255.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SEOUL ABSOLUTE EDP 90 ML (3.04 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Limon, kakule ve ananasla açılan canlı bir koku. Lavanta, elma ve portakal çiçeğinden oluşan kalp notası modern bir dokunuş katarken, odunsu notalar, vanilya ve benzoin kalıcı ve yoğun bir iz bırakır.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/e9e3/83ef/f123445e9b50/0a03fedbcb61/20210257999-e1/20210257999-e1.jpg?ts=1739352552753&w=475",
+    "product_url": "https://www.zara.com/tr/tr/seoul-absolute-edp-90-ml--3-04-fl--oz--p20210257.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "LONDON SAVILE ROW MAYFAIR EDT 90 ML (3.04 FL. OZ)",
+    "price": "750,00 TL",
+    "description": "Odunsu çiçeksi eau de toilette. Koku piramidi nane, sandal ağacı ve süsen notalarını içeriyor. Yoğun ve kalıcı, erkeksi bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/b47a/92fa/42484f74a984/5c4d0c43cf9b/20210621999-e1/20210621999-e1.jpg?ts=1728032481791&w=475",
+    "product_url": "https://www.zara.com/tr/tr/london-savile-row-mayfair-edt-90-ml--3-04-fl--oz--p20210621.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SEOUL EDT 90 ML (3.04 FL. OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de toilette. Aromatik. Fındık, biber ve kehribar notaları içeren koku piramidi. Modern, sportif ve ışıltılı bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/2c63/6808/1fca4c16877d/4add35b167f6/20210741999-e1/20210741999-e1.jpg?ts=1724830045127&w=475",
+    "product_url": "https://www.zara.com/tr/tr/seoul-edt-90-ml--3-04-fl--oz--p20210741.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FLORENCE PIAZZA DELLA SIGNORIA EDT 90 ML (3.04 FL. OZ)",
+    "price": "750,00 TL",
+    "description": "Gurme oryantal eau de toilette. Koku piramidinde karabiber, çilek ve guaiac ağacı notaları yer alıyor. Ferah, turunçgil ve parlak bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/b455/939e/beee4e46a548/9ad8eb7630ce/20210620999-e1/20210620999-e1.jpg?ts=1728032481616&w=475",
+    "product_url": "https://www.zara.com/tr/tr/florence-piazza-della-signoria-edt-90-ml--3-04-fl--oz--p20210620.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "LISBOA EDT 90ML ( 3.04 FL. OZ )",
+    "price": "750,00 TL",
+    "description": "Eau de toilette. Koku piramidi, limon, yeşil akorlar ve misk notaları içeriyor. Ferah, rahat ve sportif bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/4f14/25f6/447a4978aba0/45d87202a9f2/20210742999-e1/20210742999-e1.jpg?ts=1724765327975&w=475",
+    "product_url": "https://www.zara.com/tr/tr/lisboa-edt-90ml---3-04-fl--oz---p20210742.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SEOUL 532-8 SINSA-DONG GANGNAM-GU EDT 150 ML (5.07 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Aromatik eau de toilette. Koku piramidinde fındık, biber ve kehribar notaları yer alıyor. Modern, sportif ve ışıltılı bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/fda3/e8cb/c37044949b3f/91504f13a46a/20210999999-000-e1/20210999999-000-e1.jpg?ts=1742486839133&w=475",
+    "product_url": "https://www.zara.com/tr/tr/seoul-532-8-sinsa-dong-gangnam-gu-edt-150-ml--5-07-fl--oz--p20210999.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SILVER EDT 150 ML (5.07 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de toilette. Limon, yasemin ve paçuli notaları içeren koku piramidi. Ferah, modern ve parlak bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/992f/5833/e2104789a16c/e8ac6cf65e82/20210998999-000-e1/20210998999-000-e1.jpg?ts=1742486839524&w=475",
+    "product_url": "https://www.zara.com/tr/tr/silver-edt-150-ml--5-07-fl--oz--p20210998.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BLUE SPIRIT EDT 150 ML (5.07 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Aromatik eau de toilette. Koku piramidi mandalina, ylang ylang ve amber notaları içeriyor. Modern, geceye uygun ve sıcak bir koku.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/fdf6/e8dd/2a0a4448b661/3abb55aca374/20210997999-000-e1/20210997999-000-e1.jpg?ts=1742486839392&w=475",
+    "product_url": "https://www.zara.com/tr/tr/blue-spirit-edt-150-ml--5-07-fl--oz--p20210997.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "GREEN SAVAGE EDT 150 ML (5.07 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de toilette. Narenciye ve amber kokusu. Koku piramidi, bergamot, mandalina ve greyfurt gibi meyvemsi üst notaları zencefil ile birlikte sunar. Lavanta, elma, adaçayı ve tonka fasulyesi notalarıyla eşlik eder. Dip notalarda sedir ağacı ve misk ile sarılmış tütsü ve amber notaları ortaya çıkar. Ferah, aydınlık ve etkileyici bir kokudur.\n\nDaha fazla gör",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/3686/d630/db1748e49ced/1ba62e1702c4/20210873999-000-e1/20210873999-000-e1.jpg?ts=1742486839719&w=475",
+    "product_url": "https://www.zara.com/tr/tr/green-savage-edt-150-ml--5-07-fl--oz--p20210873.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "GREEN SAVAGE EDT 90 ML (3,04 FL.OZ)",
+    "price": "750,00 TL",
+    "description": "Hesperidik amberli eau de toilette. Koku piramidi, bergamot, mandalina ve greyfurt gibi meyvemsi üst notalarını zencefil ile birlikte ortaya çıkarır. Lavanta, elma, adaçayı ve tonka fasulyesi notalarıyla eşlik eder. Dip notalarda ise sedir ağacı ve misk ile sarmalanmış tütsülü ve amberli notalar bulunur. Ferah, ışıltılı ve etkileyici bir kokudur.\n\nDaha fazla gör",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/e8f2/59e1/c7f148c2aab4/92a1b7f276ba/20210740999-e1/20210740999-e1.jpg?ts=1724689270329&w=475",
+    "product_url": "https://www.zara.com/tr/tr/green-savage-edt-90-ml--3-04-fl-oz--p20210740.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "GOLD EDT 90ML (3,17 FL.OZ)",
+    "price": "750,00 TL",
+    "description": "Koku piramidi limon, tarçın ve palo santo notaları içeriyor. Yoğun, geceye uygun ve modern bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/bdbe/496c/cd1b45bc8364/79f11bd0e40b/20210736999-e1/20210736999-e1.jpg?ts=1724689273399&w=475",
+    "product_url": "https://www.zara.com/tr/tr/gold-edt-90ml--3-17-fl-oz--p20210736.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SILVER EDT 90 ML (3.04 FL.OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de toilette. Koku piramidi limon, yasemin ve paçuli notaları içeriyor. Ferah, modern ve ışıltılı bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/b4c4/5aa6/db744f6c9864/26761abe30a3/20210737999-e1/20210737999-e1.jpg?ts=1724765402753&w=475",
+    "product_url": "https://www.zara.com/tr/tr/silver-edt-90-ml--3-04-fl-oz--p20210737.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "UOMO EDT 90 ML (3.04 FL.OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de toilette. Koku piramidi bergamot, küçük hindistan cevizi ve amber notaları içeriyor.",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/47ef/8808/d8c9449b8dfe/25dcceec8782/20210770999-e1/20210770999-e1.jpg?ts=1724685073404&w=475",
+    "product_url": "https://www.zara.com/tr/tr/uomo-edt-90-ml--3-04-fl-oz--p20210770.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "800 BLACK EDT 90 ML (3,04 FL.OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de toilette. Turunçgil odunsu koku. Yuzu, safran ve tonka fasulyesi notaları içeren koku piramidi. Geceye uygun, güçlü ve yoğun bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/d7dc/2d2b/b2be461aa2f1/171822367c49/20210738999-e1/20210738999-e1.jpg?ts=1724689270597&w=475",
+    "product_url": "https://www.zara.com/tr/tr/800-black-edt-90-ml--3-04-fl-oz--p20210738.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "NAVY BLACK EDT 90 ML (3,04 FL.OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de toilette. Aromatik odunsu koku, nektarin, bergamot ve greyfurt üst notalarına sahiptir. Adaçayı ve kahve notalarından oluşan kalbi, vetiver, amber ve paçuli notalarıyla zenginleşen bir dip notaya sahiptir. Sportif, ferah ve ışıltılı bir koku.",
+    "notes": [
+      "Amber",
+      "Bergamot",
+      "Vetiver"
+    ],
+    "image_url": "https://static.zara.net/assets/public/55e7/d00b/81c64434ba69/6b30f1f8d349/20210753999-e1/20210753999-e1.jpg?ts=1724685070937&w=475",
+    "product_url": "https://www.zara.com/tr/tr/navy-black-edt-90-ml--3-04-fl-oz--p20210753.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SILVER WINTER EDT 90 ML (3.0 FL OZ)",
+    "price": "750,00 TL",
+    "description": "Eau de Toilette. Zengin, şehvetli ve çekici bir koku. Canlandırıcı, ışıltılı narenciye üst notaları, hafif bir buzlu yeşil nane dokunuşuyla harmanlanıyor. Orta notalarda aromatik tonlar, sıcak ve odunsu-kehribar baz notalarına ve balsamlı tonka fasulyesi vurgularına geçiş yapıyor. Koku piramidi limon, kakule ve sandal ağacı notalarından oluşuyor.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/8738/de0b/e5cf492caec0/31d07c7fa958/20210797999-e1/20210797999-e1.jpg?ts=1723014974967&w=475",
+    "product_url": "https://www.zara.com/tr/tr/silver-winter-edt-90-ml--3-0-fl-oz--p20210797.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SILVER + SILVER SUMMER EDT 2 X 90 ML (3,04 FL. OZ)",
+    "price": "990,00 TL",
+    "description": "Eau de Toilette. Man Silver ve Man Silver Summer ikili paket. Man Silver'daki kakule, lavanta ve sandal ağacının aromatik sofistikeliğini, Man Silver Summer'daki narenciye notalarının, nane ve sıcak amber ve paçuli tabanının canlı ferahlığıyla birleştiren iki tamamlayıcı koku. Yazın her anı için ferahlık ve şıklığı dengeleyen çok yönlü bir set.\n\nDaha fazla gör",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/7948/b161/c3eb40169f6b/4ce8fb055260/20210219999-e1/20210219999-e1.jpg?ts=1740655932429&w=475",
+    "product_url": "https://www.zara.com/tr/tr/silver-silver-summer-edt-2-x-90-ml--3-04-fl--oz--p20210219.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SEOUL + SEOUL SUMMER EDT 2 X 90 ML (3,04 FL. OZ)",
+    "price": "990,00 TL",
+    "description": "Eau de Toilette. Seoul ve Seoul Summer ikili seti. Seoul'de kehribar ve biberin sıcaklığını ylang-ylang'ın çiçeksi dokunuşuyla, Seoul Summer'da ise elma ve portakal çiçeğinin meyvemsi ferahlığını birleştiren iki tamamlayıcı koku. Her durum için şıklığı ve ferahlığı dengeleyen çok yönlü bir set.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/abd9/d541/544748749106/a826fb7bb311/20210218999-e1/20210218999-e1.jpg?ts=1740671627112&w=475",
+    "product_url": "https://www.zara.com/tr/tr/seoul-seoul-summer-edt-2-x-90-ml--3-04-fl--oz--p20210218.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BLUE SPIRIT SUMMER + GREEN SAVAGE SUMMER EDT 2 X 90 ML (3,04 FL. OZ)",
+    "price": "990,00 TL",
+    "description": "Eau de Toilette. Ferahlık ve karakteri bir araya getiren bir ikili. Green Savage Summer, canlı bergamot ve sıcak sandal ağacı ve tonka fasulyesi notalarıyla öne çıkıyor. Blue Spirit Summer, lavanta, adaçayı ve tütün notalarını bir araya getirerek yaz gecelerinin enerjisini yakalıyor.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/fbad/a429/0d5948c9aebf/ca7d6db8b626/20210248999-e1/20210248999-e1.jpg?ts=1740671664554&w=475",
+    "product_url": "https://www.zara.com/tr/tr/blue-spirit-summer-green-savage-summer-edt-2-x-90-ml--3-04-fl--oz--p20210248.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "W/END TILL 3:00 AM + W/END TILL 8:00 PM EDT 2 X 90ML ( 3.04 FL.OZ )",
+    "price": "990,00 TL",
+    "description": "İkili eau de toilette seti. Koku piramidi mandalina, biber ve deri (I) + bergamot, ananas ve menekşe yaprağı (II) notalarını içeriyor.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/031d/3222/159647fabcc3/c1459e084a45/20210772999-e1/20210772999-e1.jpg?ts=1724685067038&w=475",
+    "product_url": "https://www.zara.com/tr/tr/w-end-till-3-00-am-w-end-till-8-00-pm-edt-2-x-90ml---3-04-fl-oz---p20210772.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "MAN SILVER + BLUE SPIRIT EDT 2 X 90 ML (3.04 FL.OZ)",
+    "price": "990,00 TL",
+    "description": "İkili eau de toilette seti. Koku piramidi limon, yasemin ve paçuli notaları içeriyor. Taze, modern ve parlak bir koku (I) + mandalina, ylang ylang ve amber notaları. Modern, geceye uygun ve sıcak bir koku (II).",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/a944/41f2/4cab433884c5/2672f2c13496/20210768999-e1/20210768999-e1.jpg?ts=1724689271598&w=475",
+    "product_url": "https://www.zara.com/tr/tr/man-silver-blue-spirit-edt-2-x-90-ml--3-04-fl-oz--p20210768.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "ZARA VIBRANT LEATHER EDP 150ML (5,07 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Eau de Parfum. Dengeli ve sofistike bir koku. Bergamot ve limonun turunçgil notaları, deri, paçuli ve papirüsün sıcaklığıyla birleşerek canlı ve zarif bir aroma yaratıyor.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/e852/9e28/0bf64bd58cb5/b6daccd0cbad/20210845999-000-e1/20210845999-000-e1.jpg?ts=1742486838873&w=475",
+    "product_url": "https://www.zara.com/tr/tr/zara-vibrant-leather-edp-150ml--5-07-fl-oz--p20210845.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BOGOSS VIBRANT LEATHER SUMMER EDP 100 ML (3,38 FL. OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. İkonik Bogoss Vibrant Leather'ın yaz versiyonu. Narenciye ve meyve notalarını tropikal bir dokunuşla harmanlayan, ferah ve sofistike bir koku. Deri akoru ve sıcak tuzlu amber notaları bu parfümü tamamlıyor.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/015d/6a21/7ff8490caeec/51da20a587a6/20210881999-e1/20210881999-e1.jpg?ts=1740671604315&w=475",
+    "product_url": "https://www.zara.com/tr/tr/bogoss-vibrant-leather-summer-edp-100-ml--3-38-fl--oz--p20210881.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BOGOSS VIBRANT LEATHER ELIXIR PARFUM 100 ML (3,4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Elixir. Orijinal versiyonundan daha yüksek parfüm konsantrasyonuna sahip bu koku, daha kalıcı ve yoğun olup derin ve etkileyici bir iz bırakır. Bergamot, limon, ananas ve greyfurtun meyvemsi ferahlığı canlı ve modern bir dokunuş katarken, paçuli ve deri notaları sedir ağacıyla birleşerek sofistike bir odunsu taban oluşturur.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/3958/84b9/cd7247f48349/2eded498302c/20210261999-e1/20210261999-e1.jpg?ts=1742385803954&w=475",
+    "product_url": "https://www.zara.com/tr/tr/bogoss-vibrant-leather-elixir-parfum-100-ml--3-4-fl-oz--p20210261.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VIBRANT LEATHER ELIXIR PARFUM 100 ML (3,4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Elixir. Orijinal versiyonundan daha yüksek parfüm konsantrasyonuna sahip bu koku, daha kalıcı ve yoğun olup derin ve etkileyici bir iz bırakır. Canlı bergamot ve limon notaları duyuları uyandırır ve deri, paçuli ve papirüsün zenginliğiyle birleşir. Unutulmaz bir izlenim bırakan sofistike ve güçlü bir koku.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/6d16/01b3/bd914edfb18f/f24f2287bc3e/20210113999-000-e1/20210113999-000-e1.jpg?ts=1742485591982&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vibrant-leather-elixir-parfum-100-ml--3-4-fl-oz--p20210113.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "OUD VIBRANT LEATHER ELIXIR PARFUM 100 ML (3,4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Elixir. Orijinal versiyonundan daha yüksek parfüm konsantrasyonuna sahip bu koku, daha kalıcı ve yoğun olup derin ve etkileyici bir iz bırakır. Bergamot, kamkat ve elmanın narenciye ferahlığı, canlı bir başlangıç sağlarken, buhur, sardunya ve menekşenin kalbi, baharatlı zarafetiyle sarar. Dip notalarda paçuli, meşe ve ud ağacının yoğunluğu, duyusal ve sofistike bir ahenk içinde birleşerek manyetik ve unutulmaz bir koku yaratır.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/501e/ab58/7b3c44a7b470/81b39b46bf0f/20210181999-e1/20210181999-e1.jpg?ts=1742385805500&w=475",
+    "product_url": "https://www.zara.com/tr/tr/oud-vibrant-leather-elixir-parfum-100-ml--3-4-fl-oz--p20210181.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BOGOSS VIBRANT LEATHER EDP 100ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "\"Meyvemsi ananas dokunuşuyla modern bir hava katan, gençleştirici odunsu bir dokunuş veren sedir notalarıyla zenginleştirilmiş \"le benjamin\" için ilk Vibrant Leather.\" Jérôme Epinette, Vibrant Leather parfümörü.\n\nMeyvemsi odunsu eau de parfum. Koku piramidi bergamot, limon, ananas ve greyfurt, paçuli ve deri notaları içeriyor.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/c175/827b/7b8d42d2a5dc/383ea530799e/20210723999-e1/20210723999-e1.jpg?ts=1724686797654&w=475",
+    "product_url": "https://www.zara.com/tr/tr/bogoss-vibrant-leather-edp-100ml--3-4-fl-oz--p20210723.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BOGOSS VIBRANT LEATHER WAVE EDP 100 ML (3,38 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Canlı ananas ferahlığını, sulu yeşil elma kalbini ve yumuşak ve rahatlatıcı bir iz bırakan sıcak vanilya özünü birleştiren odunsu ve meyveli bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/341a/1e78/24f745e19960/212df72f329c/20210887999-e1/20210887999-e1.jpg?ts=1736869115120&w=475",
+    "product_url": "https://www.zara.com/tr/tr/bogoss-vibrant-leather-wave-edp-100-ml--3-38-fl-oz--p20210887.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BOGOSS VIBRANT LEATHER FIRE EDP 100 ML (3,38 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Odunsu ve meyveli bir koku. Canlı ananas kokusu, taze bambu kalbine yol açarken, labdanumun derinliği, kompozisyonu sıcak ve etkileyici bir dokunuşla tamamlıyor.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/9bc8/661d/354a4233a9d4/097edc54f260/20210885999-e1/20210885999-e1.jpg?ts=1736869114992&w=475",
+    "product_url": "https://www.zara.com/tr/tr/bogoss-vibrant-leather-fire-edp-100-ml--3-38-fl-oz--p20210885.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BOGOSS VIBRANT LEATHER WILD EDP 100 ML (3,38 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Ananasın canlı ferahlığıyla açılan, egzotik kivi kalbi ve yumuşak ve sıcak sürüklenmiş odun dip notalarıyla odunsu ve meyveli bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/4bbe/099e/58e049468872/dd65994561ca/20210886999-e1/20210886999-e1.jpg?ts=1736869115120&w=475",
+    "product_url": "https://www.zara.com/tr/tr/bogoss-vibrant-leather-wild-edp-100-ml--3-38-fl-oz--p20210886.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VIBRANT LEATHER EXTREME EDP 100ML (3,4 FL.OZ)",
+    "price": "1.290,00 TL",
+    "description": "Odunsu ve turunçgil notalı Eau de Parfum. Bergamot, limon ve mandalinanın ilk patlaması, enerji ve iyimserlik dolu bir etki bırakır. Kalp notasında siyah deri öne çıkar ve safran beklenmedik ve sofistike bir dokunuş katar. Dip notasında papirüs, paçulinin topraksi zenginliği ve pamuk şekerinin hoş bir sürpriziyle açılır.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/63d2/f927/8a5d44eb8c7d/03b109bcb396/20210844999-e1/20210844999-e1.jpg?ts=1730976170042&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vibrant-leather-extreme-edp-100ml--3-4-fl-oz--p20210844.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BOGOSS VIBRANT LEATHER SUMMER + BOGOSS VIBRANT LEATHER 2 X 100ML EDP (3,38 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Eau de Parfum. Bogoss Vibrant Leather ve Bogoss Vibrant Leather Summer ikili paket. Bogoss Vibrant Leather, modern bir dokunuş için meyveli ve odunsu notaları deri ve paçuli ile birleştirir. Bogoss Vibrant Leather Summer, yaz için ideal olan turunçgiller ve tuzlu amber ile tropikal bir ferahlık katar. Her durum için çok yönlü bir ikili.\n\nDaha fazla gör",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/d1f1/0e9d/bad54cda9e4e/4f9d93d61364/20210233999-e1/20210233999-e1.jpg?ts=1740134874570&w=475",
+    "product_url": "https://www.zara.com/tr/tr/bogoss-vibrant-leather-summer-bogoss-vibrant-leather-2-x-100ml-edp--3-38-fl-oz--p20210233.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VIBRANT LEATHER EDP 100 ML (3,38 FL. OZ) + 60 ML (2,03 FL. OZ)",
+    "price": "1.450,00 TL",
+    "description": "Eau de Parfum. Limited Edition. Odunsu notaların sıcaklığı ve derinin yoğunluğu arasında bir denge. Bergamot ve limonun turunçgil notaları, bambu, deri akorları ve paçuli ve papirüsün temel notalarıyla harmanlanıyor.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/6ab8/611b/76034f709f29/2c6a5c290b9c/20210814999-e1/20210814999-e1.jpg?ts=1739952892494&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vibrant-leather-edp-100-ml--3-38-fl--oz--60-ml--2-03-fl--oz--p20210814.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VIBRANT LEATHER EDP 100 ML (3,38 FL. OZ) + 12 ML (0,41 FL. OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Limited Edition. Odunsu notaların sıcaklığı ve derinin yoğunluğu arasında bir denge. Bergamot ve limonun turunçgil notaları, bambu, deri akorları ve paçuli ve papirüs özleriyle harmanlanıyor.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/a576/e3cd/98544d00a4ad/f4930e51fec7/20210794999-e1/20210794999-e1.jpg?ts=1739952893587&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vibrant-leather-edp-100-ml--3-38-fl--oz--12-ml--0-41-fl--oz--p20210794.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VIBRANT LEATHER OUD EDP 100 ML (3,38 FL. OZ) + 12 ML (0,41 FL. OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Sınırlı Sayıda Üretim. Oryantal sıcaklığın ve yoğun agar ağacının mükemmel uyumu. Bergamot, kamkat ve elmanın taze notaları, buhurun isli karakteri, sardunyanın ve menekşenin zarafetiyle bir araya gelerek, paçuli, meşe ve oudun derin bir tabanında buluşuyor. Jérôme Epinette tarafından yaratılan koku.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot",
+      "Oud"
+    ],
+    "image_url": "https://static.zara.net/assets/public/5338/c774/945443a283c7/c9f2dda73ea8/20210805999-e1/20210805999-e1.jpg?ts=1739952896670&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vibrant-leather-oud-edp-100-ml--3-38-fl--oz--12-ml--0-41-fl--oz--p20210805.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VIBRANT LEATHER EDP 60ML ( 2.03 FL.OZ )",
+    "price": "750,00 TL",
+    "description": "\"Vibrant Leather, odunsu notaların huzurlu ve romantik yanı ile derinin canlılığı ve yoğunluğu arasında bir denge.\" Jérôme Epinette, Vibrant Leather parfümör.\n\nOdunsu eau de parfum. Bergamot ve limonun narenciye notaları, bambu, deri, paçuli ve papirüs notalarından oluşan koku piramidi.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/de62/f523/1809499fab3e/00fdd2a83bc8/20210724999-e1/20210724999-e1.jpg?ts=1724755165306&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vibrant-leather-edp-60ml---2-03-fl-oz---p20210724.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BOGOSS VIBRANT LEATHER EDP 60ML (2.03 FL.OZ)",
+    "price": "750,00 TL",
+    "description": "\"'Le benjamin' için meyvemsi ananas dokunuşuyla modernlik kazanan ve sedir ağacı notalarıyla gençleştirici bir odunsu dokunuş sunan ilk Vibrant Leather.\" Jérôme Epinette, Vibrant Leather parfümörü.\n\nMeyvemsi odunsu eau de parfum. Bergamot, limon, ananas ve greyfurt, paçuli ve deri notaları içeren koku piramidi.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/fda2/9258/b26b460eab32/02d6e56a9a10/20210725999-e1/20210725999-e1.jpg?ts=1724686797250&w=475",
+    "product_url": "https://www.zara.com/tr/tr/bogoss-vibrant-leather-edp-60ml--2-03-fl-oz--p20210725.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "DARK MIRAGE EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Duyuları enerji ve gizemle uyandıran gizemli bir koku. Canlandırıcı bir his yaratan titreşimli zencefil yağı ferahlığıyla açılıyor. Kakao ve tonka çekirdeği kalbi derinlik ve sıcaklık katarken, saran dip notaları rahatlatıcı ve baştan çıkarıcı bir iz bırakıyor.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/ae23/28b7/18e84786825d/a64b558839d8/20220343999-e1/20220343999-e1.jpg?ts=1742385797441&w=475",
+    "product_url": "https://www.zara.com/tr/tr/dark-mirage-edp-100-ml--3-4-fl-oz--p20220343.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "WARM GLANCE EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Sıcak ve etkileyici, yakınlık ve zarafet hissi veren bir koku. Sonbahar esintisini çağrıştıran sulu elmanın ferahlığıyla açılıyor. Kaşmir ağacının kalbi, yumuşaklık ve derinlikle sararken, amber ve sıcak tütün notaları, samimi ve zamansız bir öz yaratıyor.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/8d09/2f21/089b41a3b757/71774c318f33/20220345999-e1/20220345999-e1.jpg?ts=1742385808175&w=475",
+    "product_url": "https://www.zara.com/tr/tr/warm-glance-edp-100-ml--3-4-fl-oz--p20220345.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "RADIANT ECHO EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Yoğun, sofistike ve çekici bir koku. Konyak ışıltılı bir akorla açılıyor ve onu paçulinin topraksı zarafeti takip ediyor. Dip notalardaki kremsi vanilya ve kuru, isli amber, bu büyüleyici ve sarmalayıcı esansı tamamlıyor.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/eecd/aea0/fe36470c8b55/38f96e08e0f6/20220344999-e1/20220344999-e1.jpg?ts=1742385807819&w=475",
+    "product_url": "https://www.zara.com/tr/tr/radiant-echo-edp-100-ml--3-4-fl-oz--p20220344.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "TENDER AMBER INTENSE EDP 100 ML (3,38 FL. OZ)",
+    "price": "1.290,00 TL",
+    "description": "Eau de Parfum. Yoğunlaştırılmış bir amber kokusu; zengin safran, isli günlük ve reçinemsi laden, gül ve sümbülteberin orijinal karışımının sıcaklığını artırarak derinleştiriyor. Egzotik meyveler ve siyah frenk üzümü, orijinalinin daha cesur ve daha büyüleyici bir versiyonunu oluşturarak öne çıkıyor.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/4443/4805/d77a4787b405/be7fffaa7179/20220342999-e1/20220342999-e1.jpg?ts=1741778426693&w=475",
+    "product_url": "https://www.zara.com/tr/tr/tender-amber-intense-edp-100-ml--3-38-fl--oz--p20220342.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SPELL CARAMEL EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "“Hayatın cezbedici ve keyifli anlarına kim karşı koyabilir?” Jordi Fernández tarafından yaratıldı.\n\nEau de parfum. Kan portakalı, zencefil ve kakulenin oryantal notaları, bu sıcak kokuya ışıltı katıyor. Davananın likörlü notaları, vanilya ve osmanthus ile birleşerek nefis bir karamel notası oluşturuyor.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/4962/2563/f3684837b1f7/ee8e97b86123/20220256999-e1/20220256999-e1.jpg?ts=1724743350052&w=475",
+    "product_url": "https://www.zara.com/tr/tr/spell-caramel-edp-100-ml--3-4-fl-oz--p20220256.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "TOBACCO SUBLIME EDP 100ML ( 3,4 FL.OZ )",
+    "price": "1.100,00 TL",
+    "description": "\"Zarif vanilya ve muhteşem tütünle sarmalanmış. Amber odunsu notalarla güçlendirilmiş bir baştan çıkarıcılık izi.\" Jordi Fernández tarafından yaratıldı.\n\nEau de parfum. Dayanılmaz tütün notaları, bir dokunuş iris ve derin paçuli notalarıyla en üst düzeyde sofistike bir hale geliyor. Zarif vanilya ile sarmalanan koku, amber odunsu notalarla güçlendirilmiş bir baştan çıkarıcılık izi bırakıyor.\n\nDaha fazla gör",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/f195/a902/c3584205aa20/03aa56cd0dbc/20220258999-e1/20220258999-e1.jpg?ts=1724684960143&w=475",
+    "product_url": "https://www.zara.com/tr/tr/tobacco-sublime-edp-100ml---3-4-fl-oz---p20220258.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SAND DESERT AT SUNSET EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de parfum. Benoist Lapouza, kum tepeleri arasında gün batımını karşılamadan önce son güneş ışınlarını aydınlatan çiçeksi ve oryantal bir koku sunuyor. Koku piramidi, tarçın, tonka fasulyesi ve çikolata baz notaları üzerindeki günnük ve portakal üst notalarını ortaya çıkarıyor. Dip notalarda sedir ağacı ve iris notaları bulunuyor.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/6b84/a6ab/d4da4a7a97d6/cb474422d9f0/20220238999-e1/20220238999-e1.jpg?ts=1724743347970&w=475",
+    "product_url": "https://www.zara.com/tr/tr/sand-desert-at-sunset-edp-100-ml--3-4-fl-oz--p20220238.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SAND DESERT AT SUNSET INTENSE EDP 100 ML (3,38 FL. OZ)",
+    "price": "1.290,00 TL",
+    "description": "Eau de Parfum. Orijinal kokunun yeni ve yoğun kehribar versiyonu, gün batımı kum tepelerine çökmeden önceki son güneş ışığı anlarını yansıtan vanilya ve kehribarın altın ışıltılarını yakalıyor.\n\nBu zenginleştirilmiş versiyonun koku piramidi, ikonik buhur aromasını ve portakal, tarçın, tonka fasulyesi ve çikolata karışımını yüceltirken, sedir ağacı ve iris, sıcak kehribar ve vanilya kucaklamasıyla sarmalanıyor.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/7c06/1cb9/ba1a4a45964d/e98e01561ba2/20220320999-e1/20220320999-e1.jpg?ts=1727681497598&w=475",
+    "product_url": "https://www.zara.com/tr/tr/sand-desert-at-sunset-intense-edp-100-ml--3-38-fl--oz--p20220320.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "SUNRISE ON THE RED SAND DUNES INTENSE EDP 100 ML (3,38 FL. OZ)",
+    "price": "1.290,00 TL",
+    "description": "Eau de Parfum. Altın rengi bir gün batımının derin ve sıcak hissinden ilham alan bu yeni ve daha yoğun versiyon, günün geceye hipnotize edici geçişini çağrıştıran köknar balsamı ve laden reçinesinin sıcaklığını ve bağımlılık yaratan yönlerini yakalıyor.\n\nKoku piramidi, bergamot ve zencefilin canlı notalarını, ışıltılı bir mandalina halesiyle ortaya çıkarıyor. Koku yayıldıkça, alt notalar portakal çiçeği ve siyah frenk üzümünün büyüleyici aromalarıyla iç içe geçmiş zengin bir amber karışımını ortaya koyuyor.\n\nDaha fazla gör",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/b43b/de4b/e7584bc4a163/929264743058/20220319999-e1/20220319999-e1.jpg?ts=1727681497056&w=475",
+    "product_url": "https://www.zara.com/tr/tr/sunrise-on-the-red-sand-dunes-intense-edp-100-ml--3-38-fl--oz--p20220319.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "ABSOLUTELY DARK EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "\"Siyahın büyüleyici duygusallığı ve derin zarafeti bir kokuda bir araya geliyor\". Marion Costero tarafından yaratıldı.\n\nEau de parfum. Büyülü aroması, canlandırıcı deniz ve narenciye notalarının büyüleyici bir karışımını ortaya çıkarıyor. Koku, kendisine rafine ve bağımlılık yapan bir özellik kazandıran iris, kaşmir ve sandal ağacı ilavesiyle daha da zenginleştiriliyor. Yosunlu odunsu ve amber notalarıyla sonlanıyor.\n\nDaha fazla gör",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/f659/84ad/d85c49b5be13/44141ba6813b/20220261999-e1/20220261999-e1.jpg?ts=1724684875106&w=475",
+    "product_url": "https://www.zara.com/tr/tr/absolutely-dark-edp-100-ml--3-4-fl-oz--p20220261.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "ANTIQUE BROWN EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "\"Taze ve sofistike bir odunsu kokuda vücut bulan bir özgürlük hikayesi.\" Honorine Blanc tarafından yaratıldı.\n\nEau de parfum. Elma, hindistan cevizi suyu ve bergamotun taze notalarının sofistike bir çıkışla harmanlandığı, kehribar ve odunsu bir koku. Bu notalar, tütün ve bal akorlarıyla bir araya geliyor. Pralin ve vanilyanın tatlı notaları, likörlü bir taban üzerinde eriyor.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/ddd4/6c56/4adf4b0da300/7e6f32058c8d/20220259999-e1/20220259999-e1.jpg?ts=1723015221209&w=475",
+    "product_url": "https://www.zara.com/tr/tr/antique-brown-edp-100-ml--3-4-fl-oz--p20220259.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "TENDER AMBER EDP 100 ML (3.4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "“Davetkar bir amber kucaklamasının yumuşaklığını ve zarafetini hissedin.” Gaël Montero tarafından yaratıldı.\n\nEau de parfum. Narin gül ve sümbülteber dokunuşlarıyla sarmalanmış kehribar kokusu. Tatlı egzotik meyvelerin nüansları, siyah frenk üzümünün ışıltısıyla bir araya gelerek sulu ve ferah bir koku oluşturur.\n\nDaha fazla gör",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/ed20/91db/f85a43b28dfc/9911fa1bd616/20220257999-e1/20220257999-e1.jpg?ts=1724685019567&w=475",
+    "product_url": "https://www.zara.com/tr/tr/tender-amber-edp-100-ml--3-4-fl-oz--p20220257.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "TENDER AMBER + ANTIQUE BROWN EDP 2X 100 ML (3.4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "TENDER AMBER: Narin gül ve sümbülteber dokunuşlarıyla sarmalanmış kehribar kokusu. Tatlı egzotik meyvelerin nüansları, siyah frenk üzümünün ışıltısıyla birleşerek sulu ve ferah bir koku oluşturur.\n\n\"Çekici bir kehribar kucaklamasının inceliğini ve zarafetini hissedin.\" Gaël Montero tarafından yaratıldı.\n\nANTIQUE BROWN: Elma, hindistan cevizi suyu ve bergamotun taze notalarının sofistike bir çıkışıyla başlayan, kehribar ve odunsu bir koku. Bu notalar, tütün ve bal nüanslarıyla birleşir. Pralin ve vanilyanın tatlı notaları, likörlü bir taban üzerinde harmanlanır.\n\n\"Taze ve sofistike bir odunsu kokuyla temsil edilen bir özgürlük öyküsü.\" Honorine Blanc tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/14dc/ddec/b38147efac33/f3aae423ba86/20220290999-e1/20220290999-e1.jpg?ts=1725262654542&w=475",
+    "product_url": "https://www.zara.com/tr/tr/tender-amber-antique-brown-edp-2x-100-ml--3-4-fl-oz--p20220290.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VANILLA COLLECTION 01: IRRESISTIBLE/MAGNETIC/DELICIOUS EDP 100 ML (3,38 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Zengin bir portakal çiçeği imzası, karşı konulmaz vanilya ve kehribar ikilisinin yönleriyle zıtlık oluşturarak neredeyse takıntılı bir likör nüansı yaratıyor. Benzersiz bir esansı ortaya çıkaran ve kutlayan ayırt edici bir duygusallık.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/e163/7910/16c5432199f5/bb9753df1330/20213001999-e1/20213001999-e1.jpg?ts=1727854397202&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vanilla-collection-01--irresistible-magnetic-delicious-edp-100-ml--3-38-fl--oz--p20213001.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VANILLA COLLECTION 02: UNIQUE/HYPNOTIC/SEDUCTIVE EDP 100 ML (3,38 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Baharatlı ve çekici bir karışımla zenginleştirilmiş baştan çıkarıcı burbon vanilyası, sıcak ve şehvetli bir gurme deneyimi yaratır. Ladenin zengin kehribar nüansları, vanilyanın bağımlılık yapan tatlılığını güçlendirerek, etkileyici ve büyüleyici bir iz bırakır.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/06f8/fd15/53fe4a60b7a4/2992098e9334/20213002999-e1/20213002999-e1.jpg?ts=1727854400875&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vanilla-collection-02--unique-hypnotic-seductive-edp-100-ml--3-38-fl--oz--p20213002.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VANILLA COLLECTION 01+ VANILLA COLLECTION 02 EDP 2 X100 ML (3,38 FL. OZ)",
+    "price": "1.290,00 TL",
+    "description": "VANILLA 01: Eau de Parfum. Zengin portakal çiçeği imzası, vanilya ve kehribar ikilisinin karşı konulmaz yönleriyle zıtlık oluşturarak neredeyse takıntılı bir likör nüansı yaratıyor. Benzersiz bir esansı ortaya çıkaran ve kutlayan ayırt edici bir duygusallık.\n\nVANILLA 02: Eau de Parfum. Baharatlı ve manyetik bir karışımla zenginleştirilmiş baştan çıkarıcı bir burbon vanilyası, sıcak ve şehvetli bir gurme deneyimi yaratır. Ladenin zengin kehribar nüansları, vanilyanın bağımlılık yapan tatlılığını güçlendirerek, sarıp sarmalayan ve büyüleyici bir imza bırakır.\n\nDaha fazla gör",
+    "notes": [
+      "Vanilla"
+    ],
+    "image_url": "https://static.zara.net/assets/public/4198/5c1d/530d4c8c85b1/62a87e8a7210/20213003999-e1/20213003999-e1.jpg?ts=1727854396598&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vanilla-collection-01-vanilla-collection-02-edp-2-x100-ml--3-38-fl--oz--p20213003.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "#TOBACCO COLLECTION RICH WARM ADDICTIVE EDT 100 ML (3,4 FL.OZ)",
+    "price": "920,00 TL",
+    "description": "Oryantal eau de toilette. Rom, beyaz şakayık ve burbon vanilyası notaları içeren koku piramidi. Sıcak, yoğun ve parlak bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/7798/0c46/30104b54b300/4f5b93b1506d/20210472999-e1/20210472999-e1.jpg?ts=1724765335514&w=475",
+    "product_url": "https://www.zara.com/tr/tr/-tobacco-collection-rich-warm-addictive-edt-100-ml--3-4-fl-oz--p20210472.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "#TOBACCO COLLECTION INTENSE DARK EXCLUSIVE EDP 100ML (3.4 FL.OZ)",
+    "price": "920,00 TL",
+    "description": "Oryantal eau de toilette. Koku piramidi elma, karabiber ve tonka fasulyesi notaları içeriyor. Şık, sıcak ve yoğun bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/33f9/1b56/fd0c4335abaf/73ab1d45e911/20210473999-e1/20210473999-e1.jpg?ts=1724686678371&w=475",
+    "product_url": "https://www.zara.com/tr/tr/-tobacco-collection-intense-dark-exclusive-edp-100ml--3-4-fl-oz--p20210473.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "#TOBACCO COLLECTION INFINITE RICH WARM EDP 100 ML (3,4 FL.OZ)",
+    "price": "990,00 TL",
+    "description": "Oryantal eau de parfum. Koku piramidi, rom, beyaz şakayık ve burbon vanilyası notalarını içeriyor. Sıcak, yoğun ve ışıltılı bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/29e1/59ea/f729404983c7/f746fff1826f/20210748999-e1/20210748999-e1.jpg?ts=1724686798789&w=475",
+    "product_url": "https://www.zara.com/tr/tr/-tobacco-collection-infinite-rich-warm-edp-100-ml--3-4-fl-oz--p20210748.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "#TOBACCO INTENSE DARK EXCLUSIVE + RICH WARM ADDICTIVE EDP 2 X 100 ML (3.4 FL.OZ)",
+    "price": "1.290,00 TL",
+    "description": "İki odunsu eau de parfum içeren bir set. Koku piramidi elma, karabiber ve tonka fasulyesi notaları içeriyor. Zarif, sıcak ve yoğun bir koku (I) + rom, beyaz şakayık ve bourbon vanilyası notaları. Sıcak, yoğun ve parlak bir koku (II).",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/acf1/838d/444b4fe39150/d4d46d565f04/20210474999-e1/20210474999-e1.jpg?ts=1724686678658&w=475",
+    "product_url": "https://www.zara.com/tr/tr/-tobacco-intense-dark-exclusive-rich-warm-addictive-edp-2-x-100-ml--3-4-fl-oz--p20210474.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "WOOD COLLECTION 01: PURE EDP 100 ML (3,38 FL. OZ).",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Canlı sedir ağacı ruhu ve taze greyfurt ağacının cazibesiyle dolu olan bu koku, doğanın en saf ağaçlarının özünü kutluyor. İncelikli bir pudramsı iris dokunuşu, kokuyu zarif ve çekici bir dokunuşla tamamlıyor.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/4acb/45f3/cb654a56adab/2e027408754c/20213004999-e1/20213004999-e1.jpg?ts=1737452653727&w=475",
+    "product_url": "https://www.zara.com/tr/tr/wood-collection-01--pure-edp-100-ml--3-38-fl--oz---p20213004.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "WOOD COLLECTION 02: OPULENT EDP 100ML (3,38 FL. OZ).",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Sandal ağacının duyusal kucaklamasıyla sarmalanan bu koku, deri üzerinde bağımlılık fısıldayan gösterişli bir aurayla kalıcıdır. Kalbinde, manyetik ve sıcak baharat karışımıyla uyumlu bir şekilde eşleşen gizemli bir tütsü imzası bulunur.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/033a/f35a/2c2e43fb9194/a4dacbf3b16d/20213005999-e1/20213005999-e1.jpg?ts=1737452654556&w=475",
+    "product_url": "https://www.zara.com/tr/tr/wood-collection-02--opulent-edp-100ml--3-38-fl--oz---p20213005.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "WOOD COLLECTION 01+ 02 EDP 2 X 100 ML (3,38 FL.OZ)",
+    "price": "1.290,00 TL",
+    "description": "İki odunsu kokudan oluşan bir set. 01 numara bergamot, greyfurt ağacı, iris ve sedir ağacını harmanlıyor. 02 numara ise sıcak baharatlar, buhur, sandal ağacı ve vetiveri bir araya getiriyor.",
+    "notes": [
+      "Bergamot",
+      "Vetiver"
+    ],
+    "image_url": "https://static.zara.net/assets/public/5cd9/fee3/86f04bfe9a1f/95c54b1ed21e/20213006999-e1/20213006999-e1.jpg?ts=1737452656092&w=475",
+    "product_url": "https://www.zara.com/tr/tr/wood-collection-01-02-edp-2-x-100-ml--3-38-fl-oz--p20213006.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM EDT 100 ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Oryantal eau de toilette. Bergamot, kakule ve sandal ağacı notaları içeren koku piramidi. Sıcak, modern ve yoğun bir koku.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/c89f/959f/ddaf45eeb69c/d990949860a4/20210476999-e1/20210476999-e1.jpg?ts=1724686672342&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-edt-100-ml--3-4-fl-oz--p20210476.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM RED EDITION EDP 100 ML (3.4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Oryantal eau de parfum. Portakal, kehribar ve meşe yosunu notaları içeren koku piramidi. Sıcak, zarif ve parlak bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/72ff/0e70/4592487bb2bf/258052f1637d/20210479999-e1/20210479999-e1.jpg?ts=1724829988142&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-red-edition-edp-100-ml--3-4-fl-oz--p20210479.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM INTENSE PARFUM 100 ML (3.4 FL OZ)",
+    "price": "1.290,00 TL",
+    "description": "Eau de parfum. İkonik orijinal parfümü yeni bir incelik seviyesine taşıyan bir koku. Bergamot ve greyfurtun canlı turunçgil notaları, benzersiz ve güçlü bir aroma yaratan zengin odunlu ve baharatlı bir imzayla kontrast oluşturuyor. Bu sofistike esansı tamamlayan Amber, Tonka ve Siyah Vanilya üçlüsü, yeniden keşfedilen bir bağımlılık katıyor ve daha derin bir büyü ortaya koyuyor. Daha fazla yoğunluk, cesur duygusallık ve erkekliğin sınırlarını yeniden şekillendirenler için karşı konulmaz bir çekim hikayesi.\n\nDaha fazla gör",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/260c/ed90/bffd49539bb3/7becd32f8f62/20210732999-e1/20210732999-e1.jpg?ts=1724685072063&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-intense-parfum-100-ml--3-4-fl-oz--p20210732.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM RED EDITION INTENSE PARFUM 100 ML (3,4 FL.OZ)",
+    "price": "1.290,00 TL",
+    "description": "İkonik orijinal parfümü yeni bir incelik seviyesine taşıyan bir koku.\n\nBergamot ve greyfurtun canlı narenciye notaları, benzersiz ve güçlü bir aroma yaratan zengin, odunsu ve baharatlı bir imza ile tezat oluşturuyor.\nBu sofistike esansı tamamlayan Amber, Tonka ve Siyah Vanilya üçlüsü, yeniden keşfedilen bir bağımlılık katıyor ve daha derin bir büyü ortaya çıkarıyor.\n\nDaha fazla yoğunluk, cüretkar duygusallık ve erkekliğin sınırlarını yeniden şekillendirenler için karşı konulmaz bir çekim.\n\nDaha fazla gör",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/11af/6cbf/1c5948d4a44f/005aa567d8c0/20210733999-e1/20210733999-e1.jpg?ts=1724685073252&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-red-edition-intense-parfum-100-ml--3-4-fl-oz--p20210733.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM BLUE EDP 100ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de parfum. Canlı bir kakule ve pembe greyfurt karışımı, hindistan cevizi suyu ile ferahlatılıyor. Kalbinde, parlak bir kontrast oluşturan portakal çiçeği, incir ve biberiye bir araya geliyor. Dip notalarda, sandal ağacı, ambrox ve paçuli, sedir ağacıyla bütünleşerek sıcak, modern ve maskülen bir iz bırakıyor.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/fd5c/c07b/06444213a8b0/d081101b4e0c/20210592999-e1/20210592999-e1.jpg?ts=1743158030653&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-blue-edp-100ml--3-4-fl-oz--p20210592.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM BLACK EDITION INTENSE PARFUM 100 ML (3,38 FL OZ)",
+    "price": "1.290,00 TL",
+    "description": "İkonik orijinal parfümü yeni bir zarafet standardına yükselten bir koku.\n\nSofistike ve derin. Greyfurt, kakule, karabiber ve acı biberin ferah ve baharatlı notalarıyla başlar. Kalbinde, portakal çiçeği, adaçayı ve sakız ağacı aromatik ve bitkisel bir dokunuş katar. Sandal ağacı, sedir ağacı, antep fıstığı, laden ve paçuli özünün dip notaları sıcak ve odunsu bir temel oluşturur. Bu koku, benzersiz ve güçlü bir esans arayan modern erkek için mükemmeldir.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/0e85/f986/391b4a659d81/20024a033236/20210259999-e1/20210259999-e1.jpg?ts=1734511760947&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-black-edition-intense-parfum-100-ml--3-38-fl-oz--p20210259.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM BLACK EDITION EDT 100 ML (3,4 FL.OZ)",
+    "price": "1.100,00 TL",
+    "description": "Oryantal eau de toilette. Küçük hindistan cevizi, portakal çiçeği ve sedir ağacı notaları içeren koku piramidi. Sıcak, kalıcı ve rahatlatıcı bir koku.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/7976/6d79/01a243fbaac0/72d3b92037d1/20210477999-000-e1/20210477999-000-e1.jpg?ts=1734523580978&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-black-edition-edt-100-ml--3-4-fl-oz--p20210477.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM EDT 100 ML (3,38 FL. OZ) + 12 ML (0,41 FL. OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Toilette. Sınımlı Ürün. Kalıcı bir etki bırakan sıcak ve modern bir koku. Bergamotun ferah notaları ve kakulenin baharatlı dokunuşu, sandal ağacının kremsi yapısıyla birleşerek yoğun ve özgün bir esans yaratıyor.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/023a/852a/4a52402b8f31/a5d33604ab2d/20210820999-e1/20210820999-e1.jpg?ts=1740053733993&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-edt-100-ml--3-38-fl--oz--12-ml--0-41-fl--oz--p20210820.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM RED EDITION EDP 100 ML (3,38 FL. OZ) + 12 ML (0,41 FL. OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Limited Edition. Sıcak ve parlak bir koku, ince zarafetiyle sarıp sarmalıyor. Canlı portakal notaları, amberin zenginliği ve evernyl'in kadifemsi dokunuşuyla birleşerek sofistike ve etkileyici bir öz yaratıyor.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/9418/10b7/3a994495b75b/b54697693e7c/20210253999-e1/20210253999-e1.jpg?ts=1740053734614&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-red-edition-edp-100-ml--3-38-fl--oz--12-ml--0-41-fl--oz--p20210253.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM RED EDITION EDP 50 ML (1.69 FL. OZ)",
+    "price": "750,00 TL",
+    "description": "Oryantal eau de parfum. Koku piramidinde portakal, amber ve evernyl notaları bulunur. Sıcak, şık ve ışıltılı bir kokudur.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/79e2/5410/cf1745629c34/a88cca56192a/20210729999-e1/20210729999-e1.jpg?ts=1724685073693&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-red-edition-edp-50-ml--1-69-fl--oz--p20210729.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM + FOR HIM RED EDITION EDP 2X 50 ML (1.69 FL. OZ)",
+    "price": "990,00 TL",
+    "description": "FOR HIM: Oryantal eau de toilette. Bergamot, kakule ve sandal ağacı notaları içeren koku piramidi. Sıcak, modern ve yoğun bir koku.\n\nFOR HIM RED EDITION: Oryantal eau de parfum. Portakal, kehribar ve evernyl notaları içeren koku piramidi. Sıcak, şık ve ışıltılı bir koku.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/5c29/1a7f/05c74ea4b90a/94ebada5b32e/20210730999-e1/20210730999-e1.jpg?ts=1724685076321&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-for-him-red-edition-edp-2x-50-ml--1-69-fl--oz--p20210730.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "ENERGETICALLY NEW YORK ELIXIR PARFÜM 100ML (3.4 FL. OZ)",
+    "price": "1.690,00 TL",
+    "description": "Jo Loves'ın kurucusu Jo Malone CBE tarafından yaratılmıştır.\n\nEnergetically New York Elixir, Eau de Parfum'ün daha yoğun ve kalıcı bir versiyonudur. Sıcaklık ve derinlik sağlayan Suede Sandalwood'un saran yumuşaklığı, kakule ve yasemin ile ideal bir dengede tamamlanır.\n\nDaha fazla gör",
+    "notes": [
+      "Sandalwood"
+    ],
+    "image_url": "https://static.zara.net/assets/public/eaf8/bc26/3f2e42fdb2ec/6146aee1aba3/20210317999-e1/20210317999-e1.jpg?ts=1748003088964&w=475",
+    "product_url": "https://www.zara.com/tr/tr/energetically-new-york-elixir-parfum-100ml--3-4-fl--oz--p20210317.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "EBONY WOOD ELIXIR PARFÜM 100ML (3.4 FL. OZ)",
+    "price": "1.690,00 TL",
+    "description": "Jo Loves'ın kurucusu Jo Malone CBE tarafından yaratılmıştır.\n\nEbony Wood Elixir, Eau de Parfum'ün en yoğun ve kalıcı versiyonudur. Mocha Flower'ın sarmalayan derinliğini ve Sedir'in karakteristik sıcaklığını vurgulayan, sıcak ve sofistike bir deneyim sunan bir gurme kokudur.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/5aec/af35/38ab42c389ce/196356a314a2/20210318999-000-e1/20210318999-000-e1.jpg?ts=1748244369322&w=475",
+    "product_url": "https://www.zara.com/tr/tr/ebony-wood-elixir-parfum-100ml--3-4-fl--oz--p20210318.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FASHIONABLY LONDON ELIXIR PARFUM 100ML (3,4 FL. OZ)",
+    "price": "1.690,00 TL",
+    "description": "Jo Loves'ın kurucusu Jo Malone CBE tarafından yaratılmıştır.\n\nFashionably London Elixir, Eau de Parfum'ün daha yoğun ve uzun süre kalıcı bir versiyonudur. Şakayığın kadifemsi zarafetini ve Kırmızı Misk'in saran derinliğini vurgulayan, sofistike ve uyumlu bir kompozisyonda birleşen çiçeksi bir koku.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/f609/fc78/186c4309bf15/39687dcc394f/20210319999-e1/20210319999-e1.jpg?ts=1748003089560&w=475",
+    "product_url": "https://www.zara.com/tr/tr/fashionably-london-elixir-parfum-100ml--3-4-fl--oz--p20210319.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "GRACEFULLY MADRID EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Eau de Parfum. Madrid'in canlı zarafetinden ilham alınmıştır. Acı portakal, bergamot ve limonun narenciye notaları, temiz ve misk tabanında fesleğen ve nane ile birleşiyor.\n\nJo Loves'ın kurucusu CBE Jo Malone tarafından yaratıldı.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/9add/b013/a88b40038628/ae9cb9b67bf6/20210138999-e1/20210138999-e1.jpg?ts=1733819996128&w=475",
+    "product_url": "https://www.zara.com/tr/tr/gracefully-madrid-edp-100-ml--3-4-fl-oz--p20210138.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "VETIVER PAMPLEMOUSSE EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Eau de Parfum. Greyfurt, pembe greyfurt, mandalina ve limonun narenciye notalarını, zarif vetiver odunsu notalarıyla birleştiren ferah ve enerji verici bir koku.\n\nJo Loves kurucusu, CBE Jo Malone tarafından yaratıldı.",
+    "notes": [
+      "Vetiver"
+    ],
+    "image_url": "https://static.zara.net/assets/public/03a4/ce35/57ba4750b460/78a29d47dd15/20210139999-e1/20210139999-e1.jpg?ts=1733819996930&w=475",
+    "product_url": "https://www.zara.com/tr/tr/vetiver-pamplemousse-edp-100-ml--3-4-fl-oz--p20210139.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BOLDLY SEOUL EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Eau de Parfum. Seul'ün modernliğinden ve canlı cazibesinden ilham alınmıştır. Bergamot ve mandalinanın taze notaları, mimoza ve armuttan oluşan çiçeksi bir kalple birleşir ve heliotrop, misk ve amber tohumlarından oluşan yumuşak bir temel üzerinde yükselir.\n\nJo Loves'ın kurucusu CBE Jo Malone tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/9d59/04aa/9fea44a59997/39c5c3fb9e5d/20210146999-e1/20210146999-e1.jpg?ts=1733819996880&w=475",
+    "product_url": "https://www.zara.com/tr/tr/boldly-seoul-edp-100-ml--3-4-fl-oz--p20210146.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "LEATHER JARDIN EDP 100ML ( 3.4 FL.OZ )",
+    "price": "1.450,00 TL",
+    "description": "Eau de Parfum: Sofistike ve büyüleyici bir koku. Canlı greyfurt notalarıyla açılan koku, narin bir gül kalbine doğru evrilir ve sıcak ve zarif deri akorlarıyla son bulur.\n\nJo Loves'ın kurucusu Jo Malone CBE tarafından tasarlanmıştır.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/0f27/21b2/8c0e4ec494f1/911550cc6723/20210244999-e1/20210244999-e1.jpg?ts=1733819997241&w=475",
+    "product_url": "https://www.zara.com/tr/tr/leather-jardin-edp-100ml---3-4-fl-oz---p20210244.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FLEUR DE PATCHOULI EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Eau de Parfum. Toprak ve çiçeksi notaları bir araya getiren sofistike bir koku. Paçuli ve bergamotla açılan koku, şakayık ve adaçayı kalbiyle devam ediyor; sıcak misk ve guayak ağacı tabanıyla son buluyor.\n\nJo Loves kurucusu Jo Malone CBE tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/fa5a/02ca/6a484ac8a27e/160d6d838e9e/20210245999-e1/20210245999-e1.jpg?ts=1733819996910&w=475",
+    "product_url": "https://www.zara.com/tr/tr/fleur-de-patchouli-edp-100-ml--3-4-fl-oz--p20210245.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "MAGNIFICENTLY DUBAI EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Eau de Parfum. Dubai'nin ihtişamından ve eşsiz karakterinden ilham alınmıştır. Bergamot ve safranın baharatlı notaları, yoğun ve sıcak bir temelde oud, deri ve vanilya ile birleşiyor.\n\nJo Loves'ın kurucusu Jo Malone CBE tarafından yaratıldı.",
+    "notes": [
+      "Bergamot",
+      "Oud"
+    ],
+    "image_url": "https://static.zara.net/assets/public/b005/f8d0/a9294bfb8b75/4d9da290d448/20210702999-e1/20210702999-e1.jpg?ts=1733819997550&w=475",
+    "product_url": "https://www.zara.com/tr/tr/magnificently-dubai-edp-100-ml--3-4-fl-oz--p20210702.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "ELEGANTLY TOKYO EDP 100ML (3.4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Jo Loves'ın kurucusu Jo Malone CBE tarafından yaratılmıştır.\n\nEau de Parfum. Beyaz çiçeklerin zarafetini, yaseminin cazibesini ve akigalawood'un modern derinliğini bir araya getiren çiçeksi ve sofistike bir koku. Zarif ve rafine, her durum için mükemmel.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/d078/d28c/7f1d45678597/0a80dcfdf218/20210799999-e1/20210799999-e1.jpg?ts=1733819997545&w=475",
+    "product_url": "https://www.zara.com/tr/tr/elegantly-tokyo-edp-100ml--3-4-fl-oz--p20210799.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FASHIONABLY LONDON EDP 100 ML (3,4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Eau de Parfum. Çiçeksi ve misk kokulu bir parfüm. Bergamotun narenciye ferahlığını, romantik gül kalbini ve miskin yumuşak ve sarmalayan alt notasını bir araya getiriyor. Şıklık ve modernlik arayanlar için ideal.\n\nJo Loves'ın kurucusu Jo Malone CBE tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/9d78/683d/538e465db637/a30f6f2ea70f/20210888999-e1/20210888999-e1.jpg?ts=1733819997680&w=475",
+    "product_url": "https://www.zara.com/tr/tr/fashionably-london-edp-100-ml--3-4-fl-oz--p20210888.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "ENERGETICALLY NEW YORK EDP 100ML (3.4 FL.OZ)",
+    "price": "1.450,00 TL",
+    "description": "Jo Loves'ın kurucusu Jo Malone CBE tarafından yaratılmıştır.\n\nEau de Parfum. Bergamotun narenciye ferahlığını, romantik bir gül kalbini ve yumuşak, saran bir misk tabanını birleştiren çiçeksi ve miskli bir koku. Zarafet ve modernlik arayanlar için mükemmeldir.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/c9f7/2732/f7cf496ebc53/e551b591685e/20210889999-e1/20210889999-e1.jpg?ts=1733819996690&w=475",
+    "product_url": "https://www.zara.com/tr/tr/energetically-new-york-edp-100ml--3-4-fl-oz--p20210889.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "RED ECLIPSE EDP 100 ML (3,4 FL. OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Yoğun ve sofistike bir koku. Bergamotun ferah notaları adaçayı ve deri dokunuşuyla harmanlanarak gizemli ve cesur bir aroma yaratıyor.",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/54e4/52d1/ea1841d3989e/fc68a1572f4f/20220329999-e1/20220329999-e1.jpg?ts=1734511760421&w=475",
+    "product_url": "https://www.zara.com/tr/tr/red-eclipse-edp-100-ml--3-4-fl--oz--p20220329.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BLUE ZENITH EDP 100ML (3,4 FL. OZ)",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Zarif ve dengeli bir koku. Mandalina ve lavanta ferahlığı, tarçın ve vanilyanın sıcaklığıyla birleşerek etkileyici ve rafine bir iz bırakır.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/7a82/3471/d5ac4d98b5e9/83d01a26ec68/20220330999-e1/20220330999-e1.jpg?ts=1734511760276&w=475",
+    "product_url": "https://www.zara.com/tr/tr/blue-zenith-edp-100ml--3-4-fl--oz--p20220330.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "PLATINUM SKY EDP 100ML ( 3.4 FL. OZ )",
+    "price": "1.100,00 TL",
+    "description": "Eau de Parfum. Sıcak ve sofistike bir koku. Mandalinanın taze notaları, safranın baharatlı akorları ve süetin derinliğiyle birleşerek şık ve etkileyici bir aroma yaratıyor.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/560c/2c82/aaa144e0b90d/c1c8047c5dc1/20220331999-e1/20220331999-e1.jpg?ts=1734511760188&w=475",
+    "product_url": "https://www.zara.com/tr/tr/platinum-sky-edp-100ml---3-4-fl--oz---p20220331.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "A DAY EDP 100 ML (3,38 FL OZ)",
+    "price": "1.690,00 TL",
+    "description": "Eau de Parfum. Narenciye meyvelerinin canlılığıyla açılan, kalbinde başrolü portakal çiçeğinin oynadığı taze Akdeniz çiçeklerinin zarif bir dokunuş kattığı, ferah ve sofistike bir koku. Dip notalarda, gizemli siyah amber ve rahatlatıcı misklerle sarmalanmış duyusal bir temel deriyi sarıyor.\n\nKlasik günlük parfümün yorumu: ferah, iyimser ve enerji dolu. Narenciye meyveleri, portakal çiçeği ve siyah amberin canlı notalarını açığa çıkaran bir aroma ile sarmalanmış.\n\nOrigins iş birliğiyle Jerôme Epinette tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/19f6/e84c/6f6c4c2ea8ff/9024bfe42ccb/20210995999-e1/20210995999-e1.jpg?ts=1727186929141&w=475",
+    "product_url": "https://www.zara.com/tr/tr/a-day-edp-100-ml--3-38-fl-oz--p20210995.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "A NIGHT EDP 100 ML (3,38 FL. OZ)",
+    "price": "1.690,00 TL",
+    "description": "Eau de Parfum. Siyah biber ve karanfil, amber ve isli odunsu notaları bir araya getiren bu kompozisyona baharatlı bir dokunuş katıyor ve sıcak, şehvetli ve gizemli bir parfüm ortaya çıkarıyor.\n\nGece parfümünün bir yorumu: Şehvetli, mistik ve derin. Siyah biber, kaşmir ağacı ve sedir ağacı notalarına sahip bu ilgi çekici karışımla gecelerinize canlı bir dokunuş katın.\n\nOrigins iş birliğiyle Jerôme Epinette tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/2b61/c028/3b3946c6b71a/5a252ae6d869/20210996999-e1/20210996999-e1.jpg?ts=1727186927971&w=475",
+    "product_url": "https://www.zara.com/tr/tr/a-night-edp-100-ml--3-38-fl--oz--p20210996.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "OAKWOOD FRAGANCE EDP 100 ML (3,4 FL. OZ)",
+    "price": "1.690,00 TL",
+    "description": "Eau de Parfum. Meşe ağacının gücünden ilham alan yoğun ve etkileyici bir koku. Greyfurt ve aldehitlerin taze notaları, kokuyu açar ve ardından baharatlı portakal çiçeği kalbi gelir. Deri ve yosun dip notaları gizemli bir dokunuş katar.\n\nZARA Origins için parfümcü Suzy Le Helley tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/6e2d/b93e/d7ba46adb7d3/7eecdb4104ef/20210674999-e1/20210674999-e1.jpg?ts=1732529111804&w=475",
+    "product_url": "https://www.zara.com/tr/tr/oakwood-fragance-edp-100-ml--3-4-fl--oz--p20210674.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "A DAY EDP 50 ML (1.69 FL OZ)",
+    "price": "990,00 TL",
+    "description": "Eau de Parfum. Narenciye meyvelerinin canlılığıyla açılan, taze ve sofistike bir koku. Kalbindeki başrol oyuncusu portakal çiçeğiyle Akdeniz'in taze çiçekleri, zarif bir dokunuş katıyor. Dip notalarda, gizemli siyah kehribar ve rahatlatıcı misklerle duyusal bir temel deriyi sarıyor.\n\nKlasik günlük parfümün yorumu: taze, iyimser ve enerji dolu. Narenciye, portakal çiçeği ve siyah kehribarın canlı notalarını ortaya çıkaran bir aromaya sarılı.\n\nOrigins iş birliğiyle Jerôme Epinette tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/8de9/775d/83624a1aa816/d9fc19af4d0b/20210672999-e1/20210672999-e1.jpg?ts=1727186925489&w=475",
+    "product_url": "https://www.zara.com/tr/tr/a-day-edp-50-ml--1-69-fl-oz--p20210672.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "A NIGHT EDP 50 ML (1.69 FL. OZ)",
+    "price": "990,00 TL",
+    "description": "Eau de Parfum. Siyah biber ve karanfil, kehribar ve isli odunsu notaları bir araya getiren bu kompozisyona baharatlı bir dokunuş katarak sıcak, şehvetli ve gizemli bir parfüm yaratır.\n\nGece parfümlerinin bir yorumu: Şehvetli, mistik ve derin. Siyah biber, kaşmir ağacı ve sedir ağacı notalarına sahip bu ilgi çekici karışımla gecelerinize canlı bir dokunuş katın.\n\nOrigins iş birliğiyle Jerôme Epinette tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/e49b/f716/dd714b7d99c4/a13109d00e2f/20210673999-e1/20210673999-e1.jpg?ts=1727186927866&w=475",
+    "product_url": "https://www.zara.com/tr/tr/a-night-edp-50-ml--1-69-fl--oz--p20210673.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "OAKWOOD FRAGANCE EDP 50ML (1.7 FL. OZ)",
+    "price": "990,00 TL",
+    "description": "Eau de Parfum. Ferah ve özgün. Mermer görünümlü sağlamlığından ilham alan parfüm, mandalina ve baharatların ferahlığını, misk ve yosunun oluşturduğu belirgin bir derinlikle birleştiriyor.\n\nZARA Origins parfümcüsü Suzy Le Helley tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/7304/d400/aef94b20922e/45da4a0e176c/20210238999-e1/20210238999-e1.jpg?ts=1732529111731&w=475",
+    "product_url": "https://www.zara.com/tr/tr/oakwood-fragance-edp-50ml--1-7-fl--oz--p20210238.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "MAJOLICA FRAGRANCE EDP 50 ML (1.7 FL. OZ)",
+    "price": "990,00 TL",
+    "description": "Eau de Parfum. Mayolika seramiğinin görsel zenginliğinden ilham alan, etkileyici bir koku. Zencefil ve badem notaları, ardından çiçeksi bir kalp ve kadifemsi vanilya ve amber notalarıyla son bulan bir aromaya açılıyor.\n\nZARA Origins için parfümör Alexandra Carlin tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/e4a6/1f12/0eb14fae9621/587d830137c1/20210239999-e1/20210239999-e1.jpg?ts=1732529111752&w=475",
+    "product_url": "https://www.zara.com/tr/tr/majolica-fragrance-edp-50-ml--1-7-fl--oz--p20210239.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "CONCRETE FRAGANCE EDP 50 ML (1.7 FL. OZ)",
+    "price": "990,00 TL",
+    "description": "Eau de Parfum. Çimentonun gücünden ve sadeliğinden ilham alan yoğun ve modern bir koku. Bergamot ve lavanta notaları, kakao ve heliotrop kalbiyle devam eden kokuyu açar. Mür ve paçuli notaları, sıcak ve odunsu bir derinlik katar.\n\nZARA Origins için parfümcü Alexandra Carlin tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/3be2/da0f/9aa74612aebe/053fabd44175/20210240999-e1/20210240999-e1.jpg?ts=1732529123910&w=475",
+    "product_url": "https://www.zara.com/tr/tr/concrete-fragance-edp-50-ml--1-7-fl--oz--p20210240.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "CELADON KOKU EDP 50 ML (1.7 FL. OZ).",
+    "price": "990,00 TL",
+    "description": "Eau de Parfum. Seladon seramiğinin zarif renginden ve dokusundan ilham alan yumuşak ve etkileyici bir koku. Bergamot ve armudun taze notaları, yasemin ve gülün çiçeksi kalbiyle devam eden kokuyu açar. Vanilya ve amber notaları, kokuya sıcak ve meyvemsi bir derinlik katar.\n\nZARA Origins için parfümcü Suzy Le Helley tarafından yaratıldı.\n\nDaha fazla gör",
+    "notes": [
+      "Amber",
+      "Bergamot"
+    ],
+    "image_url": "https://static.zara.net/assets/public/b3b2/b14d/9a0c4e98bdac/326f89500718/20210241999-e1/20210241999-e1.jpg?ts=1732529111416&w=475",
+    "product_url": "https://www.zara.com/tr/tr/celadon-koku-edp-50-ml--1-7-fl--oz---p20210241.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BLUE TEMPTATION EDP 120 ML (4,6 FL. OZ)",
+    "price": "1.290,00 TL",
+    "description": "Eau de Parfum. Tazelik ve derinliği cesur bir dokunuşla birleştiren amberli fujer kokusu. Canlı kara biber, limon ve elemî notaları, gizemli portakal çiçeği ve yeşil elma kalbine geçiş yapar. Tonka fasulyesi ve paçuli, dip notalarda karşı konulmaz bir enerji ve zarafet dengesi sağlar.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/955b/3b0a/68e8457388d0/7d0d41274be9/20220789999-e1/20220789999-e1.jpg?ts=1744712112156&w=475",
+    "product_url": "https://www.zara.com/tr/tr/blue-temptation-edp-120-ml--4-6-fl--oz--p20220789.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "BLUE TEMPTATION EDP 60 ML (2.3 FL. OZ)",
+    "price": "920,00 TL",
+    "description": "Eau de Parfum. Ferahlık ve derinliği cesur bir dokunuşla birleştiren amberli fujer kokusu. Canlı karabiber, limon ve elemî üst notaları, gizemli portakal çiçeği ve yeşil elma kalp notasına geçiş yapıyor. Tonka fasulyesi ve paçuli, dip notada karşı konulmaz bir enerji ve zarafet dengesi sunuyor.",
+    "notes": [
+      "Amber"
+    ],
+    "image_url": "https://static.zara.net/assets/public/3bd0/e72a/0eab4590a307/bb16d995f653/20220333999-000-e1/20220333999-000-e1.jpg?ts=1744795544072&w=475",
+    "product_url": "https://www.zara.com/tr/tr/blue-temptation-edp-60-ml--2-3-fl--oz--p20220333.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  },
+  {
+    "name": "FOR HIM RED EDITION EDP 100 ML (3,38 FL. OZ)",
+    "price": "1.100,00 TL",
+    "description": "Oryantal eau de parfum. Portakal, kehribar ve evernyl notaları içeren koku piramidi. Sıcak, şık ve ışıltılı bir koku.\n\nParfüm, bu özel seri için özel bir kutuda ve metalik desenli bir şişede sunuluyor.",
+    "notes": [],
+    "image_url": "https://static.zara.net/assets/public/04e1/190c/0c624898aaf9/ad908c0f7f49/20210865999-e1/20210865999-e1.jpg?ts=1729502602338&w=475",
+    "product_url": "https://www.zara.com/tr/tr/for-him-red-edition-edp-100-ml--3-38-fl--oz--p20210865.html",
+    "brand": "Zara",
+    "gender": "Men",
+    "scrape_date": "2025-06-10"
+  }
+]
