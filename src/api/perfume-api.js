@@ -2,7 +2,7 @@
 class PerfumeAPI {
     constructor() {
         // Always use Flask backend on port 5000
-        this.baseURL = 'http://localhost:5000';
+        this.baseURL = 'http://localhost:4421';
         this.apiURL = `${this.baseURL}/api`;
         
         console.log('🔗 API Base URL:', this.baseURL);

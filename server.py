@@ -578,4 +578,4 @@ if __name__ == '__main__':
     logging.info("   - GET  /api/health                -> Sağlık kontrolü")
     
     # Sunucuyu başlat
-    app.run(host='0.0.0.0', port=5000, debug=True) 
+    app.run(host='0.0.0.0', port=4421, debug=True)

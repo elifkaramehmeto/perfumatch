@@ -121,7 +121,7 @@ async function loadFamilies() {
             // If no families found, try the database server directly
             console.log('⚠️ No families found, trying database server on port 5000...');
             try {
-                const dbResponse = await fetch('http://127.0.0.1:5000/api/families');
+                const dbResponse = await fetch('http://127.0.0.1:4421/api/families');
                 if (dbResponse.ok) {
                     const dbData = await dbResponse.json();
                     console.log('🔍 Database families response:', dbData);
@@ -405,7 +405,7 @@ async function applyFilters() {
         if (filteredPerfumes.length === 0 && window.location.port !== '5000') {
             console.log('⚠️ No results found, trying database server on port 5000...');
             try {
-                const dbResponse = await fetch('http://127.0.0.1:5000/api/perfume/search', {
+                const dbResponse = await fetch('http://127.0.0.1:4421/api/perfume/search', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

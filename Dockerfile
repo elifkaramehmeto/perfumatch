@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Port'u expose et
-EXPOSE 5000
+EXPOSE 4421
 
 # Uygulamayı başlat
-CMD ["python", "server.py"] 
+CMD ["python", "server.py"]
